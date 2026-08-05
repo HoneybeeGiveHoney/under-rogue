@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq20swuh0uckk" path="res://Game.gd" id="1_wbfu4"]
 [ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://suferer.gd" id="2_gwjdr"]
+[ext_resource type="Texture2D" uid="uid://ccup5xq3revbb" path="res://assets/ковер.png" id="2_hmewc"]
 [ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/bunkerBaseTileSet.png" id="2_lvtmh"]
 [ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/sufferer.png" id="2_yx171"]
 [ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/suffererFocuses.png" id="3_gwjdr"]
@@ -15,6 +16,22 @@
 [ext_resource type="Texture2D" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="11_bvhbk"]
 [ext_resource type="Texture2D" path="res://assets/SoulRaysFragments/FullJustice.png" id="12_cpsxm"]
 [ext_resource type="Texture2D" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="13_hmewc"]
+[ext_resource type="Theme" uid="uid://b5au4x8s54862" path="res://PersonaTheme.tres" id="6_joorw"]
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="7_2vekm"]
+[ext_resource type="Script" uid="uid://7piat6annc02" path="res://PersonaButtonWobble.gd" id="8_yx171"]
+[ext_resource type="Script" uid="uid://dwm84cdu7ijw" path="res://WeaponMenu.gd" id="9_yx171"]
+[ext_resource type="Texture2D" uid="uid://cryqkg50ghv76" path="res://assets/кровать.png" id="10_7ged1"]
+[ext_resource type="Texture2D" uid="uid://ccbjf0xu6plfn" path="res://assets/interface/weapon.png" id="10_yhmtn"]
+[ext_resource type="Texture2D" uid="uid://cxtehhiceee0w" path="res://assets/еще шкаф но круче.png" id="11_0mevm"]
+[ext_resource type="Texture2D" uid="uid://bkecsrnsilnre" path="res://assets/мусорка.png" id="12_w2501"]
+[ext_resource type="Texture2D" uid="uid://cjro76nlfdwrg" path="res://assets/кiктус.png" id="13_jsoai"]
+[ext_resource type="Texture2D" uid="uid://byq3330yhtwvr" path="res://assets/записки сумашедшего.png" id="14_bisgb"]
+[ext_resource type="Texture2D" uid="uid://dcx448u8mlio6" path="res://assets/шкаф.png" id="18_y5ctq"]
+[ext_resource type="Texture2D" uid="uid://bgxt8bte3q4bn" path="res://assets/коробка.png" id="19_0mevm"]
+[ext_resource type="Texture2D" uid="uid://cxio5bbvpqyh2" path="res://assets/полароид.png" id="19_w7ht3"]
+[ext_resource type="Texture2D" uid="uid://uuo08tvugsbs" path="res://assets/часики.png" id="20_8ktx7"]
+[ext_resource type="Texture2D" uid="uid://0atby4jm31fo" path="res://assets/кампудадер.png" id="20_w2501"]
+[ext_resource type="Texture2D" uid="uid://8yu1qutkfbt" path="res://assets/тв время.png" id="21_hwsgv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
 atlas = ExtResource("2_yx171")
@@ -348,8 +365,11 @@ texture_region_size = Vector2i(64, 64)
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_vkqoe"]
 tile_size = Vector2i(64, 64)
@@ -360,8 +380,71 @@ sources/1 = SubResource("TileSetAtlasSource_yyih5")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yddip"]
 size = Vector2(123, 122)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(150.06891, 217.95575)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(208.91953, 218.71088)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(301.60938, 205.118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(228.04597, 135.9292)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
+size = Vector2(394.14926, 132.90854)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcnqv"]
+size = Vector2(200.09195, 155.27728)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7numd"]
+size = Vector2(137.99997, 135.64302)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1u0y"]
+size = Vector2(145.65517, 163.1153)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5s0fj"]
+size = Vector2(123.73564, 139.82283)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33x8s"]
+size = Vector2(191.26443, 154.05298)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2j2di"]
+size = Vector2(125.05744, 321.69922)
+
 [node name="Game" type="Node2D" unique_id=276615565]
 script = ExtResource("1_wbfu4")
+
+[node name="Кровать" type="Sprite2D" parent="." unique_id=1907744260]
+position = Vector2(274.99997, 147)
+scale = Vector2(1.1210938, 1.015625)
+texture = ExtResource("10_7ged1")
+
+[node name="Мусорка" type="Sprite2D" parent="." unique_id=1696976934]
+position = Vector2(182, 766)
+scale = Vector2(0.51953125, 0.5390625)
+texture = ExtResource("12_w2501")
+
+[node name="Кiктус" type="Sprite2D" parent="." unique_id=1375895934]
+position = Vector2(1304, 719)
+scale = Vector2(0.90234375, 0.875)
+texture = ExtResource("13_jsoai")
+
+[node name="ЗапискиСумашедшего" type="Sprite2D" parent="." unique_id=651173605]
+position = Vector2(68, 648)
+scale = Vector2(0.46484375, 0.44921875)
+texture = ExtResource("14_bisgb")
+
+[node name="ЗапискиСумашедшего2" type="Sprite2D" parent="." unique_id=488263684]
+position = Vector2(293, 783)
+scale = Vector2(0.46484375, 0.44921875)
+texture = ExtResource("14_bisgb")
+
+[node name="Ковер" type="Sprite2D" parent="." unique_id=1231931084]
+position = Vector2(739, 530)
+scale = Vector2(1.3363309, 1.2148438)
+texture = ExtResource("2_hmewc")
 
 [node name="suferer" type="CharacterBody2D" parent="." unique_id=589321758]
 position = Vector2(733, 525)
@@ -415,7 +498,90 @@ offset_bottom = 24.0
 pivot_offset = Vector2(736, 535)
 script = ExtResource("5_yhmtn")
 
-[node name="pausing" type="AnimationPlayer" parent="suferer/Control" unique_id=1422209920]
+[node name="ColorRect" type="ColorRect" parent="suferer/Control" unique_id=269642977]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -762.99994
+offset_top = -417.99994
+offset_right = -722.99994
+offset_bottom = -377.99994
+scale = Vector2(40.21926, 22.742409)
+color = Color(0, 0, 0, 0.81960785)
+
+[node name="PauseButtons" type="VBoxContainer" parent="suferer/Control" unique_id=2062400112]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -99.0
+offset_top = -176.0
+offset_right = 145.0
+offset_bottom = 145.0
+pivot_offset = Vector2(117, 195)
+theme = ExtResource("6_joorw")
+alignment = 2
+
+[node name="items" type="Button" parent="suferer/Control/PauseButtons" unique_id=2074551292]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Предметы"
+script = ExtResource("8_yx171")
+
+[node name="weapons" type="Button" parent="suferer/Control/PauseButtons" unique_id=1316595728]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(200, 80)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Оружие"
+script = ExtResource("8_yx171")
+
+[node name="armor" type="Button" parent="suferer/Control/PauseButtons" unique_id=565221546]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(-200, 25)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Броня"
+script = ExtResource("8_yx171")
+
+[node name="artifacts" type="Button" parent="suferer/Control/PauseButtons" unique_id=592583322]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 100)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Артефакты"
+script = ExtResource("8_yx171")
+
+[node name="soul" type="Button" parent="suferer/Control/PauseButtons" unique_id=1831066055]
+custom_minimum_size = Vector2(10, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, -90)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Душа"
+script = ExtResource("8_yx171")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="suferer/Control" unique_id=1422209920]
 libraries/ = SubResource("AnimationLibrary_lvtmh")
 
 [node name="PauseCooldown" type="Timer" parent="suferer/Control" unique_id=893809172]
@@ -445,6 +611,11 @@ metadata/_edit_lock_ = true
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="WeaponMenu" type="CanvasLayer" parent="." unique_id=2093587863]
+process_mode = 3
+visible = false
+script = ExtResource("9_yx171")
 
 [node name="Bravery" type="TextureProgressBar" parent="suferer/Control/Stats" unique_id=1533314272]
 layout_mode = 0
@@ -504,11 +675,106 @@ texture_under = ExtResource("13_hmewc")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1356691312]
 position = Vector2(4, 0)
-tile_map_data = PackedByteArray("AAAsABwAAQACAAAAAAArABwAAQACAAAAAAAqABwAAQACAAAAAAApABwAAQACAAAAAAAoABwAAQACAAAAAAAnABwAAQACAAAAAAAmABwAAQACAAAAAAAlABwAAQACAAAAAAAkABwAAQACAAAAAAAjABwAAQACAAAAAAAiABwAAQACAAAAAAAhABwAAQACAAAAAAAgABwAAQACAAAAAAAXABwAAQABAAAAAAAYABwAAQACAAAAAAAZABwAAQACAAAAAAAaABwAAQACAAAAAAAbABwAAQACAAAAAAAcABwAAQACAAAAAAAfABwAAQACAAAAAAAeABwAAQACAAAAAAAdABwAAQACAAAAAAAtABwAAQADAAAAAAAMAA0AAQACAAAAAAANAA0AAQACAAAAAAAOAA0AAQACAAAAAAAPAA0AAQACAAAAAAAQAA0AAQACAAAAAAARAA0AAQACAAAAAAASAA0AAQACAAAAAAATAA0AAQACAAAAAAAUAA0AAQACAAAAAAAVAAwAAQABAAAAAAAWAAsAAQABAAAAAAAWAAwAAQADAAMAAAAVAA0AAQADAAMAAAA=")
+tile_map_data = PackedByteArray("AAAtABwAAQAAAAAAAAAMAA0AAQAAAAAAAAANAA0AAQABAAAAAAAOAA0AAQACAAAAAAAPAA0AAQACAAAAAAAQAA0AAQACAAAAAAARAA0AAQACAAAAAAASAA0AAQACAAAAAAATAA0AAQACAAAAAAAUAA0AAQACAAAAAAAVAAwAAQAAAAIAAAAWAAsAAQACAAAAAAAWAAwAAQAAAAAAAAAVAA0AAQADAAMAAAALAA0AAQAAAAAAAAAKAA0AAQAAAAAAAAAJAA0AAQADAAAAAAAIAA0AAQACAAAAAAAHAA0AAQACAAAAAAAGAA0AAQACAAAAAAAFAA0AAQACAAAAAAAEAA0AAQACAAAAAAADAA0AAQACAAAAAAACAA0AAQACAAAAAAABAA0AAQAAAAAAAAABAAwAAQAAAAEAAAAAAAsAAQACAAAAAAD//woAAQAAAAEAAAD//wkAAQAAAAEAAAD//wgAAQAAAAEAAAD//wcAAQAAAAEAAAD//wYAAQAAAAEAAAD//wUAAQAAAAEAAAD//wQAAQAAAAEAAAAAAAMAAQACAAEAAAABAAIAAQAAAAEAAAACAAEAAQACAAEAAAADAAEAAQACAAEAAAAEAAEAAQACAAEAAAAFAAEAAQACAAEAAAAGAAEAAQACAAEAAAAHAAEAAQACAAEAAAAIAAEAAQACAAEAAAAJAAEAAQACAAEAAAAKAAEAAQACAAEAAAALAAEAAQACAAEAAAAMAAEAAQACAAEAAAANAAEAAQACAAEAAAAOAAEAAQACAAEAAAAPAAEAAQACAAEAAAAQAAEAAQACAAEAAAARAAEAAQACAAEAAAASAAEAAQACAAEAAAATAAEAAQACAAEAAAAUAAEAAQACAAEAAAAVAAIAAQAAAAIAAAAWAAMAAQACAAEAAAAXAAQAAQAAAAIAAAAXAAUAAQAAAAIAAAAXAAYAAQAAAAIAAAAXAAcAAQAAAAIAAAAXAAgAAQAAAAIAAAAXAAkAAQAAAAIAAAAXAAoAAQAAAAIAAAABAAMAAQADAAEAAAABAAsAAQADAAAAAAAVAAsAAQABAAAAAAAVAAMAAQABAAEAAAAKAAwAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_vkqoe")
-collision_visibility_mode = 1
 physics_quadrant_size = 32
 metadata/_edit_lock_ = true
+
+[node name="Коробка" type="Sprite2D" parent="TileMapLayer" unique_id=16970106]
+position = Vector2(67.75, 520.5)
+scale = Vector2(0.5410159, 0.5507813)
+texture = ExtResource("19_0mevm")
+
+[node name="Коробка2" type="Sprite2D" parent="TileMapLayer" unique_id=1315685399]
+position = Vector2(1407, 567)
+scale = Vector2(0.5048832, 0.49804723)
+texture = ExtResource("19_0mevm")
+
+[node name="Кампудадер" type="Sprite2D" parent="TileMapLayer" unique_id=1494491830]
+position = Vector2(885, 138)
+texture = ExtResource("20_w2501")
+
+[node name="Полароид" type="Sprite2D" parent="TileMapLayer" unique_id=1487758010]
+position = Vector2(1026, 68)
+scale = Vector2(0.35742202, 0.35742188)
+texture = ExtResource("19_w7ht3")
+
+[node name="Часики" type="Sprite2D" parent="TileMapLayer" unique_id=1663189135]
+position = Vector2(733, 47)
+scale = Vector2(0.2744142, 0.27612305)
+texture = ExtResource("20_8ktx7")
+
+[node name="ТвВремя" type="Sprite2D" parent="TileMapLayer/Часики" unique_id=1081408801]
+position = Vector2(-491.95703, 249.8886)
+scale = Vector2(2.4768672, 2.3978777)
+texture = ExtResource("21_hwsgv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer/Часики/ТвВремя" unique_id=1353767411]
+
+[node name="Шкаф" type="Sprite2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1189578746]
+position = Vector2(816.55164, 120.63718)
+scale = Vector2(0.9885053, 0.9572271)
+texture = ExtResource("18_y5ctq")
+
+[node name="ЕщеШкафНоКруче" type="Sprite2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1186433215]
+position = Vector2(1006.7125, 116.67258)
+scale = Vector2(0.9626435, 0.95280266)
+texture = ExtResource("11_0mevm")
+
+[node name="шкаф" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=167571115]
+position = Vector2(1015.17236, 131.16373)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="опять шкаф" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=196446093]
+position = Vector2(815.08044, 133.80682)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="кампудадер" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=578259198]
+position = Vector2(424.45984, 108.886444)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="тенна" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1271896543]
+position = Vector2(-5.149414, 86.0885)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="кровать" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=2090934529]
+position = Vector2(-481.0286, 93.64014)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_3gngh")
+
+[node name="корбка" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1902536654]
+position = Vector2(-778.29877, 640.98975)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_fcnqv")
+
+[node name="записки" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=889086289]
+position = Vector2(-797.42523, 803.49274)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_7numd")
+
+[node name="мусорка" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1098453669]
+position = Vector2(-626.02295, 996.81506)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_p1u0y")
+
+[node name="записка возрождение" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=45384335]
+position = Vector2(-467.862, 1007.38654)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_5s0fj")
+
+[node name="копррбка" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=247952142]
+position = Vector2(1191.724, 708.3423)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_33x8s")
+
+[node name="кактус" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1150356087]
+position = Vector2(1029.1494, 914.5021)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_2j2di")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1124898383]
 position = Vector2(1151, 480)
@@ -522,4 +788,6 @@ visible = false
 position = Vector2(92, 114)
 shape = SubResource("RectangleShape2D_yddip")
 
+[connection signal="pressed" from="suferer/Control/PauseButtons/weapons" to="." method="_on_weapons_pressed"]
+[connection signal="timeout" from="suferer/Control/Timer" to="suferer/Control" method="_on_timer_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]

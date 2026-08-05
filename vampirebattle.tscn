@@ -1,0 +1,67 @@
+[gd_scene format=4 uid="uid://bgydol8c1jqbh"]
+
+[ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/bunkerBaseTileSet.png" id="1_q0to4"]
+[ext_resource type="Texture2D" uid="uid://qkgxyidck7p2" path="res://assets/табличука.png" id="2_jx1ms"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jx1ms"]
+resource_name = "BunkerBase"
+texture = ExtResource("1_q0to4")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_uhdor"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+sources/1 = SubResource("TileSetAtlasSource_jx1ms")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(102, 56)
+
+[node name="Node2D" type="Node2D" unique_id=1602805018]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=688248922]
+position = Vector2(4, 0)
+tile_map_data = PackedByteArray("AAAtABwAAQAAAAAAAAAMAA0AAQACAAEAAAALAA0AAQACAAEAAAAKAA0AAQACAAEAAAABAA0AAQAAAAAAAAAAAAEAAQACAAAAAAABAAEAAQACAAAAAAACAAEAAQACAAAAAAADAAEAAQACAAAAAAAEAAEAAQACAAAAAAAFAAEAAQACAAAAAAAGAAEAAQACAAAAAAAAAAQAAQACAAEAAAABAAQAAQACAAEAAAACAAQAAQACAAEAAAADAAQAAQACAAEAAAAEAAQAAQACAAEAAAAFAAQAAQACAAEAAAAGAAQAAQACAAEAAAAHAAAAAQABAAAAAAAIAAAAAQACAAAAAAAJAAAAAQACAAAAAAAKAAAAAQACAAAAAAALAAAAAQACAAAAAAAMAAAAAQACAAAAAAANAAAAAQACAAAAAAAOAAAAAQACAAAAAAAPAAAAAQACAAAAAAAQAAAAAQACAAAAAAARAAAAAQACAAAAAAASAAAAAQACAAAAAAATAAAAAQACAAAAAAAUAAAAAQACAAAAAAAVAAAAAQACAAAAAAAWAAAAAQACAAAAAAAXAAAAAQACAAAAAAAYAAAAAQADAAAAAAAYAAEAAQAAAAEAAAAYAAIAAQAAAAEAAAAYAAMAAQAAAAEAAAAYAAQAAQAAAAEAAAAYAAUAAQAAAAEAAAAYAAYAAQAAAAEAAAAYAAcAAQAAAAEAAAAYAAgAAQAAAAEAAAAYAAkAAQAAAAEAAAAYAAoAAQAAAAEAAAAYAAsAAQAAAAEAAAAYAAwAAQAAAAEAAAAYAA0AAQADAAEAAAAXAA0AAQACAAEAAAAWAA0AAQACAAEAAAAVAA0AAQACAAEAAAAUAA0AAQACAAEAAAATAA0AAQACAAEAAAASAA0AAQACAAEAAAARAA0AAQACAAEAAAAQAA0AAQACAAEAAAAPAA0AAQACAAEAAAAOAA0AAQACAAEAAAANAA0AAQACAAEAAAAJAA0AAQACAAEAAAAIAA0AAQACAAEAAAAHAA0AAQABAAEAAAAHAAwAAQAAAAIAAAAHAAsAAQAAAAIAAAAHAAoAAQAAAAIAAAAHAAkAAQAAAAIAAAAHAAgAAQAAAAIAAAAHAAYAAQAAAAIAAAAHAAcAAQAAAAIAAAAHAAUAAQAAAAIAAAA=")
+tile_set = SubResource("TileSet_uhdor")
+physics_quadrant_size = 32
+
+[node name="Табличука" type="Sprite2D" parent="." unique_id=2041351770]
+position = Vector2(360, 27.000002)
+scale = Vector2(0.40625, 0.3671875)
+texture = ExtResource("2_jx1ms")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=537184716]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=952358802]
+position = Vector2(360, 35)
+shape = SubResource("RectangleShape2D_g4v7s")
