@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq20swuh0uckk" path="res://Game.gd" id="1_wbfu4"]
 [ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://suferer.gd" id="2_gwjdr"]
-[ext_resource type="Texture2D" uid="uid://ccup5xq3revbb" path="res://assets/ковер.png" id="2_hmewc"]
+[ext_resource type="Texture2D" uid="uid://ccup5xq3revbb" path="res://assets/karped.png" id="2_hmewc"]
 [ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/bunkerBaseTileSet.png" id="2_lvtmh"]
 [ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/sufferer.png" id="2_yx171"]
 [ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/suffererFocuses.png" id="3_gwjdr"]
@@ -12,18 +12,18 @@
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="7_2vekm"]
 [ext_resource type="Script" uid="uid://7piat6annc02" path="res://PersonaButtonWobble.gd" id="8_yx171"]
 [ext_resource type="Script" uid="uid://dwm84cdu7ijw" path="res://WeaponMenu.gd" id="9_yx171"]
-[ext_resource type="Texture2D" uid="uid://cryqkg50ghv76" path="res://assets/кровать.png" id="10_7ged1"]
+[ext_resource type="Texture2D" uid="uid://cryqkg50ghv76" path="res://assets/bed.png" id="10_7ged1"]
 [ext_resource type="Texture2D" uid="uid://ccbjf0xu6plfn" path="res://assets/interface/weapon.png" id="10_yhmtn"]
-[ext_resource type="Texture2D" uid="uid://cxtehhiceee0w" path="res://assets/еще шкаф но круче.png" id="11_0mevm"]
-[ext_resource type="Texture2D" uid="uid://bkecsrnsilnre" path="res://assets/мусорка.png" id="12_w2501"]
-[ext_resource type="Texture2D" uid="uid://cjro76nlfdwrg" path="res://assets/кiктус.png" id="13_jsoai"]
-[ext_resource type="Texture2D" uid="uid://byq3330yhtwvr" path="res://assets/записки сумашедшего.png" id="14_bisgb"]
-[ext_resource type="Texture2D" uid="uid://dcx448u8mlio6" path="res://assets/шкаф.png" id="18_y5ctq"]
-[ext_resource type="Texture2D" uid="uid://bgxt8bte3q4bn" path="res://assets/коробка.png" id="19_0mevm"]
-[ext_resource type="Texture2D" uid="uid://cxio5bbvpqyh2" path="res://assets/полароид.png" id="19_w7ht3"]
-[ext_resource type="Texture2D" uid="uid://uuo08tvugsbs" path="res://assets/часики.png" id="20_8ktx7"]
-[ext_resource type="Texture2D" uid="uid://0atby4jm31fo" path="res://assets/кампудадер.png" id="20_w2501"]
-[ext_resource type="Texture2D" uid="uid://8yu1qutkfbt" path="res://assets/тв время.png" id="21_hwsgv"]
+[ext_resource type="Texture2D" uid="uid://cxtehhiceee0w" path="res://assets/what.png" id="11_0mevm"]
+[ext_resource type="Texture2D" uid="uid://bkecsrnsilnre" path="res://assets/trash.png" id="12_w2501"]
+[ext_resource type="Texture2D" uid="uid://cjro76nlfdwrg" path="res://assets/cactus.png" id="13_jsoai"]
+[ext_resource type="Texture2D" uid="uid://byq3330yhtwvr" path="res://assets/paper.png" id="14_bisgb"]
+[ext_resource type="Texture2D" uid="uid://dcx448u8mlio6" path="res://assets/coffen.png" id="18_y5ctq"]
+[ext_resource type="Texture2D" uid="uid://bgxt8bte3q4bn" path="res://assets/box.png" id="19_0mevm"]
+[ext_resource type="Texture2D" uid="uid://cxio5bbvpqyh2" path="res://assets/photocard.png" id="19_w7ht3"]
+[ext_resource type="Texture2D" uid="uid://uuo08tvugsbs" path="res://assets/clock.png" id="20_8ktx7"]
+[ext_resource type="Texture2D" uid="uid://0atby4jm31fo" path="res://assets/PC.png" id="20_w2501"]
+[ext_resource type="Texture2D" uid="uid://8yu1qutkfbt" path="res://assets/TVtime.png" id="21_hwsgv"]
 =======
 [ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/empty_Hearth.png" id="5_2vekm"]
 [ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://menu.gd" id="5_yhmtn"]
@@ -526,7 +526,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("7_2vekm")
 theme_override_font_sizes/font_size = 38
-text = "Предметы"
+text = "Items"
 script = ExtResource("8_yx171")
 
 [node name="weapons" type="Button" parent="suferer/Control/PauseButtons" unique_id=1316595728]
@@ -539,7 +539,7 @@ offset_transform_position = Vector2(200, 80)
 offset_transform_visual_only = false
 theme_override_fonts/font = ExtResource("7_2vekm")
 theme_override_font_sizes/font_size = 38
-text = "Оружие"
+text = "Weapons"
 script = ExtResource("8_yx171")
 
 [node name="armor" type="Button" parent="suferer/Control/PauseButtons" unique_id=565221546]
@@ -565,7 +565,7 @@ offset_transform_position = Vector2(1, 100)
 offset_transform_visual_only = false
 theme_override_fonts/font = ExtResource("7_2vekm")
 theme_override_font_sizes/font_size = 38
-text = "Артефакты"
+text = "Artefacts"
 script = ExtResource("8_yx171")
 
 [node name="soul" type="Button" parent="suferer/Control/PauseButtons" unique_id=1831066055]
@@ -578,7 +578,7 @@ offset_transform_position = Vector2(1, -90)
 offset_transform_visual_only = false
 theme_override_fonts/font = ExtResource("7_2vekm")
 theme_override_font_sizes/font_size = 38
-text = "Душа"
+text = "Soul"
 script = ExtResource("8_yx171")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="suferer/Control" unique_id=1422209920]
