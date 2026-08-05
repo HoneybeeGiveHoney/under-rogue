@@ -4,13 +4,13 @@ var speed = 200
 
 func _process(delta):
 	var velocity = Vector2.ZERO  # выставляет текущее направление на 0
-	if Input.is_action_pressed("move_right"): # когда кнопка вверх нажата...
+	if Input.is_action_pressed("move_right") and GlobalData.IsPausing == 0: # когда кнопка вверх нажата...
 		velocity.x += 1 # ... меняем направление (велосити) 
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("move_left") and GlobalData.IsPausing == 0:
 		velocity.x -= 1
-	if Input.is_action_pressed("move_down"):
+	if Input.is_action_pressed("move_down") and GlobalData.IsPausing == 0:
 		velocity.y += 1
-	if Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("move_up") and GlobalData.IsPausing == 0:
 		velocity.y -= 1
 
 	if velocity.x == 1 and velocity.y == 0:
@@ -21,7 +21,7 @@ func _process(delta):
 		$Player.play("walk_up")
 	if velocity.y == 1:
 		$Player.play("walk_down")
-	if velocity.x == 0 and velocity.y == 0:
+	if velocity.x == 0 and velocity.y == 0 and GlobalData.IsPausing == 0:
 		$Player.play("standing")
 	
 	move_and_slide()
