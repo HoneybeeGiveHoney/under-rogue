@@ -1,0 +1,469 @@
+[gd_scene format=4 uid="uid://yp28usj6lkrn"]
+
+[ext_resource type="Script" uid="uid://cq20swuh0uckk" path="res://Game.gd" id="1_wbfu4"]
+[ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://suferer.gd" id="2_gwjdr"]
+[ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/bunkerBaseTileSet.png" id="2_lvtmh"]
+[ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/sufferer.png" id="2_yx171"]
+[ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/suffererFocuses.png" id="3_gwjdr"]
+[ext_resource type="Texture2D" uid="uid://begowx0vyyvc" path="res://icon.svg" id="4_yhmtn"]
+[ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://menu.gd" id="5_yhmtn"]
+[ext_resource type="Theme" uid="uid://b5au4x8s54862" path="res://PersonaTheme.tres" id="6_joorw"]
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="7_2vekm"]
+[ext_resource type="Script" uid="uid://7piat6annc02" path="res://PersonaButtonWobble.gd" id="8_yx171"]
+[ext_resource type="Script" uid="uid://dwm84cdu7ijw" path="res://WeaponMenu.gd" id="9_yx171"]
+[ext_resource type="Texture2D" uid="uid://ccbjf0xu6plfn" path="res://assets/interface/weapon.png" id="10_yhmtn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ged1"]
+atlas = ExtResource("2_yx171")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mevm"]
+atlas = ExtResource("3_gwjdr")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2501"]
+atlas = ExtResource("3_gwjdr")
+region = Rect2(19, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsoai"]
+atlas = ExtResource("3_gwjdr")
+region = Rect2(38, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx171"]
+atlas = ExtResource("2_yx171")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwjdr"]
+atlas = ExtResource("2_yx171")
+region = Rect2(19, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhmtn"]
+atlas = ExtResource("2_yx171")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvtmh"]
+atlas = ExtResource("2_yx171")
+region = Rect2(38, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuoie"]
+atlas = ExtResource("2_yx171")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyih5"]
+atlas = ExtResource("2_yx171")
+region = Rect2(0, 72, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjyg3"]
+atlas = ExtResource("2_yx171")
+region = Rect2(19, 72, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elkpi"]
+atlas = ExtResource("2_yx171")
+region = Rect2(38, 36, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yprl"]
+atlas = ExtResource("2_yx171")
+region = Rect2(57, 36, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvhbk"]
+atlas = ExtResource("2_yx171")
+region = Rect2(0, 36, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmewc"]
+atlas = ExtResource("2_yx171")
+region = Rect2(57, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpsxm"]
+atlas = ExtResource("2_yx171")
+region = Rect2(19, 36, 19, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sn0t7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ged1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mevm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2501")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsoai")
+}],
+"loop": 1,
+"name": &"focus",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx171")
+}],
+"loop": 1,
+"name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwjdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhmtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvtmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuoie")
+}],
+"loop": 1,
+"name": &"walk_down",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyih5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjyg3")
+}],
+"loop": 1,
+"name": &"walk_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elkpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yprl")
+}],
+"loop": 1,
+"name": &"walk_right",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvhbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmewc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpsxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmewc")
+}],
+"loop": 1,
+"name": &"walk_up",
+"speed": 3.0
+}]
+
+[sub_resource type="Animation" id="Animation_yhmtn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gwjdr"]
+resource_name = "menu Appear"
+length = 1.5333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 0.9330335),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.84705883)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.84705883)]
+}
+
+[sub_resource type="Animation" id="Animation_lvtmh"]
+resource_name = "menu Disappear"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.84705883), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.84705883), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lvtmh"]
+_data = {
+&"RESET": SubResource("Animation_yhmtn"),
+&"menu Appear": SubResource("Animation_gwjdr"),
+&"menu Disappear": SubResource("Animation_lvtmh")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vkqoe"]
+radius = 14.866069
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkqoe"]
+size = Vector2(65, 126)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yyih5"]
+resource_name = "BunkerBase"
+texture = ExtResource("2_lvtmh")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_vkqoe"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+sources/1 = SubResource("TileSetAtlasSource_yyih5")
+
+[node name="Game" type="Node2D" unique_id=276615565]
+script = ExtResource("1_wbfu4")
+
+[node name="suferer" type="CharacterBody2D" parent="." unique_id=589321758]
+position = Vector2(733, 525)
+disable_mode = 2
+collision_layer = 3
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+platform_wall_layers = 1
+safe_margin = 2.25
+script = ExtResource("2_gwjdr")
+
+[node name="Player" type="AnimatedSprite2D" parent="suferer" unique_id=684773280]
+position = Vector2(4.000004, 0.99998474)
+scale = Vector2(3.7500002, 3.7375004)
+sprite_frames = SubResource("SpriteFrames_sn0t7")
+animation = &"focus"
+
+[node name="Camera2D" type="Camera2D" parent="suferer/Player" unique_id=75503610]
+position = Vector2(-0.69999695, 1.2642212)
+scale = Vector2(0.26666665, 0.2675585)
+ignore_rotation = false
+position_smoothing_speed = 3.485
+rotation_smoothing_speed = 3.47
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.03
+drag_top_margin = 0.05
+drag_right_margin = 0.03
+drag_bottom_margin = 0.05
+editor_draw_drag_margin = true
+
+[node name="Control" type="Control" parent="suferer" unique_id=1973266937]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -17.0
+offset_top = -16.0
+offset_right = 23.0
+offset_bottom = 24.0
+pivot_offset = Vector2(736, 535)
+script = ExtResource("5_yhmtn")
+
+[node name="ColorRect" type="ColorRect" parent="suferer/Control" unique_id=269642977]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -786.99994
+offset_top = -433.99997
+offset_right = -746.99994
+offset_bottom = -393.99997
+scale = Vector2(40.21926, 22.742409)
+color = Color(0, 0, 0, 0.81960785)
+
+[node name="PauseButtons" type="VBoxContainer" parent="suferer/Control" unique_id=2062400112]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -99.0
+offset_top = -176.0
+offset_right = 145.0
+offset_bottom = 145.0
+pivot_offset = Vector2(117, 195)
+theme = ExtResource("6_joorw")
+alignment = 2
+
+[node name="items" type="Button" parent="suferer/Control/PauseButtons" unique_id=2074551292]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Предметы"
+script = ExtResource("8_yx171")
+
+[node name="weapons" type="Button" parent="suferer/Control/PauseButtons" unique_id=1316595728]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(200, 80)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Оружие"
+script = ExtResource("8_yx171")
+
+[node name="armor" type="Button" parent="suferer/Control/PauseButtons" unique_id=565221546]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(-200, 25)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Броня"
+script = ExtResource("8_yx171")
+
+[node name="artifacts" type="Button" parent="suferer/Control/PauseButtons" unique_id=592583322]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 100)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Артефакты"
+script = ExtResource("8_yx171")
+
+[node name="soul" type="Button" parent="suferer/Control/PauseButtons" unique_id=1831066055]
+custom_minimum_size = Vector2(10, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, -90)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("7_2vekm")
+theme_override_font_sizes/font_size = 38
+text = "Душа"
+script = ExtResource("8_yx171")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="suferer/Control" unique_id=1422209920]
+libraries/ = SubResource("AnimationLibrary_lvtmh")
+
+[node name="Timer" type="Timer" parent="suferer/Control" unique_id=893809172]
+one_shot = true
+
+[node name="hitbox" type="CollisionShape2D" parent="suferer" unique_id=291621689]
+shape = SubResource("CircleShape2D_vkqoe")
+
+[node name="Collision Box" type="CollisionShape2D" parent="suferer" unique_id=415880694]
+position = Vector2(3.5, 1)
+shape = SubResource("RectangleShape2D_vkqoe")
+debug_color = Color(0.77254903, 0.40392157, 0.49019608, 0.05490196)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1106776054]
+position = Vector2(410, 122)
+scale = Vector2(3.7500002, 3.7375004)
+texture = ExtResource("4_yhmtn")
+
+[node name="WeaponMenu" type="CanvasLayer" parent="." unique_id=2093587863]
+process_mode = 3
+visible = false
+script = ExtResource("9_yx171")
+
+[node name="Background" type="TextureRect" parent="WeaponMenu" unique_id=117437604]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_yhmtn")
+
+[node name="WeaponList" type="VBoxContainer" parent="WeaponMenu" unique_id=47507048]
+offset_right = 191.0
+offset_bottom = 648.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1356691312]
+position = Vector2(4, 0)
+tile_map_data = PackedByteArray("AAAsABwAAQACAAAAAAArABwAAQACAAAAAAAqABwAAQACAAAAAAApABwAAQACAAAAAAAoABwAAQACAAAAAAAnABwAAQACAAAAAAAmABwAAQACAAAAAAAlABwAAQACAAAAAAAkABwAAQACAAAAAAAjABwAAQACAAAAAAAiABwAAQACAAAAAAAhABwAAQACAAAAAAAgABwAAQACAAAAAAAXABwAAQABAAAAAAAYABwAAQACAAAAAAAZABwAAQACAAAAAAAaABwAAQACAAAAAAAbABwAAQACAAAAAAAcABwAAQACAAAAAAAfABwAAQACAAAAAAAeABwAAQACAAAAAAAdABwAAQACAAAAAAAtABwAAQADAAAAAAAMAA0AAQACAAAAAAANAA0AAQACAAAAAAAOAA0AAQACAAAAAAAPAA0AAQACAAAAAAAQAA0AAQACAAAAAAARAA0AAQACAAAAAAASAA0AAQACAAAAAAATAA0AAQACAAAAAAAUAA0AAQACAAAAAAAVAAwAAQABAAAAAAAWAAsAAQABAAAAAAAWAAwAAQADAAMAAAAVAA0AAQADAAMAAAA=")
+tile_set = SubResource("TileSet_vkqoe")
+collision_visibility_mode = 1
+physics_quadrant_size = 32
+
+[connection signal="pressed" from="suferer/Control/PauseButtons/weapons" to="." method="_on_weapons_pressed"]
+[connection signal="timeout" from="suferer/Control/Timer" to="suferer/Control" method="_on_timer_timeout"]

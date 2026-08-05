@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://l6gu040lbvfk"]
+
+[ext_resource type="Script" uid="uid://ccc1i6kdj3ywp" path="res://SoulSelect.gd" id="1_3bg01"]
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="1_m1bos"]
+[ext_resource type="Theme" uid="uid://j1ftw6ugclkr" path="res://UndertaleTheme.tres" id="3_abeax"]
+[ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/empty_Hearth.png" id="4_3bg01"]
+
+[node name="SoulSelect" type="Control" unique_id=1361785565]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3bg01")
+
+[node name="Label" type="Label" parent="." unique_id=1606536054]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 107.0
+offset_right = 1177.0
+offset_bottom = 158.0
+pivot_offset = Vector2(372, 25)
+theme_override_fonts/font = ExtResource("1_m1bos")
+theme_override_font_sizes/font_size = 43
+text = "Какую душу вы выберите?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoulButton" type="Button" parent="." unique_id=1605553312]
+texture_filter = 1
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 0
+offset_left = 744.0
+offset_top = 341.0
+offset_right = 884.0
+offset_bottom = 481.0
+theme = ExtResource("3_abeax")
+icon = ExtResource("4_3bg01")
+expand_icon = true
+
+[node name="Label" type="Label" parent="SoulButton" unique_id=467158814]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.079
+anchor_right = 0.5
+anchor_bottom = 1.079
+offset_left = -72.5
+offset_top = -12.929001
+offset_right = 72.5
+offset_bottom = 13.070999
+theme = ExtResource("3_abeax")
+theme_override_fonts/font = ExtResource("1_m1bos")
+theme_override_font_sizes/font_size = 26
+text = "Пустая
+Оболочка"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="SoulButton" to="." method="_on_soul_button_mouse_entered"]
+[connection signal="mouse_exited" from="SoulButton" to="." method="_on_soul_button_mouse_exited"]
+[connection signal="pressed" from="SoulButton" to="." method="_on_soul_button_pressed"]

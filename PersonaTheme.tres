@@ -1,0 +1,43 @@
+[gd_resource type="Theme" format=3 uid="uid://b5au4x8s54862"]
+
+[sub_resource type="StyleBoxFlat" id="PersonaNormal"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="PersonaHover"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0.8, 0, 0, 1)
+skew = Vector2(-0.3, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="PersonaPressed"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0.55, 0, 0, 1)
+skew = Vector2(-0.3, 0)
+anti_aliasing = false
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/styles/disabled = SubResource("PersonaNormal")
+Button/styles/focus = SubResource("PersonaHover")
+Button/styles/hover = SubResource("PersonaHover")
+Button/styles/normal = SubResource("PersonaNormal")
+Button/styles/pressed = SubResource("PersonaPressed")

@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://dyetghegpx448"]
+
+[ext_resource type="Texture2D" uid="uid://begowx0vyyvc" path="res://icon.svg" id="1_3pj0e"]
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="2_ev681"]
+[ext_resource type="Script" uid="uid://c0kkxe54tcxxn" path="res://StartScreen.gd" id="3_ev681"]
+[ext_resource type="Texture2D" uid="uid://b2lubhbiqvnsi" path="res://assets/bad_content.png" id="4_gxmh3"]
+[ext_resource type="Texture2D" uid="uid://c4pb8t67dr7tw" path="res://assets/karp335.jpg" id="5_8g407"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vkqoe"]
+line_spacing = 2.8
+font = ExtResource("2_ev681")
+font_size = 23
+
+[sub_resource type="LabelSettings" id="LabelSettings_co6qv"]
+font = ExtResource("2_ev681")
+font_size = 33
+
+[sub_resource type="LabelSettings" id="LabelSettings_yddip"]
+font = ExtResource("2_ev681")
+font_size = 95
+
+[sub_resource type="LabelSettings" id="LabelSettings_w7t7a"]
+font = ExtResource("2_ev681")
+font_size = 53
+
+[sub_resource type="LabelSettings" id="LabelSettings_cxmk6"]
+font = ExtResource("2_ev681")
+font_size = 95
+
+[sub_resource type="LabelSettings" id="LabelSettings_aop6e"]
+font = ExtResource("2_ev681")
+font_size = 22
+font_color = Color(1, 1, 0.5058824, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3pj0e"]
+font = ExtResource("2_ev681")
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_ygbk1"]
+font = ExtResource("2_ev681")
+font_size = 18
+
+[node name="Control" type="Control" unique_id=476641998]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=993377529]
+position = Vector2(110, 781)
+texture = ExtResource("1_3pj0e")
+
+[node name="made on godot" type="Label" parent="." unique_id=261198163]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 857.0
+offset_right = 151.0
+offset_bottom = 882.0
+scale = Vector2(1.4799988, 1.44)
+text = "made on godot"
+label_settings = SubResource("LabelSettings_vkqoe")
+metadata/_edit_group_ = true
+
+[node name="inspired" type="Label" parent="." unique_id=2010757023]
+layout_mode = 0
+offset_left = 571.0
+offset_top = 325.0
+offset_right = 1055.0
+offset_bottom = 361.0
+pivot_offset = Vector2(243, 17)
+text = "Heavily inspired by Toby Fox`s "
+label_settings = SubResource("LabelSettings_co6qv")
+metadata/_edit_group_ = true
+
+[node name="DELTARUNE" type="Label" parent="." unique_id=1001313327]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 348.0
+offset_right = 1031.0
+offset_bottom = 449.0
+pivot_offset = Vector2(219, 49)
+text = "DELTARUNE"
+label_settings = SubResource("LabelSettings_yddip")
+metadata/_edit_group_ = true
+
+[node name="&" type="Label" parent="." unique_id=1301454252]
+layout_mode = 0
+offset_left = 783.0
+offset_top = 434.0
+offset_right = 823.0
+offset_bottom = 476.0
+text = "&"
+label_settings = SubResource("LabelSettings_w7t7a")
+metadata/_edit_group_ = true
+
+[node name="UNDERTALE" type="Label" parent="." unique_id=711233642]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 471.0
+offset_right = 1028.0
+offset_bottom = 572.0
+pivot_offset = Vector2(214, 48)
+text = "UNDERTALE"
+label_settings = SubResource("LabelSettings_cxmk6")
+metadata/_edit_group_ = true
+
+[node name="(and undertale yellow)" type="Label" parent="." unique_id=818246379]
+layout_mode = 0
+offset_left = 684.0
+offset_top = 562.0
+offset_right = 926.0
+offset_bottom = 586.0
+text = "(and undertale yellow) "
+label_settings = SubResource("LabelSettings_aop6e")
+metadata/_edit_group_ = true
+
+[node name="code by" type="Label" parent="." unique_id=525373495]
+layout_mode = 0
+offset_left = 1486.0
+offset_top = 741.0
+offset_right = 1581.0
+offset_bottom = 769.0
+text = "code by:"
+label_settings = SubResource("LabelSettings_3pj0e")
+metadata/_edit_group_ = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1968694662]
+wait_time = 3.3009999999999997
+autostart = true
+script = ExtResource("3_ev681")
+
+[node name="BadContent" type="Sprite2D" parent="." unique_id=781806507]
+position = Vector2(1535.0001, 825)
+scale = Vector2(0.20368175, 0.20368175)
+texture = ExtResource("4_gxmh3")
+metadata/_edit_group_ = true
+
+[node name="bad content" type="Label" parent="." unique_id=977165066]
+layout_mode = 0
+offset_left = 1486.0
+offset_top = 869.0
+offset_right = 1590.0
+offset_bottom = 897.0
+text = "bad_content"
+label_settings = SubResource("LabelSettings_ygbk1")
+metadata/_edit_group_ = true
+
+[node name="main author" type="Label" parent="." unique_id=57473654]
+layout_mode = 0
+offset_left = 1449.0
+offset_top = 452.0
+offset_right = 1607.0
+offset_bottom = 511.0
+text = "main author:"
+label_settings = SubResource("LabelSettings_3pj0e")
+metadata/_edit_group_ = true
+
+[node name="Karp335" type="Sprite2D" parent="." unique_id=2125296365]
+position = Vector2(1524.0001, 558)
+scale = Vector2(0.18393344, 0.15091039)
+texture = ExtResource("5_8g407")
+metadata/_edit_group_ = true
+
+[node name="karp" type="Label" parent="." unique_id=504424666]
+layout_mode = 0
+offset_left = 1475.0
+offset_top = 628.0
+offset_right = 1583.0
+offset_bottom = 671.0
+text = "    karp335
+(Tarelocnic)"
+label_settings = SubResource("LabelSettings_ygbk1")
+metadata/_edit_group_ = true
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

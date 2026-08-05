@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://b46jaqlfjhrvd"]
+
+[ext_resource type="Script" uid="uid://cbuguqi6mie74" path="res://MainMenu.gd" id="1_eiy7p"]
+[ext_resource type="Theme" uid="uid://j1ftw6ugclkr" path="res://UndertaleTheme.tres" id="1_h7a2f"]
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="2_h7a2f"]
+[ext_resource type="Texture2D" uid="uid://cigwssp7sgnix" path="res://assets/mainScreen.png" id="3_iwfq2"]
+[ext_resource type="Texture2D" uid="uid://w3t2sashd0tk" path="res://assets/MMbuttonpulse.png" id="4_qoqlk"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_bhunq"]
+
+[sub_resource type="Animation" id="Animation_iwfq2"]
+resource_name = "appearing"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CPUParticles2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.9666667, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("play:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.0333333, 5.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CPUParticles2D2:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.0333333, 5.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainScreen:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.033333335, 2.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7r1g0"]
+_data = {
+&"appearing": SubResource("Animation_iwfq2")
+}
+
+[node name="MainMenu" type="Control" unique_id=1970144106]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_h7a2f")
+script = ExtResource("1_eiy7p")
+
+[node name="MainScreen" type="Sprite2D" parent="." unique_id=1674757713]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(802, 448)
+texture = ExtResource("3_iwfq2")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=2074962078]
+modulate = Color(1, 1, 1, 0.21568628)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(789, 658)
+amount = 26
+texture = ExtResource("4_qoqlk")
+lifetime = 0.5
+preprocess = 1.26
+speed_scale = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+direction = Vector2(39.67, -40)
+spread = 180.0
+gravity = Vector2(0, 24.495)
+initial_velocity_min = 10.17
+initial_velocity_max = 27.52
+angular_velocity_min = -4.0
+angular_velocity_max = 6.0
+color = Color(1, 1, 1, 0.6745098)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="play" type="Button" parent="." unique_id=903482113]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 110)
+custom_maximum_size = Vector2(-1, 60)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36
+anchor_top = 0.702
+anchor_right = 0.62600005
+anchor_bottom = 0.76900005
+offset_left = -1.0
+offset_top = -3.8000488
+offset_right = -0.60009766
+offset_bottom = -4.1000366
+theme_override_fonts/font = ExtResource("2_h7a2f")
+theme_override_font_sizes/font_size = 38
+action_mode = 0
+text = "Играть"
+icon = SubResource("ImageTexture_bhunq")
+metadata/_edit_group_ = true
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." unique_id=1335107300]
+modulate = Color(1, 1, 1, 0.21568628)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(789, 780)
+amount = 26
+texture = ExtResource("4_qoqlk")
+lifetime = 0.5
+preprocess = 1.26
+speed_scale = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+direction = Vector2(39.67, -40)
+spread = 180.0
+gravity = Vector2(0, 24.495)
+initial_velocity_min = 10.17
+initial_velocity_max = 27.52
+angular_velocity_min = -4.0
+angular_velocity_max = 6.0
+color = Color(1, 1, 1, 0.6745098)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Button2" type="Button" parent="." unique_id=358865572]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(11, 110)
+custom_maximum_size = Vector2(-1, 60)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36
+anchor_top = 0.83400005
+anchor_right = 0.62600005
+anchor_bottom = 0.901
+offset_top = -54.600037
+offset_right = 0.39990234
+offset_bottom = -54.900024
+pivot_offset = Vector2(211, 87)
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 55)
+offset_transform_visual_only = false
+theme_override_fonts/font = ExtResource("2_h7a2f")
+theme_override_font_sizes/font_size = 38
+action_mode = 0
+text = "Настройки"
+icon = SubResource("ImageTexture_bhunq")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1772671595]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 480.0
+offset_top = 35.0
+offset_right = 1064.0
+offset_bottom = 115.0
+theme_override_fonts/font = ExtResource("2_h7a2f")
+theme_override_font_sizes/font_size = 60
+text = "UnderRogue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1619174770]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_7r1g0")
+autoplay = &"appearing"
+
+[connection signal="pressed" from="play" to="." method="_on_button_pressed"]
