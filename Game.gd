@@ -1,3 +1,3 @@
 extends Node2D
 
-var IsPausing = 0
+var IsPaused = 0
