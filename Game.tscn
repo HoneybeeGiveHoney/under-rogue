@@ -345,32 +345,32 @@ size = Vector2(125.05744, 321.69922)
 [node name="Game" type="Node2D" unique_id=276615565]
 script = ExtResource("1_wbfu4")
 
-[node name="Кровать" type="Sprite2D" parent="." unique_id=1907744260]
+[node name="bad" type="Sprite2D" parent="." unique_id=1907744260]
 position = Vector2(274.99997, 147)
 scale = Vector2(1.1210938, 1.015625)
 texture = ExtResource("10_7ged1")
 
-[node name="Мусорка" type="Sprite2D" parent="." unique_id=1696976934]
+[node name="trash" type="Sprite2D" parent="." unique_id=1696976934]
 position = Vector2(182, 766)
 scale = Vector2(0.51953125, 0.5390625)
 texture = ExtResource("12_w2501")
 
-[node name="Кiктус" type="Sprite2D" parent="." unique_id=1375895934]
+[node name="cactus" type="Sprite2D" parent="." unique_id=1375895934]
 position = Vector2(1304, 719)
 scale = Vector2(0.90234375, 0.875)
 texture = ExtResource("13_jsoai")
 
-[node name="ЗапискиСумашедшего" type="Sprite2D" parent="." unique_id=651173605]
+[node name="paper" type="Sprite2D" parent="." unique_id=651173605]
 position = Vector2(68, 648)
 scale = Vector2(0.46484375, 0.44921875)
 texture = ExtResource("14_bisgb")
 
-[node name="ЗапискиСумашедшего2" type="Sprite2D" parent="." unique_id=488263684]
+[node name="paper2" type="Sprite2D" parent="." unique_id=488263684]
 position = Vector2(293, 783)
 scale = Vector2(0.46484375, 0.44921875)
 texture = ExtResource("14_bisgb")
 
-[node name="Ковер" type="Sprite2D" parent="." unique_id=1231931084]
+[node name="karped" type="Sprite2D" parent="." unique_id=1231931084]
 position = Vector2(739, 530)
 scale = Vector2(1.3363309, 1.2148438)
 texture = ExtResource("2_hmewc")
@@ -536,98 +536,98 @@ tile_map_data = PackedByteArray("AAAtABwAAQAAAAAAAAAMAA0AAQAAAAAAAAANAA0AAQABAAA
 tile_set = SubResource("TileSet_vkqoe")
 physics_quadrant_size = 32
 
-[node name="Коробка" type="Sprite2D" parent="TileMapLayer" unique_id=16970106]
+[node name="box" type="Sprite2D" parent="TileMapLayer" unique_id=16970106]
 position = Vector2(67.75, 520.5)
 scale = Vector2(0.5410159, 0.5507813)
 texture = ExtResource("19_0mevm")
 
-[node name="Коробка2" type="Sprite2D" parent="TileMapLayer" unique_id=1315685399]
+[node name="box2" type="Sprite2D" parent="TileMapLayer" unique_id=1315685399]
 position = Vector2(1407, 567)
 scale = Vector2(0.5048832, 0.49804723)
 texture = ExtResource("19_0mevm")
 
-[node name="Кампудадер" type="Sprite2D" parent="TileMapLayer" unique_id=1494491830]
+[node name="PC" type="Sprite2D" parent="TileMapLayer" unique_id=1494491830]
 position = Vector2(885, 138)
 texture = ExtResource("20_w2501")
 
-[node name="Полароид" type="Sprite2D" parent="TileMapLayer" unique_id=1487758010]
+[node name="photocard" type="Sprite2D" parent="TileMapLayer" unique_id=1487758010]
 position = Vector2(1026, 68)
 scale = Vector2(0.35742202, 0.35742188)
 texture = ExtResource("19_w7ht3")
 
-[node name="Часики" type="Sprite2D" parent="TileMapLayer" unique_id=1663189135]
+[node name="clock" type="Sprite2D" parent="TileMapLayer" unique_id=1663189135]
 position = Vector2(733, 47)
 scale = Vector2(0.2744142, 0.27612305)
 texture = ExtResource("20_8ktx7")
 
-[node name="ТвВремя" type="Sprite2D" parent="TileMapLayer/Часики" unique_id=1081408801]
+[node name="TVtime" type="Sprite2D" parent="TileMapLayer/clock" unique_id=1081408801]
 position = Vector2(-491.95703, 249.8886)
 scale = Vector2(2.4768672, 2.3978777)
 texture = ExtResource("21_hwsgv")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer/Часики/ТвВремя" unique_id=1353767411]
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer/clock/TVtime" unique_id=1353767411]
 
-[node name="Шкаф" type="Sprite2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1189578746]
+[node name="coffen" type="Sprite2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=1189578746]
 position = Vector2(816.55164, 120.63718)
 scale = Vector2(0.9885053, 0.9572271)
 texture = ExtResource("18_y5ctq")
 
-[node name="ЕщеШкафНоКруче" type="Sprite2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1186433215]
+[node name="what" type="Sprite2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=1186433215]
 position = Vector2(1006.7125, 116.67258)
 scale = Vector2(0.9626435, 0.95280266)
 texture = ExtResource("11_0mevm")
 
-[node name="шкаф" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=167571115]
+[node name="coffen2" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=167571115]
 position = Vector2(1015.17236, 131.16373)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="опять шкаф" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=196446093]
+[node name="chert" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=196446093]
 position = Vector2(815.08044, 133.80682)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="кампудадер" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=578259198]
+[node name="pc" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=578259198]
 position = Vector2(424.45984, 108.886444)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_57qmd")
 
-[node name="тенна" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1271896543]
+[node name="tv" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=1271896543]
 position = Vector2(-5.149414, 86.0885)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_d0u6y")
 
-[node name="кровать" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=2090934529]
+[node name="bad" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=2090934529]
 position = Vector2(-481.0286, 93.64014)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_3gngh")
 
-[node name="корбка" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1902536654]
+[node name="boox" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=1902536654]
 position = Vector2(-778.29877, 640.98975)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_fcnqv")
 
-[node name="записки" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=889086289]
+[node name="paper" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=889086289]
 position = Vector2(-797.42523, 803.49274)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_7numd")
 
-[node name="мусорка" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1098453669]
+[node name="trash2" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=1098453669]
 position = Vector2(-626.02295, 996.81506)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_p1u0y")
 
-[node name="записка возрождение" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=45384335]
+[node name="paper42" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=45384335]
 position = Vector2(-467.862, 1007.38654)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_5s0fj")
 
-[node name="копррбка" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=247952142]
+[node name="boxx" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=247952142]
 position = Vector2(1191.724, 708.3423)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_33x8s")
 
-[node name="кактус" type="CollisionShape2D" parent="TileMapLayer/Часики/ТвВремя/StaticBody2D" unique_id=1150356087]
+[node name="cactus" type="CollisionShape2D" parent="TileMapLayer/clock/TVtime/StaticBody2D" unique_id=1150356087]
 position = Vector2(1029.1494, 914.5021)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_2j2di")

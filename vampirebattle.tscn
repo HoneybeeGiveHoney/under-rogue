@@ -55,7 +55,7 @@ tile_map_data = PackedByteArray("AAAtABwAAQAAAAAAAAAMAA0AAQACAAEAAAALAA0AAQACAAE
 tile_set = SubResource("TileSet_uhdor")
 physics_quadrant_size = 32
 
-[node name="Табличука" type="Sprite2D" parent="." unique_id=2041351770]
+[node name="tablicha" type="Sprite2D" parent="." unique_id=2041351770]
 position = Vector2(360, 27.000002)
 scale = Vector2(0.40625, 0.3671875)
 texture = ExtResource("2_jx1ms")
