@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cryqkg50ghv76"
-path="res://.godot/imported/кровать.png-678c15ca0ea6b360cce3986fe519027b.ctex"
+uid="uid://dcx448u8mlio6"
+path="res://.godot/imported/coffen.png-3b5e8b4513045648de87e55aa5591ebb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/кровать.png"
-dest_files=["res://.godot/imported/кровать.png-678c15ca0ea6b360cce3986fe519027b.ctex"]
+source_file="res://assets/coffen.png"
+dest_files=["res://.godot/imported/coffen.png-3b5e8b4513045648de87e55aa5591ebb.ctex"]
 
 [params]
 

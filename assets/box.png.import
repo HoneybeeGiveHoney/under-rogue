@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcx448u8mlio6"
-path="res://.godot/imported/шкаф.png-267c1a5180d94c66cc96706b60f55a66.ctex"
+uid="uid://bgxt8bte3q4bn"
+path="res://.godot/imported/box.png-52cc4e41fddadef836f9ad4dbe7936fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/шкаф.png"
-dest_files=["res://.godot/imported/шкаф.png-267c1a5180d94c66cc96706b60f55a66.ctex"]
+source_file="res://assets/box.png"
+dest_files=["res://.godot/imported/box.png-52cc4e41fddadef836f9ad4dbe7936fa.ctex"]
 
 [params]
 

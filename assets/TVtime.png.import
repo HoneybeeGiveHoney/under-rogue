@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qkgxyidck7p2"
-path="res://.godot/imported/табличука.png-0c2d527f0824013cc9fa57d91d1f3fca.ctex"
+uid="uid://8yu1qutkfbt"
+path="res://.godot/imported/TVtime.png-3e25e18809842898b3fd9eb149a1328a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/табличука.png"
-dest_files=["res://.godot/imported/табличука.png-0c2d527f0824013cc9fa57d91d1f3fca.ctex"]
+source_file="res://assets/TVtime.png"
+dest_files=["res://.godot/imported/TVtime.png-3e25e18809842898b3fd9eb149a1328a.ctex"]
 
 [params]
 

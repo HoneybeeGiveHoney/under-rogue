@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxio5bbvpqyh2"
-path="res://.godot/imported/полароид.png-52e847891de8ef5c51a0f8a82a52ab9d.ctex"
+uid="uid://ccup5xq3revbb"
+path="res://.godot/imported/Karped.png-9eecc994b4b170e0bf4cade698e44993.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/полароид.png"
-dest_files=["res://.godot/imported/полароид.png-52e847891de8ef5c51a0f8a82a52ab9d.ctex"]
+source_file="res://assets/Karped.png"
+dest_files=["res://.godot/imported/Karped.png-9eecc994b4b170e0bf4cade698e44993.ctex"]
 
 [params]
 

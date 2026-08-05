@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgxt8bte3q4bn"
-path="res://.godot/imported/коробка.png-a365885f0b2afdbc7a33db00b3e19f49.ctex"
+uid="uid://cxio5bbvpqyh2"
+path="res://.godot/imported/photocard.png-01c7bcd520157cc6a5afc5d5af527dbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/коробка.png"
-dest_files=["res://.godot/imported/коробка.png-a365885f0b2afdbc7a33db00b3e19f49.ctex"]
+source_file="res://assets/photocard.png"
+dest_files=["res://.godot/imported/photocard.png-01c7bcd520157cc6a5afc5d5af527dbd.ctex"]
 
 [params]
 
