@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://cq20swuh0uckk" path="res://Game.gd" id="1_wbfu4"]
 [ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://suferer.gd" id="2_gwjdr"]
 [ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/bunkerBaseTileSet.png" id="2_lvtmh"]
-[ext_resource type="Texture2D" uid="uid://bkecsrnsilnre" path="res://assets/trashcan.png" id="2_w2501"]
+[ext_resource type="Texture2D" uid="uid://dc3y2bhv8pi8k" path="res://assets/trashcan.png" id="2_w2501"]
 [ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/sufferer.png" id="2_yx171"]
 [ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/suffererFocuses.png" id="3_gwjdr"]
-[ext_resource type="Texture2D" uid="uid://dcx448u8mlio6" path="res://assets/Wardrobe2.png" id="3_jsoai"]
-[ext_resource type="Texture2D" uid="uid://cxtehhiceee0w" path="res://assets/wardrobe.png" id="4_bisgb"]
+[ext_resource type="Texture2D" uid="uid://b0dpabh08gc2" path="res://assets/Wardrobe2.png" id="3_jsoai"]
+[ext_resource type="Texture2D" uid="uid://7oufgvebdyj7" path="res://assets/wardrobe.png" id="4_bisgb"]
 [ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/empty_Hearth.png" id="5_2vekm"]
 [ext_resource type="Texture2D" uid="uid://cryqkg50ghv76" path="res://assets/bed.png" id="5_y5ctq"]
 [ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://menu.gd" id="5_yhmtn"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ygfi8chngpgf" path="res://assets/SoulRaysFragments/Empty-Dexterity.png" id="8_elkpi"]
 [ext_resource type="Texture2D" uid="uid://cjro76nlfdwrg" path="res://assets/cactus.png" id="8_hwsgv"]
 [ext_resource type="Texture2D" uid="uid://8ry37gdkui63" path="res://assets/SoulRaysFragments/Empty-Patience.png" id="9_0yprl"]
-[ext_resource type="Texture2D" uid="uid://ccup5xq3revbb" path="res://assets/carpet.png" id="10_gebyw"]
+[ext_resource type="Texture2D" uid="uid://e2rm08oglu1h" path="res://assets/carpet.png" id="10_gebyw"]
 [ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="10_wuoie"]
 [ext_resource type="Texture2D" uid="uid://8yu1qutkfbt" path="res://assets/TVtime.png" id="11_4my3f"]
 [ext_resource type="Texture2D" uid="uid://htacyrunexjb" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="11_bvhbk"]
@@ -686,5 +686,5 @@ offset_bottom = 120.00006
 scale = Vector2(40.21926, 22.742409)
 color = Color(0, 0, 0, 0.81960785)
 
-[connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
+[connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
