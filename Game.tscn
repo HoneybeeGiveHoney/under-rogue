@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://yp28usj6lkrn"]
 
-[ext_resource type="Script" uid="uid://cq20swuh0uckk" path="res://Game.gd" id="1_wbfu4"]
-[ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://suferer.gd" id="2_gwjdr"]
+[ext_resource type="Script" uid="uid://cq20swuh0uckk" path="res://Scripts/Game.gd" id="1_wbfu4"]
+[ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://Scripts/suferer.gd" id="2_gwjdr"]
 [ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/bunkerBaseTileSet.png" id="2_lvtmh"]
 [ext_resource type="Texture2D" uid="uid://bkecsrnsilnre" path="res://assets/trashcan.png" id="2_w2501"]
 [ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/sufferer.png" id="2_yx171"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cxtehhiceee0w" path="res://assets/wardrobe.png" id="4_bisgb"]
 [ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/empty_Hearth.png" id="5_2vekm"]
 [ext_resource type="Texture2D" uid="uid://cryqkg50ghv76" path="res://assets/bed.png" id="5_y5ctq"]
-[ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://menu.gd" id="5_yhmtn"]
+[ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menu.gd" id="5_yhmtn"]
 [ext_resource type="Texture2D" uid="uid://bgxt8bte3q4bn" path="res://assets/box.png" id="6_w7ht3"]
 [ext_resource type="Texture2D" uid="uid://byq3330yhtwvr" path="res://assets/Papers.png" id="7_8ktx7"]
 [ext_resource type="Texture2D" uid="uid://6omsfqp5l312" path="res://assets/SoulRaysFragments/Empty-Bravery.png" id="7_qjyg3"]
@@ -22,8 +22,13 @@
 [ext_resource type="Texture2D" uid="uid://8yu1qutkfbt" path="res://assets/TVtime.png" id="11_4my3f"]
 [ext_resource type="Texture2D" uid="uid://htacyrunexjb" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="11_bvhbk"]
 [ext_resource type="Texture2D" uid="uid://0atby4jm31fo" path="res://assets/PC.png" id="12_aeq37"]
-[ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/FullJustice.png" id="12_cpsxm"]
+[ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/Full_Justice.png" id="12_cpsxm"]
 [ext_resource type="Texture2D" uid="uid://dlpqfh37hbans" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="13_hmewc"]
+[ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="19_8ktx7"]
+[ext_resource type="Texture2D" uid="uid://ds1f4qau0ug1o" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="21_hwsgv"]
+[ext_resource type="Texture2D" uid="uid://cox12dbm3ogjp" path="res://assets/SoulRaysFragments/Full_Integrity.png" id="25_gebyw"]
+[ext_resource type="Texture2D" uid="uid://c8ckklxvpmg7i" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="27_4my3f"]
+[ext_resource type="Texture2D" uid="uid://bfwbd4eqg3rrv" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="29_aeq37"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1u0y"]
 size = Vector2(145.65517, 163.1153)
@@ -405,6 +410,18 @@ animations = [{
 [node name="Game" type="Node2D" unique_id=276615565]
 script = ExtResource("1_wbfu4")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=75503610]
+position = Vector2(740, 448)
+scale = Vector2(1, 0.99999994)
+ignore_rotation = false
+position_smoothing_speed = 3.485
+rotation_smoothing_speed = 3.47
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+editor_draw_drag_margin = true
+
 [node name="Interior" type="StaticBody2D" parent="." unique_id=1353767411]
 position = Vector2(614, 124.99999)
 scale = Vector2(0.67968756, 0.6621093)
@@ -481,8 +498,9 @@ texture = ExtResource("8_hwsgv")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1356691312]
 position = Vector2(4, 0)
-tile_map_data = PackedByteArray("AAAtABwAAQAAAAAAAAAMAA0AAQAAAAAAAAANAA0AAQABAAAAAAAOAA0AAQACAAAAAAAPAA0AAQACAAAAAAAQAA0AAQACAAAAAAARAA0AAQACAAAAAAASAA0AAQACAAAAAAATAA0AAQACAAAAAAAUAA0AAQACAAAAAAAVAAwAAQAAAAIAAAAWAAsAAQACAAAAAAAWAAwAAQAAAAAAAAAVAA0AAQADAAMAAAALAA0AAQAAAAAAAAAKAA0AAQAAAAAAAAAJAA0AAQADAAAAAAAIAA0AAQACAAAAAAAHAA0AAQACAAAAAAAGAA0AAQACAAAAAAAFAA0AAQACAAAAAAAEAA0AAQACAAAAAAADAA0AAQACAAAAAAACAA0AAQACAAAAAAABAA0AAQACAAMAAAABAAwAAQAAAAEAAAAAAAsAAQACAAAAAAD//woAAQAAAAEAAAD//wkAAQAAAAEAAAD//wgAAQAAAAEAAAD//wcAAQAAAAEAAAD//wYAAQAAAAEAAAD//wUAAQAAAAEAAAD//wQAAQAAAAEAAAAAAAMAAQACAAEAAAABAAIAAQAAAAEAAAACAAEAAQACAAEAAAADAAEAAQACAAEAAAAEAAEAAQACAAEAAAAFAAEAAQACAAEAAAAGAAEAAQACAAEAAAAHAAEAAQACAAEAAAAIAAEAAQACAAEAAAAJAAEAAQACAAEAAAAKAAEAAQACAAEAAAALAAEAAQACAAEAAAAMAAEAAQACAAEAAAANAAEAAQACAAEAAAAOAAEAAQACAAEAAAAPAAEAAQACAAEAAAAQAAEAAQACAAEAAAARAAEAAQACAAEAAAASAAEAAQACAAEAAAATAAEAAQACAAEAAAAUAAEAAQACAAEAAAAVAAIAAQAAAAIAAAAWAAMAAQACAAEAAAAXAAQAAQAAAAIAAAAXAAUAAQAAAAIAAAAXAAYAAQAAAAIAAAAXAAcAAQAAAAIAAAAXAAgAAQAAAAIAAAAXAAkAAQAAAAIAAAAXAAoAAQAAAAIAAAABAAMAAQADAAEAAAABAAsAAQADAAAAAAAVAAsAAQABAAAAAAAVAAMAAQABAAEAAAAKAAwAAQAAAAAAAAAXAAsAAQADAAMAAAAXAAMAAQADAAIAAAAVAAEAAQADAAIAAAABAAEAAQACAAIAAAD//wsAAQACAAMAAAD//wMAAQACAAIAAAA=")
+tile_map_data = PackedByteArray("AAAtABwAAQAAAAAAAAANAA0AAQABAAAAAAAOAA0AAQACAAAAAAAPAA0AAQACAAAAAAAQAA0AAQACAAAAAAARAA0AAQACAAAAAAASAA0AAQACAAAAAAATAA0AAQACAAAAAAAUAA0AAQACAAAAAAAVAAwAAQAAAAIAAAAWAAsAAQACAAAAAAAVAA0AAQADAAMAAAAJAA0AAQADAAAAAAAIAA0AAQACAAAAAAAHAA0AAQACAAAAAAAGAA0AAQACAAAAAAAFAA0AAQACAAAAAAAEAA0AAQACAAAAAAADAA0AAQACAAAAAAACAA0AAQACAAAAAAABAA0AAQACAAMAAAABAAwAAQAAAAEAAAAAAAsAAQACAAAAAAD//woAAQAAAAEAAAD//wkAAQAAAAEAAAD//wgAAQAAAAEAAAD//wcAAQAAAAEAAAD//wYAAQAAAAEAAAD//wUAAQAAAAEAAAD//wQAAQAAAAEAAAAAAAMAAQACAAEAAAABAAIAAQAAAAEAAAACAAEAAQACAAEAAAADAAEAAQACAAEAAAAEAAEAAQACAAEAAAAFAAEAAQACAAEAAAAGAAEAAQACAAEAAAAHAAEAAQACAAEAAAAIAAEAAQACAAEAAAAJAAEAAQACAAEAAAAKAAEAAQACAAEAAAALAAEAAQACAAEAAAAMAAEAAQACAAEAAAANAAEAAQACAAEAAAAOAAEAAQACAAEAAAAPAAEAAQACAAEAAAAQAAEAAQACAAEAAAARAAEAAQACAAEAAAASAAEAAQACAAEAAAATAAEAAQACAAEAAAAUAAEAAQACAAEAAAAVAAIAAQAAAAIAAAAWAAMAAQACAAEAAAAXAAQAAQAAAAIAAAAXAAUAAQAAAAIAAAAXAAYAAQAAAAIAAAAXAAcAAQAAAAIAAAAXAAgAAQAAAAIAAAAXAAkAAQAAAAIAAAAXAAoAAQAAAAIAAAABAAMAAQADAAEAAAABAAsAAQADAAAAAAAVAAsAAQABAAAAAAAVAAMAAQABAAEAAAAXAAsAAQADAAMAAAAXAAMAAQADAAIAAAAVAAEAAQADAAIAAAABAAEAAQACAAIAAAD//wsAAQACAAMAAAD//wMAAQACAAIAAAANAA4AAQAAAAIAAAANAA8AAQAAAAIAAAAJAA4AAQAAAAEAAAAJAA8AAQAAAAEAAAAKABAAAQACAAAAAAALABAAAQACAAAAAAAMABAAAQACAAAAAAANABAAAQADAAMAAAAJABAAAQACAAMAAAA=")
 tile_set = SubResource("TileSet_vkqoe")
+collision_visibility_mode = 1
 physics_quadrant_size = 32
 metadata/_edit_lock_ = true
 
@@ -554,20 +572,8 @@ position = Vector2(4.000004, 0.99998474)
 scale = Vector2(3.7500002, 3.7375004)
 sprite_frames = SubResource("SpriteFrames_sn0t7")
 animation = &"focus"
-
-[node name="Camera2D" type="Camera2D" parent="suferer/Player" unique_id=75503610]
-position = Vector2(-0.69999695, 1.2642212)
-scale = Vector2(0.26666665, 0.2675585)
-ignore_rotation = false
-position_smoothing_speed = 3.485
-rotation_smoothing_speed = 3.47
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.03
-drag_top_margin = 0.05
-drag_right_margin = 0.03
-drag_bottom_margin = 0.05
-editor_draw_drag_margin = true
+frame = 3
+frame_progress = 0.0012661418
 
 [node name="Collision Box" type="CollisionShape2D" parent="suferer" unique_id=415880694]
 position = Vector2(3.5, 1)
@@ -598,7 +604,6 @@ wait_time = 1.565
 one_shot = true
 
 [node name="soul" type="AnimatedSprite2D" parent="suferer/Control" unique_id=1752592405]
-modulate = Color(1, 1, 1, 0.022727251)
 visibility_layer = 2
 position = Vector2(19, 21)
 scale = Vector2(1.0000001, 0.9999997)
@@ -616,27 +621,9 @@ color = Color(0, 0, 0, 0.81960785)
 metadata/_edit_lock_ = true
 
 [node name="Stats" type="Control" parent="suferer/Control" unique_id=984526833]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Bravery" type="TextureProgressBar" parent="suferer/Control/Stats" unique_id=1533314272]
-layout_mode = 0
-offset_left = 33.0
-offset_top = 1.0
-offset_right = 145.0
-offset_bottom = 42.0
-texture_under = ExtResource("7_qjyg3")
-
-[node name="Dexterity" type="TextureProgressBar" parent="suferer/Control/Stats" unique_id=2083903328]
-layout_mode = 0
-offset_left = 32.0
-offset_top = -94.0
-offset_right = 123.0
-offset_bottom = 8.0
-fill_mode = 3
-texture_under = ExtResource("8_elkpi")
 
 [node name="Patience" type="TextureProgressBar" parent="suferer/Control/Stats" unique_id=1627864785]
 layout_mode = 0
@@ -646,6 +633,7 @@ offset_right = 92.0
 offset_bottom = 12.0
 fill_mode = 3
 texture_under = ExtResource("9_0yprl")
+texture_progress = ExtResource("19_8ktx7")
 
 [node name="Kindness" type="TextureProgressBar" parent="suferer/Control/Stats" unique_id=1877163885]
 layout_mode = 0
@@ -653,8 +641,9 @@ offset_left = -82.0
 offset_top = 25.0
 offset_right = 33.0
 offset_bottom = 121.0
-fill_mode = 3
+fill_mode = 2
 texture_under = ExtResource("10_wuoie")
+texture_progress = ExtResource("21_hwsgv")
 
 [node name="Justice" type="TextureProgressBar" parent="suferer/Control/Stats" unique_id=486137120]
 layout_mode = 0
@@ -662,8 +651,7 @@ offset_left = 23.0
 offset_top = 25.0
 offset_right = 149.0
 offset_bottom = 119.0
-pivot_offset = Vector2(26, 42)
-value = 10.0
+pivot_offset = Vector2(17, 23)
 fill_mode = 2
 texture_under = ExtResource("11_bvhbk")
 texture_progress = ExtResource("12_cpsxm")
@@ -674,17 +662,38 @@ offset_left = -109.0
 offset_top = -2.0
 offset_right = 5.0
 offset_bottom = 48.0
+value = 10.0
 fill_mode = 1
 texture_under = ExtResource("13_hmewc")
+texture_progress = ExtResource("25_gebyw")
+
+[node name="Dexterity" type="TextureProgressBar" parent="suferer/Control/Stats" unique_id=2083903328]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -94.0
+offset_right = 123.0
+offset_bottom = 8.0
+fill_mode = 3
+texture_under = ExtResource("8_elkpi")
+texture_progress = ExtResource("27_4my3f")
+
+[node name="Bravery" type="TextureProgressBar" parent="suferer/Control/Stats" unique_id=1533314272]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 1.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture_under = ExtResource("7_qjyg3")
+texture_progress = ExtResource("29_aeq37")
 
 [node name="Tint" type="ColorRect" parent="." unique_id=269642977]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -39.99994
-offset_top = 80.00006
-offset_right = 6.1035156e-05
-offset_bottom = 120.00006
+offset_left = -46.999996
+offset_top = 70.0
+offset_right = -6.999996
+offset_bottom = 110.0
 scale = Vector2(40.21926, 22.742409)
 color = Color(0, 0, 0, 0.81960785)
 
-[connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
+[connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://l6gu040lbvfk"]
 
-[ext_resource type="Script" uid="uid://ccc1i6kdj3ywp" path="res://SoulSelect.gd" id="1_3bg01"]
+[ext_resource type="Script" uid="uid://ccc1i6kdj3ywp" path="res://Scripts/SoulSelect.gd" id="1_3bg01"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="1_m1bos"]
 [ext_resource type="Theme" uid="uid://j1ftw6ugclkr" path="res://UndertaleTheme.tres" id="3_abeax"]
 [ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/empty_Hearth.png" id="4_3bg01"]
