@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://cq20swuh0uckk" path="res://Scripts/Game.gd" id="1_wbfu4"]
 [ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://Scripts/suferer.gd" id="2_gwjdr"]
 [ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/bunkerBaseTileSet.png" id="2_lvtmh"]
-[ext_resource type="Texture2D" uid="uid://dc3y2bhv8pi8k" path="res://assets/trashcan.png" id="2_w2501"]
+[ext_resource type="Texture2D" uid="uid://bkecsrnsilnre" path="res://assets/trashcan.png" id="2_w2501"]
 [ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/sufferer.png" id="2_yx171"]
 [ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/suffererFocuses.png" id="3_gwjdr"]
-[ext_resource type="Texture2D" uid="uid://b0dpabh08gc2" path="res://assets/Wardrobe2.png" id="3_jsoai"]
-[ext_resource type="Texture2D" uid="uid://7oufgvebdyj7" path="res://assets/wardrobe.png" id="4_bisgb"]
+[ext_resource type="Texture2D" uid="uid://dcx448u8mlio6" path="res://assets/Wardrobe2.png" id="3_jsoai"]
+[ext_resource type="Texture2D" uid="uid://cxtehhiceee0w" path="res://assets/wardrobe.png" id="4_bisgb"]
 [ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/empty_Hearth.png" id="5_2vekm"]
 [ext_resource type="Texture2D" uid="uid://cryqkg50ghv76" path="res://assets/bed.png" id="5_y5ctq"]
 [ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menu.gd" id="5_yhmtn"]
@@ -17,18 +17,21 @@
 [ext_resource type="Texture2D" uid="uid://ygfi8chngpgf" path="res://assets/SoulRaysFragments/Empty-Dexterity.png" id="8_elkpi"]
 [ext_resource type="Texture2D" uid="uid://cjro76nlfdwrg" path="res://assets/cactus.png" id="8_hwsgv"]
 [ext_resource type="Texture2D" uid="uid://8ry37gdkui63" path="res://assets/SoulRaysFragments/Empty-Patience.png" id="9_0yprl"]
-[ext_resource type="Texture2D" uid="uid://e2rm08oglu1h" path="res://assets/carpet.png" id="10_gebyw"]
+[ext_resource type="Texture2D" uid="uid://ccup5xq3revbb" path="res://assets/carpet.png" id="10_gebyw"]
 [ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="10_wuoie"]
 [ext_resource type="Texture2D" uid="uid://8yu1qutkfbt" path="res://assets/TVtime.png" id="11_4my3f"]
 [ext_resource type="Texture2D" uid="uid://htacyrunexjb" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="11_bvhbk"]
 [ext_resource type="Texture2D" uid="uid://0atby4jm31fo" path="res://assets/PC.png" id="12_aeq37"]
 [ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/Full_Justice.png" id="12_cpsxm"]
 [ext_resource type="Texture2D" uid="uid://dlpqfh37hbans" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="13_hmewc"]
+[ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/SoulRaysAppear.ogg" id="17_gebyw"]
 [ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="19_8ktx7"]
 [ext_resource type="Texture2D" uid="uid://ds1f4qau0ug1o" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="21_hwsgv"]
 [ext_resource type="Texture2D" uid="uid://cox12dbm3ogjp" path="res://assets/SoulRaysFragments/Full_Integrity.png" id="25_gebyw"]
 [ext_resource type="Texture2D" uid="uid://c8ckklxvpmg7i" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="27_4my3f"]
 [ext_resource type="Texture2D" uid="uid://bfwbd4eqg3rrv" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="29_aeq37"]
+[ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/SoulRays.png" id="30_4my3f"]
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="30_hwsgv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1u0y"]
 size = Vector2(145.65517, 163.1153)
@@ -287,7 +290,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_gwjdr"]
 resource_name = "menu Appear"
-length = 2.6
+length = 5.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -348,6 +351,66 @@ tracks/4/keys = {
 "update": 1,
 "values": [&"focus"]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Bedroom:zoom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.76666665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2.42, 2.42)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Look In Soul:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.36666667, 1.1, 2.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Stats:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.4333334, 5.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Appearing:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.0666666),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("RayPulse:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(2.4, 5.6666665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_lvtmh"]
 resource_name = "menu Disappear"
@@ -388,6 +451,42 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Bedroom:zoom")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.42, 2.42), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Stats:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RayPulse:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lvtmh"]
 _data = {
@@ -407,20 +506,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_vkqoe"]
+font = ExtResource("30_hwsgv")
+font_size = 24
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Game" type="Node2D" unique_id=276615565]
 script = ExtResource("1_wbfu4")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=75503610]
-position = Vector2(740, 448)
-scale = Vector2(1, 0.99999994)
-ignore_rotation = false
-position_smoothing_speed = 3.485
-rotation_smoothing_speed = 3.47
-drag_left_margin = 0.0
-drag_top_margin = 0.0
-drag_right_margin = 0.0
-drag_bottom_margin = 0.0
-editor_draw_drag_margin = true
 
 [node name="Interior" type="StaticBody2D" parent="." unique_id=1353767411]
 position = Vector2(614, 124.99999)
@@ -500,7 +593,6 @@ texture = ExtResource("8_hwsgv")
 position = Vector2(4, 0)
 tile_map_data = PackedByteArray("AAAtABwAAQAAAAAAAAANAA0AAQABAAAAAAAOAA0AAQACAAAAAAAPAA0AAQACAAAAAAAQAA0AAQACAAAAAAARAA0AAQACAAAAAAASAA0AAQACAAAAAAATAA0AAQACAAAAAAAUAA0AAQACAAAAAAAVAAwAAQAAAAIAAAAWAAsAAQACAAAAAAAVAA0AAQADAAMAAAAJAA0AAQADAAAAAAAIAA0AAQACAAAAAAAHAA0AAQACAAAAAAAGAA0AAQACAAAAAAAFAA0AAQACAAAAAAAEAA0AAQACAAAAAAADAA0AAQACAAAAAAACAA0AAQACAAAAAAABAA0AAQACAAMAAAABAAwAAQAAAAEAAAAAAAsAAQACAAAAAAD//woAAQAAAAEAAAD//wkAAQAAAAEAAAD//wgAAQAAAAEAAAD//wcAAQAAAAEAAAD//wYAAQAAAAEAAAD//wUAAQAAAAEAAAD//wQAAQAAAAEAAAAAAAMAAQACAAEAAAABAAIAAQAAAAEAAAACAAEAAQACAAEAAAADAAEAAQACAAEAAAAEAAEAAQACAAEAAAAFAAEAAQACAAEAAAAGAAEAAQACAAEAAAAHAAEAAQACAAEAAAAIAAEAAQACAAEAAAAJAAEAAQACAAEAAAAKAAEAAQACAAEAAAALAAEAAQACAAEAAAAMAAEAAQACAAEAAAANAAEAAQACAAEAAAAOAAEAAQACAAEAAAAPAAEAAQACAAEAAAAQAAEAAQACAAEAAAARAAEAAQACAAEAAAASAAEAAQACAAEAAAATAAEAAQACAAEAAAAUAAEAAQACAAEAAAAVAAIAAQAAAAIAAAAWAAMAAQACAAEAAAAXAAQAAQAAAAIAAAAXAAUAAQAAAAIAAAAXAAYAAQAAAAIAAAAXAAcAAQAAAAIAAAAXAAgAAQAAAAIAAAAXAAkAAQAAAAIAAAAXAAoAAQAAAAIAAAABAAMAAQADAAEAAAABAAsAAQADAAAAAAAVAAsAAQABAAAAAAAVAAMAAQABAAEAAAAXAAsAAQADAAMAAAAXAAMAAQADAAIAAAAVAAEAAQADAAIAAAABAAEAAQACAAIAAAD//wsAAQACAAMAAAD//wMAAQACAAIAAAANAA4AAQAAAAIAAAANAA8AAQAAAAIAAAAJAA4AAQAAAAEAAAAJAA8AAQAAAAEAAAAKABAAAQACAAAAAAALABAAAQACAAAAAAAMABAAAQACAAAAAAANABAAAQADAAMAAAAJABAAAQACAAMAAAA=")
 tile_set = SubResource("TileSet_vkqoe")
-collision_visibility_mode = 1
 physics_quadrant_size = 32
 metadata/_edit_lock_ = true
 
@@ -572,8 +664,6 @@ position = Vector2(4.000004, 0.99998474)
 scale = Vector2(3.7500002, 3.7375004)
 sprite_frames = SubResource("SpriteFrames_sn0t7")
 animation = &"focus"
-frame = 3
-frame_progress = 0.0012661418
 
 [node name="Collision Box" type="CollisionShape2D" parent="suferer" unique_id=415880694]
 position = Vector2(3.5, 1)
@@ -597,6 +687,7 @@ pivot_offset = Vector2(736, 535)
 script = ExtResource("5_yhmtn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="suferer/Control" unique_id=1422209920]
+reset_on_save = false
 libraries/ = SubResource("AnimationLibrary_lvtmh")
 
 [node name="PauseCooldown" type="Timer" parent="suferer/Control" unique_id=893809172]
@@ -604,12 +695,14 @@ wait_time = 1.565
 one_shot = true
 
 [node name="soul" type="AnimatedSprite2D" parent="suferer/Control" unique_id=1752592405]
+modulate = Color(1, 1, 1, 0.022727251)
 visibility_layer = 2
 position = Vector2(19, 21)
 scale = Vector2(1.0000001, 0.9999997)
 sprite_frames = SubResource("SpriteFrames_vkqoe")
 
 [node name="Tint" type="ColorRect" parent="suferer/Control/soul" unique_id=1523386331]
+modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 show_behind_parent = true
 offset_left = -829.0
@@ -620,7 +713,17 @@ scale = Vector2(40.21926, 22.742409)
 color = Color(0, 0, 0, 0.81960785)
 metadata/_edit_lock_ = true
 
+[node name="RayPulse" type="CPUParticles2D" parent="suferer/Control" unique_id=1182639105]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(19, 21)
+amount = 1
+texture = ExtResource("30_4my3f")
+lifetime = 0.09999999999999999
+gravity = Vector2(0, 0)
+scale_amount_min = 0.98
+
 [node name="Stats" type="Control" parent="suferer/Control" unique_id=984526833]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -631,6 +734,7 @@ offset_left = -93.0
 offset_top = -94.0
 offset_right = 92.0
 offset_bottom = 12.0
+value = 50.0
 fill_mode = 3
 texture_under = ExtResource("9_0yprl")
 texture_progress = ExtResource("19_8ktx7")
@@ -652,6 +756,7 @@ offset_top = 25.0
 offset_right = 149.0
 offset_bottom = 119.0
 pivot_offset = Vector2(17, 23)
+value = 69.0
 fill_mode = 2
 texture_under = ExtResource("11_bvhbk")
 texture_progress = ExtResource("12_cpsxm")
@@ -662,7 +767,6 @@ offset_left = -109.0
 offset_top = -2.0
 offset_right = 5.0
 offset_bottom = 48.0
-value = 10.0
 fill_mode = 1
 texture_under = ExtResource("13_hmewc")
 texture_progress = ExtResource("25_gebyw")
@@ -673,6 +777,7 @@ offset_left = 32.0
 offset_top = -94.0
 offset_right = 123.0
 offset_bottom = 8.0
+value = 24.0
 fill_mode = 3
 texture_under = ExtResource("8_elkpi")
 texture_progress = ExtResource("27_4my3f")
@@ -686,6 +791,33 @@ offset_bottom = 42.0
 texture_under = ExtResource("7_qjyg3")
 texture_progress = ExtResource("29_aeq37")
 
+[node name="Appearing" type="AudioStreamPlayer2D" parent="suferer/Control" unique_id=788510340]
+position = Vector2(19, 17)
+stream = ExtResource("17_gebyw")
+
+[node name="Bedroom" type="Camera2D" parent="suferer" unique_id=75503610]
+position = Vector2(4, 5)
+scale = Vector2(1, 0.99999994)
+ignore_rotation = false
+limit_top = -10
+limit_bottom = 893
+position_smoothing_speed = 3.485
+rotation_smoothing_speed = 3.47
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+editor_draw_drag_margin = true
+
+[node name="Look In Soul" type="Label" parent="suferer" unique_id=55786373]
+modulate = Color(0, 0, 0, 0)
+offset_left = -129.0
+offset_top = -110.0
+offset_right = 155.0
+offset_bottom = -84.0
+text = "* I look in my very soul..."
+label_settings = SubResource("LabelSettings_vkqoe")
+
 [node name="Tint" type="ColorRect" parent="." unique_id=269642977]
 self_modulate = Color(1, 1, 1, 0)
 offset_left = -46.999996
@@ -693,7 +825,7 @@ offset_top = 70.0
 offset_right = -6.999996
 offset_bottom = 110.0
 scale = Vector2(40.21926, 22.742409)
-color = Color(0, 0, 0, 0.81960785)
+color = Color(0, 0, 0, 0.9137255)
 
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
