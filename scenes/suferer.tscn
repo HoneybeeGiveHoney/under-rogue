@@ -1,0 +1,617 @@
+[gd_scene format=3 uid="uid://bs2l8jui7m6hh"]
+
+[ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://Scripts/suferer.gd" id="1_ipf7k"]
+[ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/sufferer.png" id="2_j770p"]
+[ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/suffererFocuses.png" id="3_llx7r"]
+[ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menu.gd" id="4_d41q5"]
+[ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/empty_Hearth.png" id="5_wyxu5"]
+[ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/SoulRays.png" id="6_xox31"]
+[ext_resource type="Texture2D" uid="uid://8ry37gdkui63" path="res://assets/SoulRaysFragments/Empty-Patience.png" id="7_kx0vx"]
+[ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="8_js1tj"]
+[ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="9_y5dsi"]
+[ext_resource type="Texture2D" uid="uid://ds1f4qau0ug1o" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="10_nyds3"]
+[ext_resource type="Texture2D" uid="uid://htacyrunexjb" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="11_e1ax4"]
+[ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/Full_Justice.png" id="12_y4cdc"]
+[ext_resource type="Texture2D" uid="uid://dlpqfh37hbans" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="13_dtwu3"]
+[ext_resource type="Texture2D" uid="uid://cox12dbm3ogjp" path="res://assets/SoulRaysFragments/Full_Integrity.png" id="14_jj2ag"]
+[ext_resource type="Texture2D" uid="uid://ygfi8chngpgf" path="res://assets/SoulRaysFragments/Empty-Dexterity.png" id="15_3oev2"]
+[ext_resource type="Texture2D" uid="uid://c8ckklxvpmg7i" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="16_42tsv"]
+[ext_resource type="Texture2D" uid="uid://6omsfqp5l312" path="res://assets/SoulRaysFragments/Empty-Bravery.png" id="17_sakjp"]
+[ext_resource type="Texture2D" uid="uid://bfwbd4eqg3rrv" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="18_jht5m"]
+[ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/SoulRaysAppear.ogg" id="19_dns6b"]
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="20_yg2sk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
+atlas = ExtResource("2_j770p")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mevm"]
+atlas = ExtResource("3_llx7r")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2501"]
+atlas = ExtResource("3_llx7r")
+region = Rect2(19, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsoai"]
+atlas = ExtResource("3_llx7r")
+region = Rect2(38, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx171"]
+atlas = ExtResource("2_j770p")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwjdr"]
+atlas = ExtResource("2_j770p")
+region = Rect2(19, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhmtn"]
+atlas = ExtResource("2_j770p")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvtmh"]
+atlas = ExtResource("2_j770p")
+region = Rect2(38, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuoie"]
+atlas = ExtResource("2_j770p")
+region = Rect2(0, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyih5"]
+atlas = ExtResource("2_j770p")
+region = Rect2(0, 72, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjyg3"]
+atlas = ExtResource("2_j770p")
+region = Rect2(19, 72, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elkpi"]
+atlas = ExtResource("2_j770p")
+region = Rect2(38, 36, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yprl"]
+atlas = ExtResource("2_j770p")
+region = Rect2(57, 36, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvhbk"]
+atlas = ExtResource("2_j770p")
+region = Rect2(0, 36, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmewc"]
+atlas = ExtResource("2_j770p")
+region = Rect2(57, 0, 19, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpsxm"]
+atlas = ExtResource("2_j770p")
+region = Rect2(19, 36, 19, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sn0t7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vekm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mevm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2501")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsoai")
+}],
+"loop": 2,
+"name": &"focus",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx171")
+}],
+"loop": 0,
+"name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwjdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhmtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvtmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuoie")
+}],
+"loop": 1,
+"name": &"walk_down",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyih5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjyg3")
+}],
+"loop": 1,
+"name": &"walk_left",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elkpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yprl")
+}],
+"loop": 1,
+"name": &"walk_right",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvhbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmewc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpsxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmewc")
+}],
+"loop": 1,
+"name": &"walk_up",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkqoe"]
+size = Vector2(65, 126)
+
+[sub_resource type="Animation" id="Animation_yhmtn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("soul/Tint:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("soul/Tint:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gwjdr"]
+resource_name = "menu Appear"
+length = 5.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("soul/Tint:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4666667),
+"transitions": PackedFloat32Array(1, 0.9330335),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.84705883)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("soul/Tint:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 0.84705883)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("soul:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(-0.033333335, 1.4333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.033333335, 0.36666667, 0.73333335, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Player:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"focus"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Bedroom:zoom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.76666665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2.42, 2.42)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Look In Soul:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.36666667, 1.1, 2.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Stats:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.4333334, 5.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Appearing:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.0666666),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("RayPulse:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(2.4, 5.6666665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lvtmh"]
+resource_name = "menu Disappear"
+length = 2.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("soul/Tint:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.84705883), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("soul/Tint:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.84705883), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("soul:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Bedroom:zoom")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.42, 2.42), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Stats:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("RayPulse:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lvtmh"]
+_data = {
+&"RESET": SubResource("Animation_yhmtn"),
+&"menu Appear": SubResource("Animation_gwjdr"),
+&"menu Disappear": SubResource("Animation_lvtmh")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vkqoe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wyxu5")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vkqoe"]
+font = ExtResource("20_yg2sk")
+font_size = 24
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vkqoe"]
+radius = 16.0
+
+[node name="suferer" type="CharacterBody2D" unique_id=710697439]
+disable_mode = 2
+collision_layer = 3
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+platform_wall_layers = 1
+safe_margin = 2.25
+script = ExtResource("1_ipf7k")
+
+[node name="Player" type="AnimatedSprite2D" parent="." unique_id=864319927]
+position = Vector2(4.000004, 0.99998474)
+scale = Vector2(3.7500002, 3.7375004)
+sprite_frames = SubResource("SpriteFrames_sn0t7")
+animation = &"focus"
+
+[node name="Collision Box" type="CollisionShape2D" parent="." unique_id=1826113052]
+position = Vector2(3.5, 1)
+shape = SubResource("RectangleShape2D_vkqoe")
+debug_color = Color(0.77254903, 0.40392157, 0.49019608, 0.05490196)
+
+[node name="Control" type="Control" parent="." unique_id=1232078071]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = -17.0
+offset_top = -16.0
+offset_right = 23.0
+offset_bottom = 24.0
+pivot_offset = Vector2(736, 535)
+script = ExtResource("4_d41q5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control" unique_id=1671435496]
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_lvtmh")
+
+[node name="PauseCooldown" type="Timer" parent="Control" unique_id=1555240518]
+wait_time = 1.537
+one_shot = true
+
+[node name="soul" type="AnimatedSprite2D" parent="Control" unique_id=361454516]
+modulate = Color(1, 1, 1, 0.022727251)
+visibility_layer = 2
+position = Vector2(19, 21)
+scale = Vector2(1.0000001, 0.9999997)
+sprite_frames = SubResource("SpriteFrames_vkqoe")
+
+[node name="Tint" type="ColorRect" parent="Control/soul" unique_id=778295664]
+self_modulate = Color(1, 1, 1, 0)
+show_behind_parent = true
+offset_left = -829.0
+offset_top = -475.00018
+offset_right = -789.0
+offset_bottom = -435.00018
+scale = Vector2(40.21926, 22.742409)
+color = Color(0, 0, 0, 0.81960785)
+metadata/_edit_lock_ = true
+
+[node name="RayPulse" type="CPUParticles2D" parent="Control" unique_id=1316562655]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(19, 21)
+amount = 1
+texture = ExtResource("6_xox31")
+lifetime = 0.06
+gravity = Vector2(0, 0)
+scale_amount_min = 0.97
+
+[node name="Stats" type="Control" parent="Control" unique_id=1691540872]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Patience" type="TextureProgressBar" parent="Control/Stats" unique_id=1298446880]
+layout_mode = 0
+offset_left = -93.0
+offset_top = -94.0
+offset_right = 92.0
+offset_bottom = 12.0
+value = 50.0
+fill_mode = 3
+texture_under = ExtResource("7_kx0vx")
+texture_progress = ExtResource("8_js1tj")
+
+[node name="Kindness" type="TextureProgressBar" parent="Control/Stats" unique_id=90945022]
+layout_mode = 0
+offset_left = -82.0
+offset_top = 25.0
+offset_right = 33.0
+offset_bottom = 121.0
+fill_mode = 2
+texture_under = ExtResource("9_y5dsi")
+texture_progress = ExtResource("10_nyds3")
+
+[node name="Justice" type="TextureProgressBar" parent="Control/Stats" unique_id=1006453926]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 25.0
+offset_right = 149.0
+offset_bottom = 119.0
+pivot_offset = Vector2(17, 23)
+value = 69.0
+fill_mode = 2
+texture_under = ExtResource("11_e1ax4")
+texture_progress = ExtResource("12_y4cdc")
+
+[node name="Integrity" type="TextureProgressBar" parent="Control/Stats" unique_id=1082311957]
+layout_mode = 0
+offset_left = -109.0
+offset_top = -2.0
+offset_right = 5.0
+offset_bottom = 48.0
+fill_mode = 1
+texture_under = ExtResource("13_dtwu3")
+texture_progress = ExtResource("14_jj2ag")
+
+[node name="Dexterity" type="TextureProgressBar" parent="Control/Stats" unique_id=1503443634]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -94.0
+offset_right = 123.0
+offset_bottom = 8.0
+value = 24.0
+fill_mode = 3
+texture_under = ExtResource("15_3oev2")
+texture_progress = ExtResource("16_42tsv")
+
+[node name="Bravery" type="TextureProgressBar" parent="Control/Stats" unique_id=1978290112]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 1.0
+offset_right = 145.0
+offset_bottom = 42.0
+texture_under = ExtResource("17_sakjp")
+texture_progress = ExtResource("18_jht5m")
+
+[node name="Appearing" type="AudioStreamPlayer2D" parent="Control" unique_id=1288540769]
+position = Vector2(19, 17)
+stream = ExtResource("19_dns6b")
+
+[node name="UnblockMovements" type="Timer" parent="Control" unique_id=647093989]
+process_mode = 3
+wait_time = 1.055
+one_shot = true
+
+[node name="Bedroom" type="Camera2D" parent="." unique_id=989474951]
+position = Vector2(4, 5)
+scale = Vector2(1, 0.99999994)
+ignore_rotation = false
+limit_top = -10
+limit_bottom = 893
+position_smoothing_speed = 3.485
+rotation_smoothing_speed = 3.47
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+editor_draw_drag_margin = true
+
+[node name="Look In Soul" type="Label" parent="." unique_id=669598436]
+modulate = Color(0, 0, 0, 0)
+offset_left = -129.0
+offset_top = -110.0
+offset_right = 155.0
+offset_bottom = -84.0
+text = "* I look in my very soul..."
+label_settings = SubResource("LabelSettings_vkqoe")
+
+[node name="Tint" type="ColorRect" parent="." unique_id=610449697]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -787.0
+offset_top = -444.0
+offset_right = -747.0
+offset_bottom = -404.0
+scale = Vector2(40.21926, 22.742409)
+color = Color(0, 0, 0, 0.9137255)
+metadata/_edit_lock_ = true
+
+[node name="InteractBox" type="Area2D" parent="." unique_id=467115300]
+
+[node name="hitbox" type="CollisionShape2D" parent="InteractBox" unique_id=1125096523]
+position = Vector2(2, 5)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("CircleShape2D_vkqoe")
+debug_color = Color(0.92941177, 0, 0.1882353, 0.078431375)
+
+[connection signal="timeout" from="Control/PauseCooldown" to="Control" method="_on_timer_timeout"]
+[connection signal="timeout" from="Control/PauseCooldown" to="Control" method="_on_pause_cooldown_timeout"]
+[connection signal="timeout" from="Control/UnblockMovements" to="Control" method="_on_unblock_movements_timeout"]

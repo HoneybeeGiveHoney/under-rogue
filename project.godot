@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="UnderRogue"
-run/main_scene="uid://yp28usj6lkrn"
+run/main_scene="uid://0ijhbjalcwmc"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://yp28usj6lkrn"]
+
+[ext_resource type="Script" uid="uid://cq20swuh0uckk" path="res://Scripts/Game.gd" id="1_wbfu4"]
+[ext_resource type="Texture2D" uid="uid://bkecsrnsilnre" path="res://assets/trashcan.png" id="2_w2501"]
+[ext_resource type="Texture2D" uid="uid://dcx448u8mlio6" path="res://assets/Wardrobe2.png" id="3_jsoai"]
+[ext_resource type="Texture2D" uid="uid://cxtehhiceee0w" path="res://assets/wardrobe.png" id="4_bisgb"]
+[ext_resource type="Texture2D" uid="uid://cryqkg50ghv76" path="res://assets/bed.png" id="5_y5ctq"]
+[ext_resource type="Texture2D" uid="uid://bgxt8bte3q4bn" path="res://assets/box.png" id="6_w7ht3"]
+[ext_resource type="Texture2D" uid="uid://byq3330yhtwvr" path="res://assets/Papers.png" id="7_8ktx7"]
+[ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="7_gebyw"]
+[ext_resource type="Texture2D" uid="uid://cjro76nlfdwrg" path="res://assets/cactus.png" id="8_hwsgv"]
+[ext_resource type="Texture2D" uid="uid://8yu1qutkfbt" path="res://assets/TVtime.png" id="11_4my3f"]
+[ext_resource type="Texture2D" uid="uid://0atby4jm31fo" path="res://assets/PC.png" id="12_aeq37"]
+[ext_resource type="PackedScene" uid="uid://bs2l8jui7m6hh" path="res://scenes/suferer.tscn" id="12_lvtmh"]
+[ext_resource type="Script" uid="uid://cpfqylt3tro55" path="res://Scripts/TranslationRoom-Main.gd" id="32_4my3f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1u0y"]
+size = Vector2(145.65517, 163.1153)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
+size = Vector2(394.14926, 132.90854)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcnqv"]
+size = Vector2(200.09195, 155.27728)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7numd"]
+size = Vector2(137.99997, 135.64302)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5s0fj"]
+size = Vector2(123.73564, 139.82283)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33x8s"]
+size = Vector2(191.26443, 154.05298)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2j2di"]
+size = Vector2(125.05744, 321.69922)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(228.04597, 135.9292)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(301.60938, 205.118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(150.06891, 217.95575)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(208.91953, 218.71088)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjxql"]
+size = Vector2(192.5, 125.5)
+
+[node name="Bedroom" type="Node2D" unique_id=276615565]
+script = ExtResource("1_wbfu4")
+
+[node name="Interior" type="StaticBody2D" parent="." unique_id=1353767411]
+position = Vector2(614, 124.99999)
+scale = Vector2(0.67968756, 0.6621093)
+disable_mode = 1
+
+[node name="trashcan" type="CollisionShape2D" parent="Interior" unique_id=1098453669]
+position = Vector2(-626.02295, 996.8151)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_p1u0y")
+
+[node name="trashcan" type="Sprite2D" parent="Interior/trashcan" unique_id=1696976934]
+position = Vector2(8.091949, -15.104004)
+scale = Vector2(0.76436776, 0.8141593)
+texture = ExtResource("2_w2501")
+
+[node name="bed" type="CollisionShape2D" parent="Interior" unique_id=2090934529]
+position = Vector2(-481.0286, 93.64014)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_3gngh")
+
+[node name="bed" type="Sprite2D" parent="Interior/bed" unique_id=1907744260]
+position = Vector2(-0.0748291, -46.82007)
+scale = Vector2(1.6494251, 1.5339233)
+texture = ExtResource("5_y5ctq")
+
+[node name="box2" type="CollisionShape2D" parent="Interior" unique_id=1902536654]
+position = Vector2(-778.29877, 640.98975)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_fcnqv")
+
+[node name="Box2" type="Sprite2D" parent="Interior/box2" unique_id=1315685399]
+position = Vector2(1968.5515, 40.166687)
+scale = Vector2(0.7428166, 0.75221294)
+texture = ExtResource("6_w7ht3")
+
+[node name="papers2" type="CollisionShape2D" parent="Interior" unique_id=889086289]
+position = Vector2(-797.42523, 803.49274)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_7numd")
+
+[node name="Papers2" type="Sprite2D" parent="Interior/papers2" unique_id=488263684]
+position = Vector2(342.80457, 203.89386)
+scale = Vector2(0.683908, 0.6784661)
+texture = ExtResource("7_8ktx7")
+
+[node name="papers" type="CollisionShape2D" parent="Interior" unique_id=45384335]
+position = Vector2(-467.862, 1007.38654)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_5s0fj")
+
+[node name="Papers" type="Sprite2D" parent="Interior/papers" unique_id=651173605]
+position = Vector2(-317.79312, -203.89386)
+scale = Vector2(0.683908, 0.6784661)
+texture = ExtResource("7_8ktx7")
+
+[node name="box" type="CollisionShape2D" parent="Interior" unique_id=247952142]
+position = Vector2(1191.724, 708.3423)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_33x8s")
+
+[node name="Box" type="Sprite2D" parent="Interior/box" unique_id=16970106]
+position = Vector2(-1971.8618, -97.41589)
+scale = Vector2(0.79597735, 0.8318585)
+texture = ExtResource("6_w7ht3")
+
+[node name="cactus" type="CollisionShape2D" parent="Interior" unique_id=1150356087]
+position = Vector2(1029.1494, 914.5021)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("RectangleShape2D_2j2di")
+
+[node name="cactus" type="Sprite2D" parent="Interior/cactus" unique_id=1375895934]
+position = Vector2(3.6781006, -3.7763672)
+scale = Vector2(1.327586, 1.3215339)
+texture = ExtResource("8_hwsgv")
+
+[node name="BunkerTileSet" parent="." unique_id=1351696057 instance=ExtResource("7_gebyw")]
+position = Vector2(4, 0)
+
+[node name="Interior2" type="StaticBody2D" parent="." unique_id=1626771726]
+position = Vector2(610.5, 182)
+scale = Vector2(0.67968756, 0.6621094)
+disable_mode = 1
+
+[node name="TV" type="CollisionShape2D" parent="Interior2" unique_id=1271896543]
+shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="TV" type="Sprite2D" parent="Interior2/TV" unique_id=1081408801]
+position = Vector2(0.73562145, -52.861362)
+scale = Vector2(1, 0.9999999)
+texture = ExtResource("11_4my3f")
+
+[node name="PC" type="CollisionShape2D" parent="Interior2" unique_id=578259198]
+position = Vector2(429.6092, 22.797943)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="PC" type="Sprite2D" parent="Interior2/PC" unique_id=1494491830]
+position = Vector2(-2.2070313, -75.6593)
+scale = Vector2(1.4712642, 1.5103245)
+texture = ExtResource("12_aeq37")
+
+[node name="Wardrobe" type="CollisionShape2D" parent="Interior2" unique_id=167571115]
+position = Vector2(1020.3217, 45.075226)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="wardrobe" type="Sprite2D" parent="Interior2/Wardrobe" unique_id=1189578746]
+position = Vector2(-198.62073, -10.52655)
+scale = Vector2(0.9885053, 0.95722705)
+texture = ExtResource("3_jsoai")
+
+[node name="Wardrobe2" type="CollisionShape2D" parent="Interior2" unique_id=196446093]
+position = Vector2(820.2298, 47.718292)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="wardrobe2" type="Sprite2D" parent="Interior2/Wardrobe2" unique_id=1186433215]
+position = Vector2(191.63208, -17.134247)
+scale = Vector2(0.9626435, 0.95280254)
+texture = ExtResource("4_bisgb")
+
+[node name="suferer" parent="." unique_id=710697439 instance=ExtResource("12_lvtmh")]
+position = Vector2(740, 514)
+safe_margin = 2.185
+
+[node name="FromRoomToMain" type="Area2D" parent="." unique_id=333306683]
+script = ExtResource("32_4my3f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FromRoomToMain" unique_id=1482886507]
+position = Vector2(740.75, 959.75)
+shape = SubResource("RectangleShape2D_gjxql")
+debug_color = Color(0.68822694, 0.4386929, 0.6356733, 0.41960785)
+
+[connection signal="area_shape_entered" from="FromRoomToMain" to="FromRoomToMain" method="_on_area_shape_entered"]
+[connection signal="body_entered" from="FromRoomToMain" to="FromRoomToMain" method="_on_body_entered"]

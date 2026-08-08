@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://bepbfirc58gnu"]
+
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="1_qd2sc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vkqoe"]
+font = ExtResource("1_qd2sc")
+font_size = 32
+shadow_size = 7
+shadow_color = Color(1, 1, 1, 0.35686275)
+shadow_offset = Vector2(-0.985, 1)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(0.52, 2.72)
+stacked_shadow_0/color = Color(1, 1, 1, 0.5764706)
+
+[sub_resource type="Animation" id="Animation_qd2sc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Welcome:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("you will help:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g80cl"]
+resource_name = "appearing"
+length = 6.766667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Welcome:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.1666667, 3.0666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("you will help:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.8, 5.766667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pi7fj"]
+_data = {
+&"RESET": SubResource("Animation_qd2sc"),
+&"appearing": SubResource("Animation_g80cl")
+}
+
+[node name="Control" type="Control" unique_id=329778455]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Welcome" type="Label" parent="." unique_id=1033619048]
+layout_mode = 0
+offset_left = 729.00006
+offset_top = 410.0
+offset_right = 859.00006
+offset_bottom = 445.0
+scale = Vector2(3.6323395, 3.6323395)
+pivot_offset = Vector2(60.016403, 16.793587)
+text = "WELCOME."
+label_settings = SubResource("LabelSettings_vkqoe")
+
+[node name="you will help" type="Label" parent="." unique_id=1233720840]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 328.0
+offset_right = 702.0
+offset_bottom = 401.0
+scale = Vector2(3.6323395, 3.6323395)
+pivot_offset = Vector2(60.016403, 16.793587)
+text = "You will help me with
+my experiment."
+label_settings = SubResource("LabelSettings_vkqoe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2069324829]
+libraries/ = SubResource("AnimationLibrary_pi7fj")
+autoplay = &"appearing"

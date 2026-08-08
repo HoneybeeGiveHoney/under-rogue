@@ -1,0 +1,51 @@
+[gd_scene format=4 uid="uid://3ehpg8su6k0k"]
+
+[ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/bunkerBaseTileSet.png" id="1_ghha8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yyih5"]
+resource_name = "BunkerBase"
+texture = ExtResource("1_ghha8")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_vkqoe"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 11
+physics_layer_0/collision_mask = 11
+sources/1 = SubResource("TileSetAtlasSource_yyih5")
+
+[node name="BunkerTileSet" type="TileMapLayer" unique_id=1351696057]
+tile_map_data = PackedByteArray("AAANAA0AAQABAAAAAAAOAA0AAQACAAAAAAAPAA0AAQACAAAAAAAQAA0AAQACAAAAAAAUAA0AAQACAAAAAAAVAAwAAQAAAAIAAAAWAAsAAQACAAAAAAAVAA0AAQADAAMAAAAJAA0AAQADAAAAAAAIAA0AAQACAAAAAAAHAA0AAQACAAAAAAAGAA0AAQACAAAAAAAFAA0AAQACAAAAAAAEAA0AAQACAAAAAAADAA0AAQACAAAAAAACAA0AAQACAAAAAAABAA0AAQACAAMAAAABAAwAAQAAAAEAAAAAAAsAAQACAAAAAAD//woAAQAAAAEAAAD//wkAAQAAAAEAAAD//wgAAQAAAAEAAAD//wcAAQAAAAEAAAD//wYAAQAAAAEAAAD//wUAAQAAAAEAAAD//wQAAQAAAAEAAAAAAAMAAQACAAEAAAABAAIAAQAAAAEAAAACAAEAAQACAAEAAAADAAEAAQACAAEAAAAEAAEAAQACAAEAAAAFAAEAAQACAAEAAAAGAAEAAQACAAEAAAAHAAEAAQACAAEAAAAIAAEAAQACAAEAAAAJAAEAAQACAAEAAAAKAAEAAQACAAEAAAALAAEAAQACAAEAAAAMAAEAAQACAAEAAAANAAEAAQACAAEAAAAOAAEAAQACAAEAAAAPAAEAAQACAAEAAAAQAAEAAQACAAEAAAARAAEAAQACAAEAAAASAAEAAQACAAEAAAATAAEAAQACAAEAAAAUAAEAAQACAAEAAAAVAAIAAQAAAAIAAAAWAAMAAQACAAEAAAAXAAQAAQAAAAIAAAAXAAUAAQAAAAIAAAAXAAYAAQAAAAIAAAAXAAcAAQAAAAIAAAAXAAgAAQAAAAIAAAAXAAkAAQAAAAIAAAAXAAoAAQAAAAIAAAABAAMAAQADAAEAAAABAAsAAQADAAAAAAAVAAsAAQABAAAAAAAVAAMAAQABAAEAAAAXAAsAAQADAAMAAAAXAAMAAQADAAIAAAAVAAEAAQADAAIAAAABAAEAAQACAAIAAAD//wsAAQACAAMAAAD//wMAAQACAAIAAAANAA4AAQAAAAIAAAANAA8AAQAAAAIAAAAJAA4AAQAAAAEAAAAJAA8AAQAAAAEAAAAKABAAAQACAAAAAAALABAAAQACAAAAAAAMABAAAQACAAAAAAANABAAAQADAAMAAAAJABAAAQACAAMAAAARAA0AAQACAAAAAAATAA0AAQACAAAAAAASAA0AAQACAAAAAAA=")
+tile_set = SubResource("TileSet_vkqoe")
+collision_visibility_mode = 1
+physics_quadrant_size = 32
+metadata/_edit_lock_ = true

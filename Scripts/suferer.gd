@@ -24,7 +24,8 @@ func _process(delta):
 	if velocity.x == 0 and velocity.y == 0 and GlobalData.IsPaused == 0:
 		$Player.play("standing")
 	
-	move_and_slide()
+		move_and_slide()
 	if velocity.length() > 0: # если направление больше нуля...
 		velocity = velocity.normalized() * speed # ... множим скорость на направление
 	position += velocity * delta # текущая позиция ангела равна текущему направлению, множеному на время
+	
