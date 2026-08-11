@@ -1,0 +1,13 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://bh5xybd5bo7eo"]
+
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="1_xanll"]
+
+[resource]
+font = ExtResource("1_xanll")
+font_size = 32
+shadow_size = 7
+shadow_color = Color(1, 1, 1, 0.35686275)
+shadow_offset = Vector2(-0.985, 1)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(0.52, 2.72)
+stacked_shadow_0/color = Color(1, 1, 1, 0.5764706)

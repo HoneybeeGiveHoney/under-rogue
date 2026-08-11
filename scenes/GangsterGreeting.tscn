@@ -1,19 +1,11 @@
 [gd_scene format=3 uid="uid://bepbfirc58gnu"]
 
-[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="1_qd2sc"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_vkqoe"]
-font = ExtResource("1_qd2sc")
-font_size = 32
-shadow_size = 7
-shadow_color = Color(1, 1, 1, 0.35686275)
-shadow_offset = Vector2(-0.985, 1)
-stacked_shadow_count = 1
-stacked_shadow_0/offset = Vector2(0.52, 2.72)
-stacked_shadow_0/color = Color(1, 1, 1, 0.5764706)
+[ext_resource type="LabelSettings" uid="uid://bh5xybd5bo7eo" path="res://gangstertxt.tres" id="1_6bsa2"]
+[ext_resource type="Texture2D" uid="uid://imepewmtf6kr" path="res://scenes/esc.png" id="2_agw1x"]
+[ext_resource type="Texture2D" uid="uid://nkqcrk8nbsat" path="res://scenes/wasd.png" id="3_vf7cs"]
+[ext_resource type="Texture2D" uid="uid://evgguh65mmop" path="res://scenes/dohodyaga.png" id="4_ic3rx"]
 
 [sub_resource type="Animation" id="Animation_qd2sc"]
-length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -41,7 +33,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_g80cl"]
 resource_name = "appearing"
-length = 6.766667
+length = 22.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -61,10 +53,94 @@ tracks/1/path = NodePath("you will help:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2.8, 5.766667),
+"times": PackedFloat32Array(2.8, 5.766667, 6.5666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("this is your body/Dohodyaga:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(8.8822155, 9.533334),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("this is your body:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7.16085, 8.8, 12.533334, 13.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("you can command him by:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(10.159358, 11, 12.5, 13.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("you can command him by/Wasd:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(11.565898, 12.266666, 12.633333, 13.366667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("you can ask him to watch in depths of his VESSEL:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(14.729868, 16.033333, 17.2, 18.066668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Esc:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(15.8, 16.166666, 17.166666, 18.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("you will choose your own path, good luck:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(18.668177, 20.2, 21.366667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pi7fj"]
@@ -82,6 +158,77 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
+[node name="you will choose your own path, good luck" type="Label" parent="." unique_id=1658074512]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 173.0
+offset_top = 176.0
+offset_right = 693.87195
+offset_bottom = 337.66068
+scale = Vector2(3.6323395, 3.6323395)
+pivot_offset = Vector2(60.016403, 16.793587)
+text = "you will choose your own 
+path, good luck"
+label_settings = ExtResource("1_6bsa2")
+
+[node name="you can ask him to watch in depths of his VESSEL" type="Label" parent="." unique_id=2130158719]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 173.0
+offset_top = 176.0
+offset_right = 789.95325
+offset_bottom = 325.0
+scale = Vector2(3.6323395, 3.6323395)
+pivot_offset = Vector2(60.016403, 16.793587)
+text = "you can ask him
+to watch in depths of his 
+ VESSEL
+ by "
+label_settings = ExtResource("1_6bsa2")
+
+[node name="Esc" type="Sprite2D" parent="." unique_id=389135408]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(777.00006, 739)
+scale = Vector2(3.2460935, 2.6582031)
+texture = ExtResource("2_agw1x")
+
+[node name="you can command him by" type="Label" parent="." unique_id=1677117574]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 708.0
+offset_top = 350.0
+offset_right = 974.4904
+offset_bottom = 423.0
+scale = Vector2(3.6323395, 3.6323395)
+pivot_offset = Vector2(60.016403, 16.793587)
+text = "you can command 
+him by"
+label_settings = ExtResource("1_6bsa2")
+
+[node name="Wasd" type="Sprite2D" parent="you can command him by" unique_id=2337597]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(186.65204, 93.660416)
+scale = Vector2(0.6559994, 0.6070683)
+texture = ExtResource("3_vf7cs")
+
+[node name="this is your body" type="Label" parent="." unique_id=1324778078]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 702.0
+offset_top = 194.0
+offset_right = 961.0
+offset_bottom = 229.0
+scale = Vector2(3.6323395, 3.6323395)
+pivot_offset = Vector2(60.016403, 16.793587)
+text = "this is your body"
+label_settings = ExtResource("1_6bsa2")
+
+[node name="Dohodyaga" type="Sprite2D" parent="this is your body" unique_id=1575347708]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-76.26394, 44.656185)
+scale = Vector2(2.8983471, 2.9537895)
+texture = ExtResource("4_ic3rx")
+
 [node name="Welcome" type="Label" parent="." unique_id=1033619048]
 layout_mode = 0
 offset_left = 729.00006
@@ -91,7 +238,7 @@ offset_bottom = 445.0
 scale = Vector2(3.6323395, 3.6323395)
 pivot_offset = Vector2(60.016403, 16.793587)
 text = "WELCOME."
-label_settings = SubResource("LabelSettings_vkqoe")
+label_settings = ExtResource("1_6bsa2")
 
 [node name="you will help" type="Label" parent="." unique_id=1233720840]
 layout_mode = 0
@@ -103,7 +250,7 @@ scale = Vector2(3.6323395, 3.6323395)
 pivot_offset = Vector2(60.016403, 16.793587)
 text = "You will help me with
 my experiment."
-label_settings = SubResource("LabelSettings_vkqoe")
+label_settings = ExtResource("1_6bsa2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2069324829]
 libraries/ = SubResource("AnimationLibrary_pi7fj")
