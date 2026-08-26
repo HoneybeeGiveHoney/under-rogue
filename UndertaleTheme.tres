@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://j1ftw6ugclkr"]
 
-[ext_resource type="Texture2D" uid="uid://86binf15frol" path="res://assets/slider_grabber.png" id="1_grabber"]
+[ext_resource type="Texture2D" uid="uid://86binf15frol" path="res://assets/interface/slider_grabber.png" id="1_grabber"]
 
 [sub_resource type="StyleBoxFlat" id="ButtonNormal"]
 content_margin_left = 24.0
