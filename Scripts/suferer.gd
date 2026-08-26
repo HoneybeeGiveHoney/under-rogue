@@ -29,6 +29,7 @@ func _process(delta):
 		velocity = velocity.normalized() * speed # ... множим скорость на направление
 	position += velocity * delta # текущая позиция ангела равна текущему направлению, множеному на время
 	
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 	if Input.is_action_pressed("left_mouse"):
 		pass
@@ -58,3 +59,5 @@ func throw_knife() -> void:
 	var timer = get_tree().create_timer(throw_cooldown)
 	timer.timeout.connect(func(): can_throw = true)
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of ae1b056 (my (maybe) last push)
