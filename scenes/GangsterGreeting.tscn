@@ -1,9 +1,20 @@
 [gd_scene format=3 uid="uid://bepbfirc58gnu"]
 
 [ext_resource type="LabelSettings" uid="uid://bh5xybd5bo7eo" path="res://gangstertxt.tres" id="1_6bsa2"]
-[ext_resource type="Texture2D" uid="uid://imepewmtf6kr" path="res://scenes/esc.png" id="2_agw1x"]
-[ext_resource type="Texture2D" uid="uid://nkqcrk8nbsat" path="res://scenes/wasd.png" id="3_vf7cs"]
-[ext_resource type="Texture2D" uid="uid://evgguh65mmop" path="res://scenes/dohodyaga.png" id="4_ic3rx"]
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="1_agw1x"]
+[ext_resource type="Texture2D" uid="uid://imepewmtf6kr" path="res://assets/interface/esc.png" id="2_agw1x"]
+[ext_resource type="Texture2D" uid="uid://nkqcrk8nbsat" path="res://assets/interface/wasd.png" id="3_vf7cs"]
+[ext_resource type="Texture2D" uid="uid://evgguh65mmop" path="res://assets/interface/dohodyaga.png" id="4_ic3rx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vf7cs"]
+font = ExtResource("1_agw1x")
+font_size = 30
+shadow_size = 7
+shadow_color = Color(1, 1, 1, 0.35686275)
+shadow_offset = Vector2(-0.985, 1)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(0.52, 2.72)
+stacked_shadow_0/color = Color(1, 1, 1, 0.5764706)
 
 [sub_resource type="Animation" id="Animation_qd2sc"]
 tracks/0/type = "value"
@@ -159,25 +170,26 @@ grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="you will choose your own path, good luck" type="Label" parent="." unique_id=1658074512]
-modulate = Color(1, 1, 1, 0)
+modulate = Color(1, 1, 1, 0.7812573)
 layout_mode = 0
-offset_left = 173.0
-offset_top = 176.0
-offset_right = 693.87195
-offset_bottom = 337.66068
+offset_left = 28.0
+offset_top = 188.0
+offset_right = 548.87195
+offset_bottom = 349.6607
 scale = Vector2(3.6323395, 3.6323395)
 pivot_offset = Vector2(60.016403, 16.793587)
-text = "you will choose your own 
-path, good luck"
-label_settings = ExtResource("1_6bsa2")
+text = "you will choose your own path,
+ good luck"
+label_settings = SubResource("LabelSettings_vf7cs")
+horizontal_alignment = 1
 
 [node name="you can ask him to watch in depths of his VESSEL" type="Label" parent="." unique_id=2130158719]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 173.0
-offset_top = 176.0
-offset_right = 789.95325
-offset_bottom = 325.0
+offset_left = -170.0
+offset_top = 46.0
+offset_right = 446.95325
+offset_bottom = 195.0
 scale = Vector2(3.6323395, 3.6323395)
 pivot_offset = Vector2(60.016403, 16.793587)
 text = "you can ask him
@@ -185,10 +197,11 @@ to watch in depths of his
  VESSEL
  by "
 label_settings = ExtResource("1_6bsa2")
+horizontal_alignment = 1
 
 [node name="Esc" type="Sprite2D" parent="." unique_id=389135408]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(777.00006, 739)
+position = Vector2(784.00006, 773.99994)
 scale = Vector2(3.2460935, 2.6582031)
 texture = ExtResource("2_agw1x")
 
@@ -224,7 +237,6 @@ text = "this is your body"
 label_settings = ExtResource("1_6bsa2")
 
 [node name="Dohodyaga" type="Sprite2D" parent="this is your body" unique_id=1575347708]
-modulate = Color(1, 1, 1, 0)
 position = Vector2(-76.26394, 44.656185)
 scale = Vector2(2.8983471, 2.9537895)
 texture = ExtResource("4_ic3rx")

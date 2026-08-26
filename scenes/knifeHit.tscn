@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dbhxotm3qhslr"]
+
+[ext_resource type="Texture2D" uid="uid://dkoct035fl35v" path="res://assets/Knife_hit.png" id="1_6ylck"]
+[ext_resource type="Script" uid="uid://dt7t8d85b2ocg" path="res://knife_hit.gd" id="2_m7jhu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix1vp"]
+atlas = ExtResource("1_6ylck")
+region = Rect2(0, 0, 112, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsmbq"]
+atlas = ExtResource("1_6ylck")
+region = Rect2(112, 0, 112, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfs4g"]
+atlas = ExtResource("1_6ylck")
+region = Rect2(224, 0, 112, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wvwc"]
+atlas = ExtResource("1_6ylck")
+region = Rect2(0, 112, 112, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it0oe"]
+atlas = ExtResource("1_6ylck")
+region = Rect2(112, 112, 112, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf75y"]
+atlas = ExtResource("1_6ylck")
+region = Rect2(224, 112, 112, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vkqoe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix1vp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsmbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfs4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wvwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it0oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nf75y")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 13.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1183869506]
+
+[node name="Knife hit" type="AnimatedSprite2D" parent="." unique_id=578708254]
+sprite_frames = SubResource("SpriteFrames_vkqoe")
+frame = 2
+frame_progress = 0.83624464
+script = ExtResource("2_m7jhu")
+
+[node name="Area2D" type="Area2D" parent="Knife hit" unique_id=1021537322]
+
+[node name="knife poly" type="CollisionPolygon2D" parent="Knife hit/Area2D" unique_id=844662055]
+position = Vector2(-15, 0)
+scale = Vector2(2.494116, 4.7438154)
+polygon = PackedVector2Array(4.4103804, -9.275234, -6.014155, -2.951211, -8.018873, 0.63240236, -4.8113236, 5.2700195, 2.4056618, 8.2212305, 8.820761, 9.486035, 7.2169857, 5.48082, 4.811324, 1.4756055, 6.014155, -4.216016)
+
+[connection signal="body_entered" from="Knife hit/Area2D" to="Knife hit" method="_on_area_2d_body_entered"]

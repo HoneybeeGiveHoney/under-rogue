@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://de45iqqsvjoqy"]
+
+[ext_resource type="Texture2D" uid="uid://bkwlimi0hyqru" path="res://assets/pointer.png" id="1_0hk4w"]
+[ext_resource type="Script" uid="uid://b7gquus6u05au" path="res://Scripts/pointer.gd" id="2_vyy14"]
+
+[node name="Pointer" type="Sprite2D" unique_id=613101763]
+rotation = -1.5759501
+scale = Vector2(2.15625, 2.15625)
+texture = ExtResource("1_0hk4w")
+offset = Vector2(0.62683105, 26.575897)
+script = ExtResource("2_vyy14")
