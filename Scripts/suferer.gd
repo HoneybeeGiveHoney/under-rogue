@@ -29,32 +29,5 @@ func _process(delta):
 		velocity = velocity.normalized() * speed # ... множим скорость на направление
 	position += velocity * delta # текущая позиция ангела равна текущему направлению, множеному на время
 	
-<<<<<<< Updated upstream
 	if Input.is_action_pressed("left_mouse"):
 		pass
-=======
-
-@export var knife_scene: PackedScene  # сюда в инспекторе перетащи Knife.tscn
-@export var throw_cooldown: float = 1.5
-@export var knife_spawn_point: Node2D  # Marker2D, откуда вылетает нож
-
-var can_throw: bool = true
-
-func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("attack") and can_throw:
-		throw_knife()
-
-func throw_knife() -> void:
-	can_throw = false
-	var knife = knife_scene.instantiate()
-	get_tree().current_scene.add_child(knife)
-	var direction = (get_global_mouse_position() - global_position).normalized()
-	
-	# Спавним чуть впереди игрока, в направлении курсора
-	knife.global_position = global_position + direction * 20
-	knife.rotation = direction.angle()
-	knife.setup(direction)
-	
-	var timer = get_tree().create_timer(throw_cooldown)
-	timer.timeout.connect(func(): can_throw = true)
->>>>>>> Stashed changes
