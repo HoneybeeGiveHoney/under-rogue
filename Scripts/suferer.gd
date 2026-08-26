@@ -29,5 +29,3 @@ func _process(delta):
 		velocity = velocity.normalized() * speed # ... множим скорость на направление
 	position += velocity * delta # текущая позиция ангела равна текущему направлению, множеному на время
 	
-	if Input.is_action_pressed("left_mouse"):
-		pass

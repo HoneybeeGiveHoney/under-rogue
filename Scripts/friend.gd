@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
-var Health = 60
 var speed = 70
 
-func _process(_delta):
+func _process(delta):
 	var Delta = position.x - $"../suferer".position.x
 	var Beta = position.y - $"../suferer".position.y
 	if Delta < 0:
@@ -16,12 +15,12 @@ func _process(_delta):
 		velocity.y = -1
 	if velocity.length() > 0: # если направление больше нуля...
 		velocity = velocity.normalized() * speed # ... множим скорость на направление
-	position += velocity * _delta
+	position += velocity * delta
 	move_and_slide()
 	
 	
 
 func _on_collision_trigger_body_entered(TileMapLayer):
-	$Foe.play("WallWalker")
+	$AnimatedSprite2D.play("WallWalker")
 func _on_collision_trigger_body_exited(TileMapLayer):
-	$Foe.play("Base")
+	$AnimatedSprite2D.play("Base")
