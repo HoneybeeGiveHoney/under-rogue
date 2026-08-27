@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://0ijhbjalcwmc"]
 
 [ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_iolsc"]
-[ext_resource type="Script" uid="uid://cs06jwigdejou" path="res://Scripts/Room.gd" id="1_uq2c6"]
 [ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://Scripts/suferer.gd" id="2_nthll"]
 [ext_resource type="Texture2D" uid="uid://dxrvygimv1j0q" path="res://assets/Placeholder_Friend.png" id="3_8v8mo"]
 [ext_resource type="PackedScene" uid="uid://d4eow2hduvu3k" path="res://knife.tscn" id="3_tq6vh"]
@@ -26,7 +25,6 @@
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="21_gu7m6"]
 [ext_resource type="Script" uid="uid://cr8mqoobtb3a7" path="res://Scripts/friend.gd" id="22_fwn4l"]
 [ext_resource type="Texture2D" uid="uid://ckou5np40aq3r" path="res://assets/Placeholder_Friend2.png" id="24_fwn4l"]
-[ext_resource type="Script" uid="uid://coen1i0ssm5u3" path="res://Scripts/Door.gd" id="26_h5an3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
 atlas = ExtResource("3_xg3yv")
@@ -458,16 +456,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(192, 145)
-
 [node name="BunkerMain" type="Node2D" unique_id=686264999]
-script = ExtResource("1_uq2c6")
 
 [node name="BunkerTileSet" parent="." unique_id=1351696057 instance=ExtResource("1_iolsc")]
 tile_map_data = PackedByteArray("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")
 
-[node name="suferer" type="CharacterBody2D" parent="." unique_id=710697439 node_paths=PackedStringArray("knife_spawn_point")]
+[node name="suferer" type="CharacterBody2D" parent="." unique_id=710697439]
 position = Vector2(2776, 613)
 disable_mode = 2
 collision_layer = 3
@@ -478,7 +472,6 @@ platform_wall_layers = 1
 safe_margin = 2.25
 script = ExtResource("2_nthll")
 knife_scene = ExtResource("3_tq6vh")
-knife_spawn_point = NodePath("KnifeSpawn")
 
 [node name="KnifeSpawn" type="Marker2D" parent="suferer" unique_id=1381992612]
 
@@ -672,7 +665,6 @@ debug_color = Color(0.92941177, 0, 0.1882353, 0.078431375)
 position = Vector2(0, 9)
 
 [node name="Friend" type="CharacterBody2D" parent="." unique_id=93083512]
-visible = false
 position = Vector2(2155, 681)
 collision_layer = 0
 collision_mask = 0
@@ -698,16 +690,6 @@ debug_color = Color(0.8156863, 0, 0.16470589, 0.47058824)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Friend" unique_id=320355133]
 sprite_frames = SubResource("SpriteFrames_co6qv")
 animation = &"Base"
-
-[node name="Doors" type="Node" parent="." unique_id=1690084358]
-
-[node name="DoorDown" type="Area2D" parent="Doors" unique_id=2025667642]
-script = ExtResource("26_h5an3")
-direction = Vector2i(0, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/DoorDown" unique_id=897168220]
-position = Vector2(3360, 1143.5)
-shape = SubResource("RectangleShape2D_g4v7s")
 
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]

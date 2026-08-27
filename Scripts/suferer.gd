@@ -2,9 +2,13 @@ extends CharacterBody2D
 
 var speed = 200
 
-func _physics_process(delta: float) -> void:
-	var direction = Vector2.ZERO  # переименовано, чтобы не путать со встроенным velocity
+@export var knife_scene: PackedScene
+@export var throw_cooldown: float = 1.5
+@export var knife_spawn_point: Node2D
+var can_throw: bool = true
 
+func _physics_process(delta: float) -> void:
+	var direction = Vector2.ZERO
 	if Input.is_action_pressed("move_right") and GlobalData.IsPaused == 0:
 		direction.x += 1
 	if Input.is_action_pressed("move_left") and GlobalData.IsPaused == 0:
@@ -14,7 +18,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_up") and GlobalData.IsPaused == 0:
 		direction.y -= 1
 
-	# анимации
 	if direction.x == 1 and direction.y == 0:
 		$Player.play("walk_right")
 	elif direction.x == -1 and direction.y == 0:
@@ -28,15 +31,8 @@ func _physics_process(delta: float) -> void:
 
 	if direction.length() > 0:
 		direction = direction.normalized()
-
-	velocity = direction * speed  # это уже встроенное свойство CharacterBody2D
-	move_and_slide()              # вызывается КАЖДЫЙ кадр, вне всех if — здесь и происходит реальное движение с учётом стен
-
-
-@export var knife_scene: PackedScene
-@export var throw_cooldown: float = 1.5
-@export var knife_spawn_point: Node2D
-var can_throw: bool = true
+	velocity = direction * speed
+	move_and_slide()
 
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("attack") and can_throw:
@@ -47,9 +43,8 @@ func throw_knife() -> void:
 	var knife = knife_scene.instantiate()
 	get_tree().current_scene.add_child(knife)
 	var direction = (get_global_mouse_position() - global_position).normalized()
-
 	knife.global_position = global_position + direction * 20
 	knife.rotation = direction.angle()
 	knife.setup(direction)
-
 	var timer = get_tree().create_timer(throw_cooldown)
+	timer.timeout.connect(func(): can_throw = true)
