@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(_delta: float):
-	if Input.is_action_pressed("attack") and can_throw:
+	if Input.is_action_pressed("attack") and can_throw and GlobalData.CurrentWeapon == 1:
 		$sounds/KnifeSwing.play()
 		throw_knife()
 
