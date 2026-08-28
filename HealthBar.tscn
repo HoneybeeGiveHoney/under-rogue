@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8h4x2v5r0nqp"]
 
-[ext_resource type="Script" uid="uid://dd0d2be8w85dp" path="res://HealthBar.gd" id="1_hbscr"]
+[ext_resource type="Script" uid="uid://dd0d2be8w85dp" path="res://Scripts/HealthBar.gd" id="1_hbscr"]
 [ext_resource type="Texture2D" uid="uid://d2jw5u7rjyb1n" path="res://iconka.png" id="2_7onog"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="2_n0c2p"]
 

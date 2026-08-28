@@ -3,7 +3,7 @@ extends CharacterBody2D
 var speed = 200
 
 @export var knife_scene: PackedScene
-@export var throw_cooldown: float = 1.5
+@export var throw_cooldown: = 0.3
 @export var knife_spawn_point: Node2D
 var can_throw: bool = true
 
@@ -34,16 +34,17 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * speed
 	move_and_slide()
 
-func _process(_delta: float) -> void:
+func _process(_delta: float):
 	if Input.is_action_pressed("attack") and can_throw:
+		$sounds/KnifeSwing.play()
 		throw_knife()
 
-func throw_knife() -> void:
+func throw_knife():
 	can_throw = false
 	var knife = knife_scene.instantiate()
 	get_tree().current_scene.add_child(knife)
 	var direction = (get_global_mouse_position() - global_position).normalized()
-	knife.global_position = global_position + direction * 20
+	knife.global_position = global_position + direction * 10
 	knife.rotation = direction.angle()
 	knife.setup(direction)
 	var timer = get_tree().create_timer(throw_cooldown)

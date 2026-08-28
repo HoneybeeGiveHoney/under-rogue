@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://d4eow2hduvu3k"]
+
+[ext_resource type="Script" uid="uid://kn3ty52vo151" path="res://Scripts/knife.gd" id="1_8wt88"]
+[ext_resource type="Texture2D" uid="uid://bluh7skl8488i" path="res://assets/Knife_hit.png" id="2_syuqf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amocf"]
+atlas = ExtResource("2_syuqf")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhlpq"]
+atlas = ExtResource("2_syuqf")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwwuh"]
+atlas = ExtResource("2_syuqf")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w0et"]
+atlas = ExtResource("2_syuqf")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a2es"]
+atlas = ExtResource("2_syuqf")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kol1t"]
+atlas = ExtResource("2_syuqf")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6bsa2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amocf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhlpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwwuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w0et")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7a2es")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kol1t")
+}],
+"loop": 0,
+"name": &"hit",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdp04"]
+size = Vector2(171.375, 121.36367)
+
+[node name="Knife" type="Area2D" unique_id=630576184]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_8wt88")
+lifetime = 0.3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=320912201]
+position = Vector2(-2, 0)
+scale = Vector2(2.2265625, 2.2265625)
+sprite_frames = SubResource("SpriteFrames_6bsa2")
+animation = &"hit"
+autoplay = "hit"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1072645152]
+position = Vector2(1.3125, -7.500004)
+scale = Vector2(1, 2.1999993)
+shape = SubResource("RectangleShape2D_fdp04")
+debug_color = Color(0.8901961, 0, 0.3019608, 0.18431373)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

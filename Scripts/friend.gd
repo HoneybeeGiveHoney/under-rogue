@@ -21,6 +21,6 @@ func _process(delta):
 	
 
 func _on_collision_trigger_body_entered(TileMapLayer):
-	$AnimatedSprite2D.play("WallWalker")
+	$"Friend's sprite".play("WallWalker")
 func _on_collision_trigger_body_exited(TileMapLayer):
-	$AnimatedSprite2D.play("Base")
+	$"Friend's sprite".play("Base")
