@@ -37,6 +37,7 @@ func _physics_process(delta: float) -> void:
 func _process(_delta: float):
 	if Input.is_action_pressed("attack") and can_throw and GlobalData.CurrentWeapon == 1:
 		$sounds/KnifeSwing.play()
+		# $Stars нужно придумать как вызывать частицу каждый удар, вне зависимости от скорости удара
 		throw_knife()
 
 func throw_knife():

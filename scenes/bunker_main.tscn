@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_iolsc"]
 [ext_resource type="Script" uid="uid://brba232ktf1k5" path="res://Scripts/bunker_main.gd" id="1_uq2c6"]
-[ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://Scripts/suferer.gd" id="2_nthll"]
+[ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://Scripts/mobs/suferer.gd" id="2_nthll"]
 [ext_resource type="PackedScene" uid="uid://d4eow2hduvu3k" path="res://scenes/knife.tscn" id="3_tq6vh"]
 [ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/sufferer.png" id="3_xg3yv"]
 [ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/suffererFocuses.png" id="4_gncxx"]
-[ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menu.gd" id="5_h6rnp"]
-[ext_resource type="AudioStream" uid="uid://b6v0eycf7ewd2" path="res://assets/KnifeSwing.mp3" id="5_wfcug"]
-[ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/empty_Hearth.png" id="6_lp5pk"]
-[ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/SoulRays.png" id="7_8bjgs"]
+[ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menus/menu.gd" id="5_h6rnp"]
+[ext_resource type="AudioStream" uid="uid://nixv3sw57tcl" path="res://assets/KnifeSwing.ogg" id="5_vmfmc"]
+[ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/Sprites/empty_Hearth.png" id="6_lp5pk"]
+[ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/Sprites/SoulRays.png" id="7_8bjgs"]
 [ext_resource type="Texture2D" uid="uid://8ry37gdkui63" path="res://assets/SoulRaysFragments/Empty-Patience.png" id="8_bd77f"]
 [ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="9_isam3"]
 [ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="10_3cqmg"]
@@ -25,10 +25,11 @@
 [ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/SoulRaysAppear.ogg" id="20_ro5b2"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="21_gu7m6"]
 [ext_resource type="Script" uid="uid://cr8mqoobtb3a7" path="res://Scripts/friend.gd" id="22_fwn4l"]
-[ext_resource type="Texture2D" uid="uid://cm2yi4kghpvfn" path="res://assets/WeaponPointer.png" id="24_vmfmc"]
-[ext_resource type="Texture2D" uid="uid://br7oebhv03xgr" path="res://assets/Foe1.png" id="25_h5an3"]
+[ext_resource type="Texture2D" uid="uid://cm2yi4kghpvfn" path="res://assets/interface/WeaponPointer.png" id="24_vmfmc"]
+[ext_resource type="Texture2D" uid="uid://br7oebhv03xgr" path="res://assets/Sprites/Foe1.png" id="25_h5an3"]
 [ext_resource type="Script" uid="uid://2o66revuju2o" path="res://scenes/Weapon.gd" id="25_nvy1x"]
-[ext_resource type="Texture2D" uid="uid://xpmscjk4pr54" path="res://assets/FoeFade.png" id="26_uq2c6"]
+[ext_resource type="Texture2D" uid="uid://xpmscjk4pr54" path="res://assets/Sprites/FoeFade.png" id="26_uq2c6"]
+[ext_resource type="Texture2D" uid="uid://cnccipkibtcvh" path="res://assets/Sprites/littleStar.png" id="27_nvy1x"]
 [ext_resource type="PackedScene" uid="uid://c8h4x2v5r0nqp" path="res://HealthBar.tscn" id="27_wfcug"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
@@ -498,6 +499,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [-1.5673057]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Stars:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.87058824, 0.45882353, 0.07450981, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_crp4k"]
 resource_name = "dexterity"
@@ -524,6 +537,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [-2.5534167]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Stars:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.7103303, 0.2384986, 0.99999994, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_rmdxy"]
@@ -552,6 +577,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [1.5917403]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Stars:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.41385734, 0.77193016, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_48p1c"]
 resource_name = "justice"
@@ -578,6 +615,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [-0.7819075]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Stars:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.79463124, 0.6404755, 7.70092e-07, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_nsmmb"]
@@ -606,6 +655,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.6667158]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Stars:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.22077322, 0.5970212, 0, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_qo0vt"]
 resource_name = "normal"
@@ -632,6 +693,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(20.000015, -57)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Stars:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_cf2cc"]
@@ -660,6 +733,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-104, -106)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../Stars:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(4.042983e-06, 0.91841656, 0.91876835, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n482b"]
@@ -786,7 +871,7 @@ script = ExtResource("1_uq2c6")
 [node name="BunkerTileSet" parent="." unique_id=1351696057 instance=ExtResource("1_iolsc")]
 tile_map_data = PackedByteArray("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")
 
-[node name="suferer" type="CharacterBody2D" parent="." unique_id=710697439]
+[node name="suferer" type="CharacterBody2D" parent="." unique_id=710697439 node_paths=PackedStringArray("knife_spawn_point")]
 position = Vector2(2776, 613)
 disable_mode = 2
 collision_layer = 3
@@ -797,11 +882,12 @@ platform_wall_layers = 1
 safe_margin = 2.25
 script = ExtResource("2_nthll")
 knife_scene = ExtResource("3_tq6vh")
+knife_spawn_point = NodePath("KnifeSpawn")
 
 [node name="sounds" type="Node2D" parent="suferer" unique_id=900229841]
 
 [node name="KnifeSwing" type="AudioStreamPlayer2D" parent="suferer/sounds" unique_id=2003984507]
-stream = ExtResource("5_wfcug")
+stream = ExtResource("5_vmfmc")
 
 [node name="KnifeSpawn" type="Marker2D" parent="suferer" unique_id=1381992612]
 
@@ -1011,6 +1097,24 @@ debug_color = Color(0.92941177, 0, 0.1882353, 0.078431375)
 
 [node name="MainCamera" type="Camera2D" parent="suferer" unique_id=1784157402]
 position = Vector2(0, 9)
+
+[node name="Stars" type="CPUParticles2D" parent="suferer" unique_id=416509074]
+position = Vector2(2, 5)
+emitting = false
+amount = 1
+texture = ExtResource("27_nvy1x")
+lifetime = 2.0
+one_shot = true
+emission_shape = 3
+emission_rect_extents = Vector2(11.255, 10.095)
+spread = 180.0
+gravity = Vector2(0, -24.37)
+initial_velocity_min = 30.0
+initial_velocity_max = 30.0
+angular_velocity_min = -720.0
+angular_velocity_max = -187.2
+damping_max = 8.0
+color = Color(0.87058824, 0.45882353, 0.07450981, 1)
 
 [node name="Friend" type="CharacterBody2D" parent="." unique_id=93083512]
 position = Vector2(2155, 681)

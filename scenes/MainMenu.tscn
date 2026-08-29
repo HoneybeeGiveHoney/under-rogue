@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b46jaqlfjhrvd"]
 
-[ext_resource type="Script" uid="uid://cbuguqi6mie74" path="res://Scripts/MainMenu.gd" id="1_eiy7p"]
+[ext_resource type="Script" uid="uid://cbuguqi6mie74" path="res://Scripts/menus/MainMenu.gd" id="1_eiy7p"]
 [ext_resource type="Theme" uid="uid://j1ftw6ugclkr" path="res://UndertaleTheme.tres" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="2_h7a2f"]
-[ext_resource type="Texture2D" uid="uid://cigwssp7sgnix" path="res://assets/mainScreen.png" id="3_iwfq2"]
+[ext_resource type="Texture2D" uid="uid://cigwssp7sgnix" path="res://assets/interface/mainScreen.png" id="3_iwfq2"]
 [ext_resource type="Texture2D" uid="uid://w3t2sashd0tk" path="res://assets/MMbuttonpulse.png" id="4_qoqlk"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_bhunq"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d4eow2hduvu3k"]
 
-[ext_resource type="Script" uid="uid://kn3ty52vo151" path="res://Scripts/knife.gd" id="1_8wt88"]
+[ext_resource type="Script" uid="uid://kn3ty52vo151" path="res://Scripts/weapons/knife.gd" id="1_8wt88"]
 [ext_resource type="Texture2D" uid="uid://bluh7skl8488i" path="res://assets/Knife_hit.png" id="2_syuqf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amocf"]
