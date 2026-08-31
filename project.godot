@@ -30,6 +30,10 @@ window/stretch/aspect="expand"
 mouse_cursor/custom_image="uid://cnmil003w3k1"
 mouse_cursor/custom_image_hotspot=Vector2(14, 12)
 
+[global_group]
+
+stars_fx="star"
+
 [input]
 
 move_up={

@@ -8,29 +8,30 @@
 [ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/suffererFocuses.png" id="4_gncxx"]
 [ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menus/menu.gd" id="5_h6rnp"]
 [ext_resource type="AudioStream" uid="uid://nixv3sw57tcl" path="res://assets/KnifeSwing.ogg" id="5_vmfmc"]
-[ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/Sprites/empty_Hearth.png" id="6_lp5pk"]
-[ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/Sprites/SoulRays.png" id="7_8bjgs"]
+[ext_resource type="Texture2D" uid="uid://cj08thpom8b7t" path="res://assets/Sprites/empty_Hearth.png" id="6_lp5pk"]
+[ext_resource type="Texture2D" uid="uid://3rayylas65ai" path="res://assets/Sprites/SoulRays.png" id="7_8bjgs"]
 [ext_resource type="Texture2D" uid="uid://8ry37gdkui63" path="res://assets/SoulRaysFragments/Empty-Patience.png" id="8_bd77f"]
 [ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="9_isam3"]
 [ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="10_3cqmg"]
-[ext_resource type="Texture2D" uid="uid://ds1f4qau0ug1o" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="11_tui8b"]
+[ext_resource type="Texture2D" uid="uid://bc4hkigsrskm4" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="11_tui8b"]
 [ext_resource type="Texture2D" uid="uid://htacyrunexjb" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="12_t0e2p"]
-[ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/Full_Justice.png" id="13_83unw"]
+[ext_resource type="Texture2D" uid="uid://cu5xuylbe5bwy" path="res://assets/SoulRaysFragments/Full_Justice.png" id="13_83unw"]
 [ext_resource type="Texture2D" uid="uid://dlpqfh37hbans" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="14_wqtb7"]
 [ext_resource type="Texture2D" uid="uid://cox12dbm3ogjp" path="res://assets/SoulRaysFragments/Full_Integrity.png" id="15_enw1k"]
 [ext_resource type="Texture2D" uid="uid://ygfi8chngpgf" path="res://assets/SoulRaysFragments/Empty-Dexterity.png" id="16_yawcl"]
-[ext_resource type="Texture2D" uid="uid://c8ckklxvpmg7i" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="17_r5bsq"]
+[ext_resource type="Texture2D" uid="uid://vcjjxxbg5qtr" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="17_r5bsq"]
 [ext_resource type="Texture2D" uid="uid://6omsfqp5l312" path="res://assets/SoulRaysFragments/Empty-Bravery.png" id="18_hkcvx"]
-[ext_resource type="Texture2D" uid="uid://bfwbd4eqg3rrv" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="19_fa2ew"]
+[ext_resource type="Texture2D" uid="uid://c84dovvcbd3j0" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="19_fa2ew"]
 [ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/SoulRaysAppear.ogg" id="20_ro5b2"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="21_gu7m6"]
 [ext_resource type="Script" uid="uid://cr8mqoobtb3a7" path="res://Scripts/friend.gd" id="22_fwn4l"]
-[ext_resource type="Texture2D" uid="uid://cm2yi4kghpvfn" path="res://assets/interface/WeaponPointer.png" id="24_vmfmc"]
-[ext_resource type="Texture2D" uid="uid://br7oebhv03xgr" path="res://assets/Sprites/Foe1.png" id="25_h5an3"]
+[ext_resource type="Texture2D" uid="uid://bcx5o76k6ro3d" path="res://assets/interface/WeaponPointer.png" id="24_vmfmc"]
+[ext_resource type="Texture2D" uid="uid://0kuf12xe40so" path="res://assets/Sprites/Foe1.png" id="25_h5an3"]
 [ext_resource type="Script" uid="uid://2o66revuju2o" path="res://scenes/Weapon.gd" id="25_nvy1x"]
-[ext_resource type="Texture2D" uid="uid://xpmscjk4pr54" path="res://assets/Sprites/FoeFade.png" id="26_uq2c6"]
+[ext_resource type="Texture2D" uid="uid://diqxtphipenc2" path="res://assets/Sprites/FoeFade.png" id="26_uq2c6"]
 [ext_resource type="Texture2D" uid="uid://cnccipkibtcvh" path="res://assets/Sprites/littleStar.png" id="27_nvy1x"]
 [ext_resource type="PackedScene" uid="uid://c8h4x2v5r0nqp" path="res://HealthBar.tscn" id="27_wfcug"]
+[ext_resource type="Script" uid="uid://cg02dbvdps3xo" path="res://scenes/stars.gd" id="28_lq3gn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
 atlas = ExtResource("3_xg3yv")
@@ -1098,7 +1099,7 @@ debug_color = Color(0.92941177, 0, 0.1882353, 0.078431375)
 [node name="MainCamera" type="Camera2D" parent="suferer" unique_id=1784157402]
 position = Vector2(0, 9)
 
-[node name="Stars" type="CPUParticles2D" parent="suferer" unique_id=416509074]
+[node name="Stars" type="CPUParticles2D" parent="suferer" unique_id=416509074 groups=["stars_fx"]]
 position = Vector2(2, 5)
 emitting = false
 amount = 1
@@ -1115,6 +1116,7 @@ angular_velocity_min = -720.0
 angular_velocity_max = -187.2
 damping_max = 8.0
 color = Color(0.87058824, 0.45882353, 0.07450981, 1)
+script = ExtResource("28_lq3gn")
 
 [node name="Friend" type="CharacterBody2D" parent="." unique_id=93083512]
 position = Vector2(2155, 681)
