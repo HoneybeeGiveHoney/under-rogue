@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d4eow2hduvu3k"]
 
 [ext_resource type="Script" uid="uid://kn3ty52vo151" path="res://Scripts/weapons/knife.gd" id="1_8wt88"]
-[ext_resource type="Texture2D" uid="uid://bluh7skl8488i" path="res://assets/Knife_hit.png" id="2_syuqf"]
+[ext_resource type="Texture2D" uid="uid://csq6qtq5ml2mc" path="res://assets/Knife_hit.png" id="2_syuqf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amocf"]
 atlas = ExtResource("2_syuqf")
@@ -60,7 +60,6 @@ size = Vector2(171.375, 121.36367)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_8wt88")
-lifetime = 0.3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=320912201]
 position = Vector2(-2, 0)

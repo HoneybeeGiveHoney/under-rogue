@@ -3,7 +3,7 @@ extends Control
 var Pause = 0
 
 func _process(_delta):
-	if Input.is_action_just_pressed("pause") and Pause == 0 and GlobalData.IsPaused == 0:
+	if Input.is_action_just_pressed("pause") and Pause == 0 and GlobalData.IsPaused == 0 and GlobalData.CanFocus == 1:
 		$AnimationPlayer.play("menu Appear")
 		GlobalData.IsPaused = 1
 		GlobalData.BlockMovements = 1
