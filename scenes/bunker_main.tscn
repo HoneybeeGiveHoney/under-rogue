@@ -12,18 +12,23 @@
 [ext_resource type="AudioStream" uid="uid://nixv3sw57tcl" path="res://assets/KnifeSwing.ogg" id="5_vmfmc"]
 [ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/Sprites/empty_Hearth.png" id="6_lp5pk"]
 [ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/Sprites/SoulRays.png" id="7_8bjgs"]
-[ext_resource type="AudioStream" uid="uid://b6t1bhtqe2o5k" path="res://assets/FoeDeath.ogg" id="7_48p1c"]
 [ext_resource type="Texture2D" uid="uid://ds1rgi7q22ci1" path="res://assets/interface/StatPointer.png" id="7_rmdxy"]
+[ext_resource type="AudioStream" uid="uid://bi2gfl5t5b6bl" path="res://assets/Sounds/Weapons/LeftArrow.ogg" id="7_rt5ba"]
+[ext_resource type="AudioStream" uid="uid://be6srubkymj2e" path="res://assets/Sounds/Weapons/DownArrow.ogg" id="8_6mvv0"]
 [ext_resource type="Texture2D" uid="uid://8ry37gdkui63" path="res://assets/SoulRaysFragments/Empty-Patience.png" id="8_bd77f"]
+[ext_resource type="AudioStream" uid="uid://do0q03ugh6ibc" path="res://assets/Sounds/Weapons/RightArrow.ogg" id="9_3vj0e"]
 [ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="9_isam3"]
 [ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="10_3cqmg"]
-[ext_resource type="AudioStream" uid="uid://dkuotgaapunms" path="res://assets/CHANGE.mp3" id="10_nsmmb"]
 [ext_resource type="Texture2D" uid="uid://tbfasuw31nbg" path="res://assets/Sprites/SoulLight.png" id="10_nvy1x"]
+[ext_resource type="AudioStream" uid="uid://c7pbeun58pqwm" path="res://assets/Sounds/Weapons/sucess.ogg" id="10_otphl"]
+[ext_resource type="AudioStream" uid="uid://dewrygeta1k4u" path="res://assets/Sounds/Weapons/UpArrow.ogg" id="11_jrwb0"]
 [ext_resource type="Script" uid="uid://bi7idqlufendl" path="res://scenes/pulse.gd" id="11_lq3gn"]
-[ext_resource type="AudioStream" uid="uid://ci1f8l2djaoya" path="res://assets/DELETE IT.mp3" id="11_qo0vt"]
 [ext_resource type="Texture2D" uid="uid://ds1f4qau0ug1o" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="11_tui8b"]
+[ext_resource type="AudioStream" uid="uid://celwuypigkgcb" path="res://assets/Sounds/Weapons/Failure.ogg" id="12_106nv"]
 [ext_resource type="Texture2D" uid="uid://htacyrunexjb" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="12_t0e2p"]
+[ext_resource type="AudioStream" uid="uid://yxe51eulx7s5" path="res://assets/Sounds/Weapons/Change.ogg" id="13_6mvv0"]
 [ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/Full_Justice.png" id="13_83unw"]
+[ext_resource type="AudioStream" uid="uid://bmtrkd38ul7xg" path="res://assets/Sounds/Weapons/Beat.ogg" id="13_f284d"]
 [ext_resource type="Texture2D" uid="uid://dlpqfh37hbans" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="14_wqtb7"]
 [ext_resource type="Texture2D" uid="uid://cox12dbm3ogjp" path="res://assets/SoulRaysFragments/Full_Integrity.png" id="15_enw1k"]
 [ext_resource type="Texture2D" uid="uid://ygfi8chngpgf" path="res://assets/SoulRaysFragments/Empty-Dexterity.png" id="16_yawcl"]
@@ -1483,6 +1488,7 @@ autoplay = "Left"
 
 [node name="Fail" type="Timer" parent="suferer/Attacks/Integrity" unique_id=1542566570]
 wait_time = 8.0
+one_shot = true
 
 [node name="Beat" type="Timer" parent="suferer/Attacks/Integrity" unique_id=205486352]
 one_shot = true
@@ -1490,21 +1496,45 @@ one_shot = true
 [node name="PointerMovement" type="AnimationPlayer" parent="suferer/Attacks/Integrity" unique_id=505094357]
 libraries/ = SubResource("AnimationLibrary_ojs3s")
 
-[node name="FoeDeath" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity" unique_id=116508316]
-position = Vector2(1, 6)
-stream = ExtResource("7_48p1c")
+[node name="DeadZone" type="Timer" parent="suferer/Attacks/Integrity" unique_id=1735725245]
+wait_time = 0.458
+one_shot = true
 
-[node name="KnifeSwing" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity" unique_id=1040639762]
-position = Vector2(-1, 6)
-stream = ExtResource("5_vmfmc")
+[node name="Sounds" type="Control" parent="suferer/Attacks/Integrity" unique_id=769721197]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="DeleteIt" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity" unique_id=1395299775]
-position = Vector2(0, 6)
-stream = ExtResource("11_qo0vt")
+[node name="LeftArrow" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=1604475355]
+stream = ExtResource("7_rt5ba")
 
-[node name="Change" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity" unique_id=956701240]
-position = Vector2(1, 9)
-stream = ExtResource("10_nsmmb")
+[node name="DownArrow" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=1705024526]
+position = Vector2(1, 0)
+stream = ExtResource("8_6mvv0")
+
+[node name="RightArrow" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=423255700]
+stream = ExtResource("9_3vj0e")
+
+[node name="Sucess" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=477972826]
+position = Vector2(5, 2)
+stream = ExtResource("10_otphl")
+
+[node name="UpArrow" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=390992145]
+position = Vector2(-1, 16)
+stream = ExtResource("11_jrwb0")
+
+[node name="Failure" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=1437542916]
+position = Vector2(3, 5)
+stream = ExtResource("12_106nv")
+
+[node name="Beat" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=8825501]
+position = Vector2(-1, 3)
+stream = ExtResource("13_f284d")
+
+[node name="Change" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=655163563]
+position = Vector2(3, 4)
+stream = ExtResource("13_6mvv0")
 
 [node name="StatPointer" type="Sprite2D" parent="suferer/Attacks" unique_id=1581805017]
 position = Vector2(5, 189)
@@ -1790,6 +1820,7 @@ offset_bottom = 899.0
 
 [connection signal="timeout" from="suferer/Attacks/Integrity/Fail" to="suferer/Attacks/Integrity" method="_on_fail_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Beat" to="suferer/Attacks/Integrity" method="_on_beat_timeout"]
+[connection signal="timeout" from="suferer/Attacks/Integrity/DeadZone" to="suferer/Attacks/Integrity" method="_on_dead_zone_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/UnblockMovements" to="suferer/Control" method="_on_unblock_movements_timeout"]
