@@ -1651,14 +1651,14 @@ wait_time = 8.0
 one_shot = true
 
 [node name="Beat" type="Timer" parent="suferer/Attacks/Integrity" unique_id=205486352]
-wait_time = 0.458
+wait_time = 0.357
 one_shot = true
 
 [node name="PointerMovement" type="AnimationPlayer" parent="suferer/Attacks/Integrity" unique_id=505094357]
 libraries/ = SubResource("AnimationLibrary_ojs3s")
 
 [node name="DeadZone" type="Timer" parent="suferer/Attacks/Integrity" unique_id=1735725245]
-wait_time = 0.458
+wait_time = 0.358
 one_shot = true
 
 [node name="Sounds" type="Control" parent="suferer/Attacks/Integrity" unique_id=769721197]
@@ -1697,7 +1697,12 @@ stream = ExtResource("13_6mvv0")
 position = Vector2(2, 1)
 stream = ExtResource("10_otphl")
 
+[node name="Cooldown" type="Timer" parent="suferer/Attacks/Integrity" unique_id=92513057]
+wait_time = 3.0
+one_shot = true
+
 [node name="Pointer" type="AnimatedSprite2D" parent="suferer/Attacks" unique_id=72689236]
+self_modulate = Color(1, 1, 1, 0)
 position = Vector2(6, 203)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_w7t7a")
@@ -1986,6 +1991,7 @@ offset_bottom = 899.0
 [connection signal="timeout" from="suferer/Attacks/Integrity/Fail" to="suferer/Attacks/Integrity" method="_on_fail_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Beat" to="suferer/Attacks/Integrity" method="_on_beat_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/DeadZone" to="suferer/Attacks/Integrity" method="_on_dead_zone_timeout"]
+[connection signal="timeout" from="suferer/Attacks/Integrity/Cooldown" to="suferer/Attacks/Integrity" method="_on_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/UnblockMovements" to="suferer/Control" method="_on_unblock_movements_timeout"]

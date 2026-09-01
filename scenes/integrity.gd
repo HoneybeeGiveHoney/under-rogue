@@ -42,10 +42,6 @@ func _process(delta):
 	#var random = RandomNumberGenerator.new()
 	#random.seed = 12345
 	
-	if Failed == 1:
-		$Sounds/Failure.play()
-	
-	
 	if Input.is_action_just_pressed("space") and IsPlaying == 0:
 		SongStarted()
 	if IsPlaying == 1 and Current == 1:
@@ -111,6 +107,7 @@ func SongStarted():
 func Fail():
 	Failed = 1
 	$Sounds/Failure.play()
+	$Cooldown.start()
 	$"../Pointer/PointerAnimation".play("Dissapear")
 
 func Sucess():
@@ -141,3 +138,7 @@ func _on_beat_timeout():
 
 func _on_dead_zone_timeout():
 	Progress += 1
+
+func _on_cooldown_timeout():
+	Failed = 0
+	IsPlaying = 0
