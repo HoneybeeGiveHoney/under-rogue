@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c8ckklxvpmg7i" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="16_42tsv"]
 [ext_resource type="Texture2D" uid="uid://6omsfqp5l312" path="res://assets/SoulRaysFragments/Empty-Bravery.png" id="17_sakjp"]
 [ext_resource type="Texture2D" uid="uid://bfwbd4eqg3rrv" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="18_jht5m"]
-[ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/SoulRaysAppear.ogg" id="19_dns6b"]
+[ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/Sounds/SoulRaysAppear.ogg" id="19_dns6b"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="20_yg2sk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]

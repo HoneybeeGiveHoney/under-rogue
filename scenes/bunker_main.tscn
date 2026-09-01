@@ -9,10 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dbsiralkxqln6" path="res://assets/Sprites/QTEArrows.png" id="5_1oeht"]
 [ext_resource type="Script" uid="uid://c2wc7mkcnoytg" path="res://scenes/integrity.gd" id="5_crp4k"]
 [ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menus/menu.gd" id="5_h6rnp"]
-[ext_resource type="AudioStream" uid="uid://nixv3sw57tcl" path="res://assets/KnifeSwing.ogg" id="5_vmfmc"]
+[ext_resource type="AudioStream" uid="uid://nixv3sw57tcl" path="res://assets/Sounds/KnifeSwing.ogg" id="5_vmfmc"]
 [ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/Sprites/empty_Hearth.png" id="6_lp5pk"]
 [ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/Sprites/SoulRays.png" id="7_8bjgs"]
-[ext_resource type="Texture2D" uid="uid://ds1rgi7q22ci1" path="res://assets/interface/StatPointer.png" id="7_rmdxy"]
 [ext_resource type="AudioStream" uid="uid://bi2gfl5t5b6bl" path="res://assets/Sounds/Weapons/LeftArrow.ogg" id="7_rt5ba"]
 [ext_resource type="AudioStream" uid="uid://be6srubkymj2e" path="res://assets/Sounds/Weapons/DownArrow.ogg" id="8_6mvv0"]
 [ext_resource type="Texture2D" uid="uid://8ry37gdkui63" path="res://assets/SoulRaysFragments/Empty-Patience.png" id="8_bd77f"]
@@ -20,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="9_isam3"]
 [ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="10_3cqmg"]
 [ext_resource type="Texture2D" uid="uid://tbfasuw31nbg" path="res://assets/Sprites/SoulLight.png" id="10_nvy1x"]
-[ext_resource type="AudioStream" uid="uid://c7pbeun58pqwm" path="res://assets/Sounds/Weapons/sucess.ogg" id="10_otphl"]
+[ext_resource type="AudioStream" uid="uid://c5ef4a6ml77my" path="res://assets/Sounds/Weapons/sucess.ogg" id="10_otphl"]
 [ext_resource type="AudioStream" uid="uid://dewrygeta1k4u" path="res://assets/Sounds/Weapons/UpArrow.ogg" id="11_jrwb0"]
 [ext_resource type="Script" uid="uid://bi7idqlufendl" path="res://scenes/pulse.gd" id="11_lq3gn"]
 [ext_resource type="Texture2D" uid="uid://ds1f4qau0ug1o" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="11_tui8b"]
@@ -30,12 +29,13 @@
 [ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/Full_Justice.png" id="13_83unw"]
 [ext_resource type="AudioStream" uid="uid://bmtrkd38ul7xg" path="res://assets/Sounds/Weapons/Beat.ogg" id="13_f284d"]
 [ext_resource type="Texture2D" uid="uid://dlpqfh37hbans" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="14_wqtb7"]
+[ext_resource type="Texture2D" uid="uid://7n4hm3f2lxug" path="res://assets/interface/ArrowPointer.png" id="15_6mvv0"]
 [ext_resource type="Texture2D" uid="uid://cox12dbm3ogjp" path="res://assets/SoulRaysFragments/Full_Integrity.png" id="15_enw1k"]
 [ext_resource type="Texture2D" uid="uid://ygfi8chngpgf" path="res://assets/SoulRaysFragments/Empty-Dexterity.png" id="16_yawcl"]
 [ext_resource type="Texture2D" uid="uid://c8ckklxvpmg7i" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="17_r5bsq"]
 [ext_resource type="Texture2D" uid="uid://6omsfqp5l312" path="res://assets/SoulRaysFragments/Empty-Bravery.png" id="18_hkcvx"]
 [ext_resource type="Texture2D" uid="uid://bfwbd4eqg3rrv" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="19_fa2ew"]
-[ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/SoulRaysAppear.ogg" id="20_ro5b2"]
+[ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/Sounds/SoulRaysAppear.ogg" id="20_ro5b2"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="21_gu7m6"]
 [ext_resource type="Script" uid="uid://cr8mqoobtb3a7" path="res://Scripts/friend.gd" id="22_fwn4l"]
 [ext_resource type="Texture2D" uid="uid://cm2yi4kghpvfn" path="res://assets/interface/WeaponPointer.png" id="24_vmfmc"]
@@ -380,19 +380,19 @@ resource_name = "Down"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../StatPointer:position")
+tracks/0/path = NodePath("../Pointer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(5, 189)]
+"values": [Vector2(6, 203)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../StatPointer:rotation")
+tracks/1/path = NodePath("../Pointer:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -407,26 +407,53 @@ resource_name = "Left"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../StatPointer:rotation")
+tracks/0/path = NodePath("../Pointer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1.5707964]
+"values": [Vector2(-207, -7)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../StatPointer:position")
+tracks/1/path = NodePath("../Pointer:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-194, -4)]
+"values": [1.5707964]
+}
+
+[sub_resource type="Animation" id="Animation_ojs3s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Pointer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 203)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Pointer:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_nxxxb"]
@@ -434,26 +461,26 @@ resource_name = "Right"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../StatPointer:rotation")
+tracks/0/path = NodePath("../Pointer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-1.5707964]
+"values": [Vector2(215, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../StatPointer:position")
+tracks/1/path = NodePath("../Pointer:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(194, 3)]
+"values": [-1.5707964]
 }
 
 [sub_resource type="Animation" id="Animation_ve28e"]
@@ -461,34 +488,167 @@ resource_name = "Up"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../StatPointer:rotation")
+tracks/0/path = NodePath("../Pointer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [3.1415927]
+"values": [Vector2(3, -209)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../StatPointer:position")
+tracks/1/path = NodePath("../Pointer:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(5, -193)]
+"values": [-3.1415927]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ojs3s"]
 _data = {
 &"Down": SubResource("Animation_106nv"),
 &"Left": SubResource("Animation_f284d"),
+&"RESET": SubResource("Animation_ojs3s"),
 &"Right": SubResource("Animation_nxxxb"),
 &"Up": SubResource("Animation_ve28e")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lofop"]
+atlas = ExtResource("15_6mvv0")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehxeq"]
+atlas = ExtResource("15_6mvv0")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vxa1"]
+atlas = ExtResource("15_6mvv0")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swdrg"]
+atlas = ExtResource("15_6mvv0")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o75b7"]
+atlas = ExtResource("15_6mvv0")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0io1r"]
+atlas = ExtResource("15_6mvv0")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w7t7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lofop")
+}],
+"loop": 0,
+"name": &"Dissapear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehxeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vxa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swdrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o75b7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0io1r")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_as3dj"]
+resource_name = "Appear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ere52"]
+resource_name = "Beat"
+length = 0.425
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.3, 0.36666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="Animation" id="Animation_xf7vj"]
+resource_name = "Dissapear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Dissapear"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2nhvs"]
+_data = {
+&"Appear": SubResource("Animation_as3dj"),
+&"Beat": SubResource("Animation_ere52"),
+&"Dissapear": SubResource("Animation_xf7vj")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
@@ -1491,6 +1651,7 @@ wait_time = 8.0
 one_shot = true
 
 [node name="Beat" type="Timer" parent="suferer/Attacks/Integrity" unique_id=205486352]
+wait_time = 0.458
 one_shot = true
 
 [node name="PointerMovement" type="AnimationPlayer" parent="suferer/Attacks/Integrity" unique_id=505094357]
@@ -1516,10 +1677,6 @@ stream = ExtResource("8_6mvv0")
 [node name="RightArrow" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=423255700]
 stream = ExtResource("9_3vj0e")
 
-[node name="Sucess" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=477972826]
-position = Vector2(5, 2)
-stream = ExtResource("10_otphl")
-
 [node name="UpArrow" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=390992145]
 position = Vector2(-1, 16)
 stream = ExtResource("11_jrwb0")
@@ -1536,9 +1693,17 @@ stream = ExtResource("13_f284d")
 position = Vector2(3, 4)
 stream = ExtResource("13_6mvv0")
 
-[node name="StatPointer" type="Sprite2D" parent="suferer/Attacks" unique_id=1581805017]
-position = Vector2(5, 189)
-texture = ExtResource("7_rmdxy")
+[node name="Sucess" type="AudioStreamPlayer2D" parent="suferer/Attacks/Integrity/Sounds" unique_id=196494801]
+position = Vector2(2, 1)
+stream = ExtResource("10_otphl")
+
+[node name="Pointer" type="AnimatedSprite2D" parent="suferer/Attacks" unique_id=72689236]
+position = Vector2(6, 203)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_w7t7a")
+
+[node name="PointerAnimation" type="AnimationPlayer" parent="suferer/Attacks/Pointer" unique_id=1871267697]
+libraries/ = SubResource("AnimationLibrary_2nhvs")
 
 [node name="sounds" type="Node2D" parent="suferer" unique_id=900229841]
 
