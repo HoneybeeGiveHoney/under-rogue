@@ -102,12 +102,14 @@ func SongStarted():
 	IsPlaying = 1
 	GlobalData.CanFocus = 0
 	$Fail.start()
+	$ArrowsMovement.play("Appear")
 	$"../Pointer/PointerAnimation".play("Appear")
 
 func Fail():
 	Failed = 1
 	$Sounds/Failure.play()
 	$Cooldown.start()
+	$ArrowsMovement.play("Dissapear")
 	$"../Pointer/PointerAnimation".play("Dissapear")
 
 func Sucess():
@@ -119,6 +121,7 @@ func Sucess():
 	Down = 0
 	$Fail.stop()
 	$Sounds/Sucess.play()
+	$ArrowsMovement.play("Dissapear")
 	$"../Pointer/PointerAnimation".play("Dissapear")
 
 func DoBeat():
