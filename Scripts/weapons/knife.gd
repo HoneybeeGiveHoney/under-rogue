@@ -8,6 +8,10 @@ var direction: Vector2 = Vector2.ZERO
 func setup(dir: Vector2):
 	direction = dir
 
+func _ready():
+	# удаляем нож через lifetime секунд, даже если он ни во что не попал
+	get_tree().create_timer(lifetime).timeout.connect(queue_free)
+
 func _physics_process(delta):
 	position += direction * speed * delta
 
