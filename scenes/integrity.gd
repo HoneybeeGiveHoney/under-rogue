@@ -11,7 +11,7 @@ var Progress = 0
 var Beat = 1
 var Alpha = 0
 var Current = 0
-var Roll = 1
+var Roll = 0
 
 func _process(delta):
 #region Inputs
@@ -39,23 +39,24 @@ func _process(delta):
 
 	var random = RandomNumberGenerator.new()
 	random.seed = 12345
-	Alpha = (randi_range(1, 5))
-	
+	Roll = (randi_range(1, 5))
+
+
 	if Input.is_action_just_pressed("Info"):
 		print(Current, Progress, Beat, Failed, IsPlaying, Right, Left, Up, Down)
 	if Input.is_action_just_pressed("space") and IsPlaying == 0:
 		SongStarted()
-		Current = Alpha
+		Current = Roll
 	if IsPlaying == 1 and Current == 1:   # FIRST SONG 1️⃣
 		#region Pointer
-		if Progress == 0:
-			$PointerMovement.play("Right")
-		if Progress == 1:
-			$PointerMovement.play("Right")
-		if Progress == 2:
-			$PointerMovement.play("Up")
-		if Progress == 3:
-			$PointerMovement.play("Down")
+		if Progress == 0 and Alpha == 1:
+			$Highlighting.play("Right")
+		if Progress == 1 and Alpha == 1:
+			$Highlighting.play("Right")
+		if Progress == 2 and Alpha == 1:
+			$Highlighting.play("Up")
+		if Progress == 3 and Alpha == 1:
+			$Highlighting.play("Down")
 		#endregion
 		#region First beat
 		if Right == 1 and Progress == 0 and Failed == 0 and Beat == 1:
@@ -104,14 +105,14 @@ func _process(delta):
 		#endregion
 	if IsPlaying == 1 and Current == 2:   # SECOND SONG 2️⃣
 		#region Pointer
-		if Progress == 0:
-			$PointerMovement.play("Up")
-		if Progress == 1:
-			$PointerMovement.play("Down")
-		if Progress == 2:
-			$PointerMovement.play("Down")
-		if Progress == 3:
-			$PointerMovement.play("Up")
+		if Progress == 0 and Alpha == 1:
+			$Highlighting.play("Up")
+		if Progress == 1 and Alpha == 1:
+			$Highlighting.play("Down")
+		if Progress == 2 and Alpha == 1:
+			$Highlighting.play("Down")
+		if Progress == 3 and Alpha == 1:
+			$Highlighting.play("Up")
 		#endregion
 		#region first beat
 		if Right == 1 and Progress == 0:
@@ -160,14 +161,14 @@ func _process(delta):
 		#endregion
 	if IsPlaying == 1 and Current == 3:   # THIRD SONG 3️⃣
 		#region Pointer
-		if Progress == 0:
-			$PointerMovement.play("Up")
-		if Progress == 1:
-			$PointerMovement.play("Left")
-		if Progress == 2:
-			$PointerMovement.play("Left")
-		if Progress == 3:
-			$PointerMovement.play("Right")
+		if Progress == 0 and Alpha == 1:
+			$Highlighting.play("Up")
+		if Progress == 1 and Alpha == 1:
+			$Highlighting.play("Left")
+		if Progress == 2 and Alpha == 1:
+			$Highlighting.play("Left")
+		if Progress == 3 and Alpha == 1:
+			$Highlighting.play("Right")
 		#endregion
 		#region first beat
 		if Right == 1 and Progress == 0:
@@ -207,7 +208,6 @@ func _process(delta):
 			Sucess()
 			DoBeat()
 			GlobalData.IntegritySucess = 1
-			$"../Pointer/PointerAnimation".play("Dissapear")
 		if Left == 1 and Progress == 3:
 			Fail()
 		if Up == 1 and Progress == 3:
@@ -217,14 +217,14 @@ func _process(delta):
 		#endregion
 	if IsPlaying == 1 and Current == 4:   # FOURTH SONG 4️⃣
 		#region Pointer
-		if Progress == 0:
-			$PointerMovement.play("Down")
-		if Progress == 1:
-			$PointerMovement.play("Right")
-		if Progress == 2:
-			$PointerMovement.play("Left")
-		if Progress == 3:
-			$PointerMovement.play("Up")
+		if Progress == 0 and Alpha == 1:
+			$Highlighting.play("Down")
+		if Progress == 1 and Alpha == 1:
+			$Highlighting.play("Right")
+		if Progress == 2 and Alpha == 1:
+			$Highlighting.play("Left")
+		if Progress == 3 and Alpha == 1:
+			$Highlighting.play("Up")
 		#endregion
 		#region first beat
 		if Right == 1 and Progress == 0:
@@ -273,14 +273,14 @@ func _process(delta):
 		#endregion
 	if IsPlaying == 1 and Current == 5:   # FIFTH SONG 5️⃣
 		#region Pointer
-		if Progress == 0:
-			$PointerMovement.play("Left")
-		if Progress == 1:
-			$PointerMovement.play("Left")
-		if Progress == 2:
-			$PointerMovement.play("Right")
-		if Progress == 3:
-			$PointerMovement.play("Right")
+		if Progress == 0 and Alpha == 1:
+			$Highlighting.play("Left")
+		if Progress == 1 and Alpha == 1:
+			$Highlighting.play("Left")
+		if Progress == 2 and Alpha == 1:
+			$Highlighting.play("Right")
+		if Progress == 3 and Alpha == 1:
+			$Highlighting.play("Right")
 		#endregion
 		#region first beat
 		if Right == 1 and Progress == 0:
@@ -320,7 +320,6 @@ func _process(delta):
 			Sucess()
 			DoBeat()
 			GlobalData.IntegritySucess = 1
-			$"../Pointer/PointerAnimation".play("Dissapear")
 		if Left == 1 and Progress == 3:
 			Fail()
 		if Up == 1 and Progress == 3:
@@ -333,17 +332,21 @@ func _process(delta):
 func SongStarted():
 	Progress = 0
 	IsPlaying = 1
+	Alpha = 1
 	GlobalData.CanFocus = 0
 	$Fail.start()
 	$ArrowsMovement.play("Appear")
-	$"../Pointer/PointerAnimation".play("Appear")
+	$"../../Control/soul".self_modulate.a = 255
 
 func Fail():
 	Failed = 1
+	Progress = 0
 	$Sounds/Failure.play()
 	$Cooldown.start()
 	$ArrowsMovement.play("Dissapear")
-	$"../Pointer/PointerAnimation".play("Dissapear")
+	$"../../Control/soul".self_modulate.a = 0
+	$Highlighting.play("Reset")
+	Alpha = 0
 
 func Sucess():
 	$Cooldown.start()
@@ -352,21 +355,19 @@ func Sucess():
 	Left = 0
 	Up = 0
 	Down = 0
+	Progress = 0
 	$Fail.stop()
 	$Sounds/Sucess.play()
 	$ArrowsMovement.play("Dissapear")
-	$"../Pointer/PointerAnimation".play("Dissapear")
+	$"../../Control/soul".self_modulate.a = 0
+	Alpha = 0
 
 func DoBeat():
 	$Beat.start()
 	Beat = 0
-	$"../Pointer/PointerAnimation".play("Beat")
 
 func _on_fail_timeout():
-	IsPlaying = 0
-	GlobalData.CanFocus = 1
-	$Sounds/Failure.play()
-	$"../Pointer".visible = false
+	Fail()
 
 func _on_beat_timeout():
 	Beat = 1
