@@ -375,225 +375,164 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Animation" id="Animation_106nv"]
-resource_name = "Down"
-length = 0.73333335
+[sub_resource type="Animation" id="Animation_ere52"]
+resource_name = "Pulse"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Down/Pulse:scale")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7114987),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(2.193, 2.042)]
+"values": [Vector2(1e-05, 1e-05), Vector2(2.635, 2.635)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Down/Pulse:self_modulate")
+tracks/1/path = NodePath(".:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.7114987),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_f284d"]
-resource_name = "Left"
-length = 0.76666665
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2nhvs"]
+_data = {
+&"Pulse": SubResource("Animation_ere52")
+}
+
+[sub_resource type="Animation" id="Animation_wdo10"]
+resource_name = "Pulse"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Left/Pulse:scale")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.71622103),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1.3333333e-05, 1.3333333e-05), Vector2(2.193, 2.042)]
+"values": [Vector2(1e-05, 1e-05), Vector2(2.635, 2.635)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Left/Pulse:self_modulate")
+tracks/1/path = NodePath(".:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.73333335),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ojs3s"]
-resource_name = "Reset"
+[sub_resource type="Animation" id="Animation_67hkc"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Left/Pulse:self_modulate")
+tracks/0/path = NodePath(".:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Right/Pulse:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Up/Pulse:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Down/Pulse:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Left/Pulse:scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Right/Pulse:scale")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Down/Pulse:scale")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Up/Pulse:scale")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
+"values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_nxxxb"]
-resource_name = "Right"
-length = 0.73333335
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Right/Pulse:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1.3333333e-05, 1.3333333e-05), Vector2(2.193, 2.042)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Right/Pulse:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_ve28e"]
-resource_name = "Up"
-length = 0.73333335
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Up/Pulse:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(2.193, 2.042)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Up/Pulse:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojs3s"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_08813"]
 _data = {
-&"Down": SubResource("Animation_106nv"),
-&"Left": SubResource("Animation_f284d"),
-&"Reset": SubResource("Animation_ojs3s"),
-&"Right": SubResource("Animation_nxxxb"),
-&"Up": SubResource("Animation_ve28e")
+&"Pulse": SubResource("Animation_wdo10"),
+&"RESET": SubResource("Animation_67hkc")
+}
+
+[sub_resource type="Animation" id="Animation_nbic5"]
+resource_name = "Pulse"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(2.635, 2.635)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.93333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1yrg3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iah2v"]
+_data = {
+&"Pulse": SubResource("Animation_nbic5"),
+&"RESET": SubResource("Animation_1yrg3")
+}
+
+[sub_resource type="Animation" id="Animation_akogo"]
+resource_name = "Pulse"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(2.635, 2.635)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6uc53"]
+_data = {
+&"Pulse": SubResource("Animation_akogo")
 }
 
 [sub_resource type="Animation" id="Animation_2nhvs"]
@@ -700,10 +639,62 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_106nv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Up:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Down:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7dbvr"]
 _data = {
 &"Appear": SubResource("Animation_2nhvs"),
-&"Dissapear": SubResource("Animation_7dbvr")
+&"Dissapear": SubResource("Animation_7dbvr"),
+&"RESET": SubResource("Animation_106nv")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
@@ -1126,95 +1117,95 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("soul:modulate")
+tracks/2/path = NodePath("../Player:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(-0.033333335, 1.4333333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Player:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0.033333335, 0.36666667, 0.73333335, 1.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Player:animation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0.033333335),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"focus"]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Bedroom:zoom")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Bedroom:zoom")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.76666665),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(2.42, 2.42)]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Look In Soul:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Look In Soul:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0.36666667, 1.1, 2.9666667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Stats:modulate")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Stats:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(2.4333334, 5.7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Appearing:playing")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Appearing:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(2.0666666),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RayPulse:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.4, 5.6666665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("RayPulse:modulate")
+tracks/9/path = NodePath("soul:self_modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(2.4, 5.6666665),
+"times": PackedFloat32Array(0, 2.4333334),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -1675,67 +1666,75 @@ script = ExtResource("5_crp4k")
 
 [node name="Down" type="AnimatedSprite2D" parent="suferer/Attacks/Integrity" unique_id=187563696]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(2, 3.0000305)
+position = Vector2(3.000061, 120.00006)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_yddip")
 animation = &"Down"
 autoplay = "Down"
-offset = Vector2(4, 158.66663)
+offset = Vector2(1.333252, 5.333252)
 
 [node name="Pulse" type="Sprite2D" parent="suferer/Attacks/Integrity/Down" unique_id=1189223458]
 modulate = Color(0.52156866, 0.6313726, 1, 1)
-position = Vector2(4, 158.66663)
+position = Vector2(0, 2.666626)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("7_3vj0e")
 
+[node name="DownPulse" type="AnimationPlayer" parent="suferer/Attacks/Integrity/Down/Pulse" unique_id=62606242]
+libraries/ = SubResource("AnimationLibrary_2nhvs")
+
 [node name="Up" type="AnimatedSprite2D" parent="suferer/Attacks/Integrity" unique_id=631815366]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(1.9998779, 3)
+position = Vector2(3, -123)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_yddip")
 animation = &"Up"
 autoplay = "Up"
-offset = Vector2(1.3334961, -168)
 
 [node name="Pulse" type="Sprite2D" parent="suferer/Attacks/Integrity/Up" unique_id=1564687603]
 modulate = Color(0.52156866, 0.6313726, 1, 1)
-self_modulate = Color(0, 0, 0, 1)
-position = Vector2(2.666666, -170.66672)
+position = Vector2(1.3333327, -1.3332977)
 rotation = -1.5707964
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("7_3vj0e")
 
+[node name="UpPulse" type="AnimationPlayer" parent="suferer/Attacks/Integrity/Up/Pulse" unique_id=664306498]
+libraries/ = SubResource("AnimationLibrary_08813")
+
 [node name="Right" type="AnimatedSprite2D" parent="suferer/Attacks/Integrity" unique_id=1769284627]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(1.9998779, 3.0000153)
+position = Vector2(124.99988, -1.0000153)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_yddip")
 animation = &"Right"
 autoplay = "Right"
-offset = Vector2(165.3335, -2.666687)
+offset = Vector2(1.3334961, 2.666687)
 
 [node name="Pulse" type="Sprite2D" parent="suferer/Attacks/Integrity/Right" unique_id=211673036]
 modulate = Color(0.52156866, 0.6313726, 1, 1)
-self_modulate = Color(0, 0, 0, 1)
-position = Vector2(168, -5.333374)
+position = Vector2(1.3333282, -1.3332925)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("7_3vj0e")
 
+[node name="RightPulse" type="AnimationPlayer" parent="suferer/Attacks/Integrity/Right/Pulse" unique_id=1032999749]
+libraries/ = SubResource("AnimationLibrary_iah2v")
+
 [node name="Left" type="AnimatedSprite2D" parent="suferer/Attacks/Integrity" unique_id=1171557693]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(1.9998779, 3)
+position = Vector2(-123, -1.0000305)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_yddip")
 animation = &"Left"
 autoplay = "Left"
-offset = Vector2(-166.6665, -4)
+offset = Vector2(0, 1.333374)
 
 [node name="Pulse" type="Sprite2D" parent="suferer/Attacks/Integrity/Left" unique_id=2087442610]
 modulate = Color(0.52156866, 0.6313726, 1, 1)
-self_modulate = Color(0, 0, 0, 1)
-position = Vector2(-162.6665, -5.333354)
+position = Vector2(1.3334961, -2.6666873)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("7_3vj0e")
+
+[node name="LeftPulse" type="AnimationPlayer" parent="suferer/Attacks/Integrity/Left/Pulse" unique_id=1173450188]
+libraries/ = SubResource("AnimationLibrary_6uc53")
 
 [node name="Fail" type="Timer" parent="suferer/Attacks/Integrity" unique_id=1542566570]
 wait_time = 8.0
@@ -1744,12 +1743,6 @@ one_shot = true
 [node name="Beat" type="Timer" parent="suferer/Attacks/Integrity" unique_id=205486352]
 wait_time = 0.828
 one_shot = true
-
-[node name="Highlighting" type="AnimationPlayer" parent="suferer/Attacks/Integrity" unique_id=505094357]
-deterministic = true
-callback_mode_method = 1
-callback_mode_discrete = 2
-libraries/ = SubResource("AnimationLibrary_ojs3s")
 
 [node name="DeadZone" type="Timer" parent="suferer/Attacks/Integrity" unique_id=1735725245]
 wait_time = 0.358
@@ -1809,7 +1802,8 @@ stream = ExtResource("5_vmfmc")
 position = Vector2(4.000004, 0.99998474)
 scale = Vector2(3.7500002, 3.7375004)
 sprite_frames = SubResource("SpriteFrames_sn0t7")
-animation = &"standing"
+animation = &"focus"
+frame = 3
 
 [node name="Collision Box" type="CollisionShape2D" parent="suferer" unique_id=1826113052]
 position = Vector2(3.5, 1)
@@ -1875,6 +1869,7 @@ script = ExtResource("11_lq3gn")
 
 [node name="ColorChange" type="AnimationPlayer" parent="suferer/Control/Pulse" unique_id=783322087]
 libraries/ = SubResource("AnimationLibrary_106nv")
+autoplay = &"Normal"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="suferer/Control" unique_id=1671435496]
 reset_on_save = false
@@ -1888,7 +1883,7 @@ one_shot = true
 [node name="soul" type="AnimatedSprite2D" parent="suferer/Control" unique_id=361454516]
 self_modulate = Color(1, 1, 1, 0)
 visibility_layer = 2
-position = Vector2(19, 22)
+position = Vector2(19, 21)
 scale = Vector2(1.0000001, 0.9999997)
 sprite_frames = SubResource("SpriteFrames_vkqoe")
 
@@ -1906,7 +1901,7 @@ metadata/_edit_lock_ = true
 [node name="RayPulse" type="CPUParticles2D" parent="suferer/Control" unique_id=1316562655]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(19, 21)
-amount = 2
+amount = 1
 texture = ExtResource("7_8bjgs")
 lifetime = 0.04
 speed_scale = 0.5

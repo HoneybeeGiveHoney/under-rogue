@@ -29,8 +29,8 @@ func _physics_process(_delta):
 	if GlobalData.CurrentWeapon > 6:
 		GlobalData. CurrentWeapon = 0
 	
-	if Input.is_action_just_pressed("move_right") and GlobalData.IsPaused == 1:
+	if Input.is_action_just_pressed("Right") and GlobalData.IsPaused == 1:
 		GlobalData.CurrentWeapon -= 1
-	if Input.is_action_just_pressed("move_left") and GlobalData.IsPaused == 1:
+	if Input.is_action_just_pressed("Left") and GlobalData.IsPaused == 1:
 		GlobalData.CurrentWeapon += 1
 	

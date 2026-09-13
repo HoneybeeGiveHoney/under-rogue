@@ -41,22 +41,21 @@ func _process(delta):
 	random.seed = 12345
 	Roll = (randi_range(1, 5))
 
-
 	if Input.is_action_just_pressed("Info"):
 		print(Current, Progress, Beat, Failed, IsPlaying, Right, Left, Up, Down)
-	if Input.is_action_just_pressed("space") and IsPlaying == 0:
+	if Input.is_action_just_pressed("space") and GlobalData.CurrentWeapon == 2 and IsPlaying == 0:
 		SongStarted()
 		Current = Roll
 	if IsPlaying == 1 and Current == 1:   # FIRST SONG 1️⃣
 		#region Pointer
 		if Progress == 0 and Alpha == 1:
-			$Highlighting.play("Right")
+			$Right/Pulse/RightPulse.play("Pulse")
 		if Progress == 1 and Alpha == 1:
-			$Highlighting.play("Right")
+			$Right/Pulse/RightPulse.play("Pulse")
 		if Progress == 2 and Alpha == 1:
-			$Highlighting.play("Up")
+			$Up/Pulse/UpPulse.play("Pulse")
 		if Progress == 3 and Alpha == 1:
-			$Highlighting.play("Down")
+			$Down/Pulse/DownPulse.play("Pulse")
 		#endregion
 		#region First beat
 		if Right == 1 and Progress == 0 and Failed == 0 and Beat == 1:
@@ -106,13 +105,13 @@ func _process(delta):
 	if IsPlaying == 1 and Current == 2:   # SECOND SONG 2️⃣
 		#region Pointer
 		if Progress == 0 and Alpha == 1:
-			$Highlighting.play("Up")
+			$Up/Pulse/UpPulse.play("Pulse")
 		if Progress == 1 and Alpha == 1:
-			$Highlighting.play("Down")
+			$Down/Pulse/DownPulse.play("Pulse")
 		if Progress == 2 and Alpha == 1:
-			$Highlighting.play("Down")
+			$Down/Pulse/DownPulse.play("Pulse")
 		if Progress == 3 and Alpha == 1:
-			$Highlighting.play("Up")
+			$Up/Pulse/UpPulse.play("Pulse")
 		#endregion
 		#region first beat
 		if Right == 1 and Progress == 0:
@@ -162,13 +161,13 @@ func _process(delta):
 	if IsPlaying == 1 and Current == 3:   # THIRD SONG 3️⃣
 		#region Pointer
 		if Progress == 0 and Alpha == 1:
-			$Highlighting.play("Up")
+			$Up/Pulse/UpPulse.play("Pulse")
 		if Progress == 1 and Alpha == 1:
-			$Highlighting.play("Left")
+			$Left/Pulse/LeftPulse.play("Pulse")
 		if Progress == 2 and Alpha == 1:
-			$Highlighting.play("Left")
+			$Left/Pulse/LeftPulse.play("Pulse")
 		if Progress == 3 and Alpha == 1:
-			$Highlighting.play("Right")
+			$Right/Pulse/RightPulse.play("Pulse")
 		#endregion
 		#region first beat
 		if Right == 1 and Progress == 0:
@@ -218,13 +217,13 @@ func _process(delta):
 	if IsPlaying == 1 and Current == 4:   # FOURTH SONG 4️⃣
 		#region Pointer
 		if Progress == 0 and Alpha == 1:
-			$Highlighting.play("Down")
+			$Down/Pulse/DownPulse.play("Pulse")
 		if Progress == 1 and Alpha == 1:
-			$Highlighting.play("Right")
+			$Right/Pulse/RightPulse.play("Pulse")
 		if Progress == 2 and Alpha == 1:
-			$Highlighting.play("Left")
+			$Left/Pulse/LeftPulse.play("Pulse")
 		if Progress == 3 and Alpha == 1:
-			$Highlighting.play("Up")
+			$Up/Pulse/UpPulse.play("Pulse")
 		#endregion
 		#region first beat
 		if Right == 1 and Progress == 0:
@@ -274,13 +273,13 @@ func _process(delta):
 	if IsPlaying == 1 and Current == 5:   # FIFTH SONG 5️⃣
 		#region Pointer
 		if Progress == 0 and Alpha == 1:
-			$Highlighting.play("Left")
+			$Left/Pulse/LeftPulse.play("Pulse")
 		if Progress == 1 and Alpha == 1:
-			$Highlighting.play("Left")
+			$Left/Pulse/LeftPulse.play("Pulse")
 		if Progress == 2 and Alpha == 1:
-			$Highlighting.play("Right")
+			$Right/Pulse/RightPulse.play("Pulse")
 		if Progress == 3 and Alpha == 1:
-			$Highlighting.play("Right")
+			$Right/Pulse/RightPulse.play("Pulse")
 		#endregion
 		#region first beat
 		if Right == 1 and Progress == 0:
@@ -336,7 +335,6 @@ func SongStarted():
 	GlobalData.CanFocus = 0
 	$Fail.start()
 	$ArrowsMovement.play("Appear")
-	$"../../Control/soul".self_modulate.a = 255
 
 func Fail():
 	Failed = 1
@@ -344,8 +342,6 @@ func Fail():
 	$Sounds/Failure.play()
 	$Cooldown.start()
 	$ArrowsMovement.play("Dissapear")
-	$"../../Control/soul".self_modulate.a = 0
-	$Highlighting.play("Reset")
 	Alpha = 0
 
 func Sucess():
@@ -359,7 +355,6 @@ func Sucess():
 	$Fail.stop()
 	$Sounds/Sucess.play()
 	$ArrowsMovement.play("Dissapear")
-	$"../../Control/soul".self_modulate.a = 0
 	Alpha = 0
 
 func DoBeat():
