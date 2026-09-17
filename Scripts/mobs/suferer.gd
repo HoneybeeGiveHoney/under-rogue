@@ -55,3 +55,27 @@ func attack_knife():
 func attack_spin():
 	pass
 	
+@export var rmb_attack_scene: PackedScene
+@export var rmb_cooldown: float = 0.3
+var can_rmb_attack: bool = true
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			if can_rmb_attack and GlobalData.IsPaused == 0:
+				attack_rmb()
+
+func attack_rmb() -> void:
+	can_rmb_attack = false
+	var direction = (get_global_mouse_position() - global_position).normalized()
+
+	var atk = rmb_attack_scene.instantiate()
+	get_tree().current_scene.add_child(atk)
+	atk.global_position = global_position + direction * 10
+	atk.rotation = direction.angle()
+	if atk.has_method("setup"):
+		atk.setup(direction)
+
+	var timer = get_tree().create_timer(rmb_cooldown)
+	timer.timeout.connect(func(): can_rmb_attack = true)
+	

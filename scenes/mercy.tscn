@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bob3dxdgik2no"]
+
+[ext_resource type="Script" uid="uid://d0e3hgl3mqf28" path="res://mercy.gd" id="1_4lh2j"]
+[ext_resource type="Texture2D" uid="uid://b3gw68f0gxkne" path="res://mercy_shot.png" id="2_wf3fd"]
+[ext_resource type="AudioStream" uid="uid://4qtpll3sysi0" path="res://assets/Sounds/Weapons/mercy_sound.mp3" id="3_wf3fd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0f6c"]
+atlas = ExtResource("2_wf3fd")
+region = Rect2(0, 0, 178, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujoo5"]
+atlas = ExtResource("2_wf3fd")
+region = Rect2(178, 0, 178, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i6b2"]
+atlas = ExtResource("2_wf3fd")
+region = Rect2(356, 0, 178, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m7id"]
+atlas = ExtResource("2_wf3fd")
+region = Rect2(534, 0, 178, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+resource_name = "mercy"
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0f6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujoo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i6b2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m7id")
+}],
+"loop": 1,
+"name": &"mercy",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(88, 78)
+
+[node name="mercy" type="Area2D" unique_id=55533349]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_4lh2j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1604133720]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"mercy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1079155600]
+position = Vector2(-7, 1)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=301928806]
+stream = ExtResource("3_wf3fd")
