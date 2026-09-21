@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://belmamiufqsbs"]
+
+[ext_resource type="Texture2D" uid="uid://b7sr683jrpo6o" path="res://assets/IntegrityBell.png" id="1_es4u7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vkqoe"]
+radius = 34.0
+
+[node name="IntegrityBell" type="Area2D" unique_id=2144609113]
+
+[node name="IntegrityBell" type="Sprite2D" parent="." unique_id=486704087]
+scale = Vector2(0.77929693, 0.77929693)
+texture = ExtResource("1_es4u7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318255905]
+shape = SubResource("CircleShape2D_vkqoe")
+debug_color = Color(2.9744804e-05, 0.27704588, 0.79043317, 0.41960785)
