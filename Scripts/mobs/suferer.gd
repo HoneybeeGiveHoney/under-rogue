@@ -63,7 +63,9 @@ func attack_integrity():
 	$Attacks/Cooldown.start()
 	var Bell = Bell_scene.instantiate()
 	get_tree().current_scene.add_child(Bell)
-	Bell.position = get_local_mouse_position()
+	Bell.global_position = $InteractBox/CursorSpawn.global_position
+	Bell.Fade()
+	Bell.Appear()
 	
 @export var rmb_attack_scene: PackedScene
 @export var rmb_cooldown: float = 0.3

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bob3dxdgik2no"]
 
-[ext_resource type="Script" uid="uid://d0e3hgl3mqf28" path="res://mercy.gd" id="1_4lh2j"]
+[ext_resource type="Script" uid="uid://d0e3hgl3mqf28" path="res://Scripts/mercy.gd" id="1_4lh2j"]
 [ext_resource type="Texture2D" uid="uid://b3gw68f0gxkne" path="res://mercy_shot.png" id="2_wf3fd"]
 [ext_resource type="AudioStream" uid="uid://4qtpll3sysi0" path="res://assets/Sounds/Weapons/mercy_sound.mp3" id="3_wf3fd"]
 

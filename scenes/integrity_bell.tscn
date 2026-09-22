@@ -1,16 +1,226 @@
 [gd_scene format=3 uid="uid://belmamiufqsbs"]
 
+[ext_resource type="Script" uid="uid://t863byj7qhad" path="res://scenes/integrity_bell.gd" id="1_5wjq0"]
 [ext_resource type="Texture2D" uid="uid://b7sr683jrpo6o" path="res://assets/IntegrityBell.png" id="1_es4u7"]
+[ext_resource type="Texture2D" uid="uid://b7vjx671ebsb" path="res://assets/Pulse.png" id="3_p3mgc"]
+[ext_resource type="AudioStream" uid="uid://dx58ab0kibkkb" path="res://assets/Sounds/Weapons/IntegrityBell.ogg" id="4_hwoq1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vkqoe"]
-radius = 34.0
+radius = 8.0
+
+[sub_resource type="Animation" id="Animation_5x5qh"]
+resource_name = "Ding"
+length = 4.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336, 0.73333335, 1.4666667, 1.72, 2.4333334, 2.6489003, 3.2637646, 3.5586486),
+"transitions": PackedFloat32Array(1, 13.928845, 6.276669, 1, 6.276669, 1, 6.276669, 1),
+"update": 0,
+"values": [0.0, 0.45727626402251415, -0.2373647782712292, 0.0, 0.47472955654245746, 0.0, 0.47472955654245746, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.4666667, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(35, 35)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pulse:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.4666667, 2.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(5.765, 5.765)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pulse:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.3333334, 2.2, 2.6333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("DingSound:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6666667, 4.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SecondPulse:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.4333334, 3.3666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(4.08, 4.08)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SecondPulse:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.2666667, 2.9333334, 3.2666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ThirdPulse:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3.3, 4.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2.555, 2.555)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ThirdPulse:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(3.2333333, 3.7, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("IntegrityBell:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(4.133333, 4.341696),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.60784316), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5723c"]
+_data = {
+&"Ding": SubResource("Animation_5x5qh")
+}
+
+[sub_resource type="Animation" id="Animation_0rel2"]
+resource_name = "Appear"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntegrityBell:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.60784316)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_npu0j"]
+_data = {
+&"Appear": SubResource("Animation_0rel2")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_co6qv"]
+radius = 48.06172
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gjxql"]
+radius = 46.31809
 
 [node name="IntegrityBell" type="Area2D" unique_id=2144609113]
+self_modulate = Color(1, 1, 1, 0)
+script = ExtResource("1_5wjq0")
 
 [node name="IntegrityBell" type="Sprite2D" parent="." unique_id=486704087]
-scale = Vector2(0.77929693, 0.77929693)
+self_modulate = Color(1, 1, 1, 0.60784316)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_es4u7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318255905]
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_vkqoe")
-debug_color = Color(2.9744804e-05, 0.27704588, 0.79043317, 0.41960785)
+debug_color = Color(0, 0.2784314, 0.7921569, 0.101960786)
+
+[node name="Fade" type="Timer" parent="." unique_id=1081100082]
+wait_time = 4.4
+
+[node name="Ding" type="AnimationPlayer" parent="." unique_id=1441854153]
+libraries/ = SubResource("AnimationLibrary_5723c")
+
+[node name="Appear" type="AnimationPlayer" parent="." unique_id=764490303]
+libraries/ = SubResource("AnimationLibrary_npu0j")
+
+[node name="DingSound" type="AudioStreamPlayer2D" parent="." unique_id=1921346632]
+stream = ExtResource("4_hwoq1")
+
+[node name="Pulse" type="Sprite2D" parent="." unique_id=1762781413]
+modulate = Color(0.46666667, 0.6039216, 1, 0.57254905)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(1, -1)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("3_p3mgc")
+
+[node name="SecondPulse" type="Sprite2D" parent="." unique_id=30518107]
+modulate = Color(0.5764706, 0.69411767, 1, 0.36078432)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(1, 0)
+texture = ExtResource("3_p3mgc")
+
+[node name="SecondPulse" type="Area2D" parent="SecondPulse" unique_id=1460353728]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SecondPulse/SecondPulse" unique_id=1738772169]
+position = Vector2(-1.4705882, 0)
+shape = SubResource("CircleShape2D_co6qv")
+
+[node name="ThirdPulse" type="Sprite2D" parent="." unique_id=182165589]
+modulate = Color(0.5764706, 0.69411767, 1, 0.36078432)
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("3_p3mgc")
+
+[node name="ThirdPulse" type="Area2D" parent="ThirdPulse" unique_id=766971826]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThirdPulse/ThirdPulse" unique_id=2013257104]
+position = Vector2(-0.78277886, 0)
+shape = SubResource("CircleShape2D_gjxql")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Fade" to="." method="_on_fade_timeout"]
+[connection signal="body_entered" from="SecondPulse/SecondPulse" to="." method="_on_second_pulse_body_entered"]
+[connection signal="body_entered" from="ThirdPulse/ThirdPulse" to="." method="_on_third_pulse_body_entered"]
