@@ -14,10 +14,10 @@ func _on_area_entered(area: Area2D):
 	if area.is_in_group("Enemies"):
 		area.Health -= 10
 
-func _on_second_pulse_body_entered(body: Node2D):
-	if body.is_in_group("Enemies"):
-		pass
-	
-func _on_third_pulse_body_entered(body: Node2D):
-	if body.is_in_group("Enemies"):
-		pass
+func _on_second_pulse_area_entered(area: Area2D):
+	if area.is_in_group("Enemies"):
+		area.Health -= 15
+
+func _on_third_pulse_area_entered(area: Area2D):
+	if area.is_in_group("Enemies"):
+		area.Health -= 20

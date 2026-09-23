@@ -7,8 +7,8 @@ func _process(_delta):
 	if Health <= 0 and Dead == false:
 		Dead = true
 		$"../Timer".start()
-		$"../hit".emitting = true
 		$"..".alive = false
+		$"../Death".play("death")
 
 
 func _on_timer_timeout():

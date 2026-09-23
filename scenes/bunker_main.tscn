@@ -44,7 +44,9 @@
 [ext_resource type="Texture2D" uid="uid://xpmscjk4pr54" path="res://assets/Sprites/FoeFade.png" id="26_uq2c6"]
 [ext_resource type="Texture2D" uid="uid://djbdu350lhgo6" path="res://assets/TargetPointer.png" id="40_6mvv0"]
 [ext_resource type="Script" uid="uid://1ybo1j4ykwkk" path="res://scenes/FriendDeath.gd" id="40_rt5ba"]
+[ext_resource type="Texture2D" uid="uid://v5is1uph6ygx" path="res://assets/Sprites/FoeDeath.png" id="44_jrwb0"]
 [ext_resource type="Texture2D" uid="uid://cnccipkibtcvh" path="res://assets/Sprites/littleStar.png" id="45_otphl"]
+[ext_resource type="AudioStream" uid="uid://b6t1bhtqe2o5k" path="res://assets/Sounds/FoeDeath.ogg" id="47_106nv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxxxb"]
 atlas = ExtResource("5_1oeht")
@@ -1671,6 +1673,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("44_jrwb0")
+}],
+"loop": 0,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_1oeht")
 }, {
 "duration": 1.0,
@@ -1695,6 +1705,91 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gjxql"]
 radius = 63.126858
+
+[sub_resource type="Animation" id="Animation_ojs3s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DeathSound:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ve28e"]
+resource_name = "death"
+length = 1.1666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hit:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.26666668, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Friend\'s sprite:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Death"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Friend\'s sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.16666667, 0.24, 0.3, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2.000002, 4.000001), Vector2(10.275, 3.205), Vector2(-1.615, 11.22), Vector2(-4.245, -12.88), Vector2(7.775, 3.205), Vector2(2.000002, 4.000001)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DeathSound:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Friend\'s sprite:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6333333, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojs3s"]
+_data = {
+&"RESET": SubResource("Animation_ojs3s"),
+&"death": SubResource("Animation_ve28e")
+}
 
 [node name="BunkerMain" type="Node2D" unique_id=686264999]
 
@@ -2127,7 +2222,7 @@ debug_color = Color(0.9703923, 0, 0.4518209, 0.13333334)
 position = Vector2(2.000002, 4.000001)
 scale = Vector2(1.32, 1.32)
 sprite_frames = SubResource("SpriteFrames_co6qv")
-animation = &"Base"
+animation = &"Death"
 autoplay = "Base"
 
 [node name="Hitbox" type="CollisionShape2D" parent="Friend" unique_id=756824085 groups=["Enemies"]]
@@ -2136,18 +2231,24 @@ debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="hit" type="CPUParticles2D" parent="Friend" unique_id=1571353561]
 emitting = false
-amount = 15
+amount = 79
 texture = ExtResource("45_otphl")
 lifetime = 0.56
 direction = Vector2(1.26, 0)
 spread = 180.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 32.36
-initial_velocity_max = 106.83
+initial_velocity_min = 120.81
+initial_velocity_max = 318.31
 
 [node name="Timer" type="Timer" parent="Friend" unique_id=167069264]
-wait_time = 2.037
+wait_time = 1.1669999999999998
 one_shot = true
+
+[node name="Death" type="AnimationPlayer" parent="Friend" unique_id=2144292583]
+libraries/ = SubResource("AnimationLibrary_ojs3s")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="Friend" unique_id=196809979]
+stream = ExtResource("47_106nv")
 
 [connection signal="timeout" from="suferer/Attacks/Integrity/Fail" to="suferer/Attacks/Integrity" method="_on_fail_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Beat" to="suferer/Attacks/Integrity" method="_on_beat_timeout"]
