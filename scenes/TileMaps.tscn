@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://3ehpg8su6k0k"]
 
-[ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/bunkerBaseTileSet.png" id="1_ghha8"]
+[ext_resource type="Texture2D" uid="uid://bl06hia7ywixv" path="res://assets/Sprites/bunkerBaseTileSet.png" id="1_ghha8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yyih5"]
 resource_name = "BunkerBase"

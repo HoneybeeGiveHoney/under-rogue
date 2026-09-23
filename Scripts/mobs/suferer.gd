@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
 var speed = 200
+var Roll = 1
 
 @export var knife_scene: PackedScene
 @export var Bell_scene: PackedScene
-@export var cooldown: = 0.1
+@export var cooldown: = 0.5
 @export var spawn_point: Node2D
 var can_hit: bool = true
 
@@ -29,7 +30,7 @@ func _physics_process(_delta):
 		$Player.play("walk_down")
 	elif direction == Vector2.ZERO and GlobalData.IsPaused == 0:
 		$Player.play("standing")
-
+	
 	if direction.length() > 0:
 		direction = direction.normalized()
 	velocity = direction * speed
@@ -37,6 +38,12 @@ func _physics_process(_delta):
 
 	$Attacks/Cooldown.wait_time = cooldown
 	$InteractBox.position = get_local_mouse_position()
+	
+	#region
+	var random = RandomNumberGenerator.new()
+	random.seed = 12345
+	Roll = (randi_range(1, 6))
+	#endregion
 	
 func _process(_delta):
 	if Input.is_action_pressed("attack") and can_hit and GlobalData.CurrentWeapon == 1:
@@ -53,10 +60,22 @@ func attack_knife():
 	$Attacks/Cooldown.start()
 	var knife = knife_scene.instantiate()
 	get_tree().current_scene.add_child(knife)
-	var direction = (get_global_mouse_position() - global_position).normalized()
-	knife.global_position = global_position + direction * 10
-	knife.rotation = direction.angle()
-	knife.setup(direction)
+	knife.Hit()
+	knife.global_position = $InteractBox/CursorSpawn.global_position
+	#region
+	if Roll == 1:
+		knife.rotation = 0
+	if Roll == 2:
+		knife.rotation = 45
+	if Roll == 3:
+		knife.rotation = -45
+	if Roll == 4:
+		knife.rotation = 90
+	if Roll == 5:
+		knife.rotation = 128
+	if Roll == 6:
+		knife.rotation = -128
+	#endregion
 	
 func attack_integrity():
 	can_hit = false

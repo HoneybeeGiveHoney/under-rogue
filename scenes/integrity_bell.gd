@@ -13,11 +13,14 @@ func _on_fade_timeout():
 func _on_area_entered(area: Area2D):
 	if area.is_in_group("Enemies"):
 		area.Health -= 10
+		area.Hit()
 
 func _on_second_pulse_area_entered(area: Area2D):
 	if area.is_in_group("Enemies"):
 		area.Health -= 15
+		area.Hit()
 
 func _on_third_pulse_area_entered(area: Area2D):
 	if area.is_in_group("Enemies"):
 		area.Health -= 20
+		area.Hit()

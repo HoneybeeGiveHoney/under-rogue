@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://belmamiufqsbs"]
 
 [ext_resource type="Script" uid="uid://t863byj7qhad" path="res://scenes/integrity_bell.gd" id="1_5wjq0"]
-[ext_resource type="Texture2D" uid="uid://b7sr683jrpo6o" path="res://assets/IntegrityBell.png" id="1_es4u7"]
-[ext_resource type="Texture2D" uid="uid://b7vjx671ebsb" path="res://assets/Pulse.png" id="3_p3mgc"]
+[ext_resource type="Texture2D" uid="uid://b7sr683jrpo6o" path="res://assets/Sprites/IntegrityBell.png" id="1_es4u7"]
+[ext_resource type="Texture2D" uid="uid://b7vjx671ebsb" path="res://assets/Sprites/Pulse.png" id="3_p3mgc"]
 [ext_resource type="AudioStream" uid="uid://dx58ab0kibkkb" path="res://assets/Sounds/Weapons/IntegrityBell.ogg" id="4_hwoq1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vkqoe"]
@@ -18,7 +18,7 @@ tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.03333336, 0.73333335, 1.4666667, 1.72, 2.4333334, 2.6489003, 3.2637646, 3.5586486),
+"times": PackedFloat32Array(0, 0.73333335, 1.4666667, 1.72, 2.4333334, 2.6489003, 3.2637646, 3.5586486),
 "transitions": PackedFloat32Array(1, 13.928845, 6.276669, 1, 6.276669, 1, 6.276669, 1),
 "update": 0,
 "values": [0.0, 0.45727626402251415, -0.2373647782712292, 0.0, 0.47472955654245746, 0.0, 0.47472955654245746, 0.0]
@@ -33,7 +33,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(1.4666667, 2.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(35, 35)]
+"values": [Vector2(1, 1), Vector2(29.01, 29.01)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -159,10 +159,10 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_co6qv"]
-radius = 48.06172
+radius = 4.470588
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gjxql"]
-radius = 46.31809
+radius = 1.0233206
 
 [node name="IntegrityBell" type="Area2D" unique_id=2144609113]
 self_modulate = Color(1, 1, 1, 0)

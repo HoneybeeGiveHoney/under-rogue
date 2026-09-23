@@ -10,6 +10,8 @@ func _process(_delta):
 		$"..".alive = false
 		$"../Death".play("death")
 
+func Hit():
+	$"../Damage".play("damage")
 
 func _on_timer_timeout():
 	$"..".queue_free()

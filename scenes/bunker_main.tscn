@@ -3,15 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_iolsc"]
 [ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://Scripts/mobs/suferer.gd" id="2_nthll"]
 [ext_resource type="PackedScene" uid="uid://d4eow2hduvu3k" path="res://scenes/knife.tscn" id="3_tq6vh"]
-[ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/sufferer.png" id="3_xg3yv"]
+[ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/Sprites/sufferer.png" id="3_xg3yv"]
 [ext_resource type="PackedScene" uid="uid://belmamiufqsbs" path="res://scenes/integrity_bell.tscn" id="4_3vj0e"]
-[ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/suffererFocuses.png" id="4_gncxx"]
+[ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/Sprites/suffererFocuses.png" id="4_gncxx"]
 [ext_resource type="Texture2D" uid="uid://dbsiralkxqln6" path="res://assets/Sprites/QTEArrows.png" id="5_1oeht"]
 [ext_resource type="Script" uid="uid://c2wc7mkcnoytg" path="res://scenes/integrity.gd" id="5_crp4k"]
 [ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menus/menu.gd" id="5_h6rnp"]
 [ext_resource type="AudioStream" uid="uid://nixv3sw57tcl" path="res://assets/Sounds/KnifeSwing.ogg" id="5_vmfmc"]
 [ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/Sprites/empty_Hearth.png" id="6_lp5pk"]
-[ext_resource type="Texture2D" uid="uid://b7vjx671ebsb" path="res://assets/Pulse.png" id="7_3vj0e"]
+[ext_resource type="Texture2D" uid="uid://b7vjx671ebsb" path="res://assets/Sprites/Pulse.png" id="7_3vj0e"]
 [ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/Sprites/SoulRays.png" id="7_8bjgs"]
 [ext_resource type="AudioStream" uid="uid://bi2gfl5t5b6bl" path="res://assets/Sounds/Weapons/LeftArrow.ogg" id="7_rt5ba"]
 [ext_resource type="AudioStream" uid="uid://be6srubkymj2e" path="res://assets/Sounds/Weapons/DownArrow.ogg" id="8_6mvv0"]
@@ -42,8 +42,9 @@
 [ext_resource type="Texture2D" uid="uid://br7oebhv03xgr" path="res://assets/Sprites/Foe1.png" id="25_h5an3"]
 [ext_resource type="Script" uid="uid://2o66revuju2o" path="res://Scripts/weapons/Weapon.gd" id="25_nvy1x"]
 [ext_resource type="Texture2D" uid="uid://xpmscjk4pr54" path="res://assets/Sprites/FoeFade.png" id="26_uq2c6"]
-[ext_resource type="Texture2D" uid="uid://djbdu350lhgo6" path="res://assets/TargetPointer.png" id="40_6mvv0"]
+[ext_resource type="Texture2D" uid="uid://djbdu350lhgo6" path="res://assets/Sprites/TargetPointer.png" id="40_6mvv0"]
 [ext_resource type="Script" uid="uid://1ybo1j4ykwkk" path="res://scenes/FriendDeath.gd" id="40_rt5ba"]
+[ext_resource type="Texture2D" uid="uid://b2qi33eq4kv86" path="res://assets/Sprites/JusticeScope.png" id="41_f284d"]
 [ext_resource type="Texture2D" uid="uid://v5is1uph6ygx" path="res://assets/Sprites/FoeDeath.png" id="44_jrwb0"]
 [ext_resource type="Texture2D" uid="uid://cnccipkibtcvh" path="res://assets/Sprites/littleStar.png" id="45_otphl"]
 [ext_resource type="AudioStream" uid="uid://b6t1bhtqe2o5k" path="res://assets/Sounds/FoeDeath.ogg" id="47_106nv"]
@@ -1541,6 +1542,9 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_vkqoe"]
 radius = 16.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_co6qv"]
+radius = 131.09538
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_w7t7a"]
 animations = [{
 "frames": [{
@@ -1549,6 +1553,14 @@ animations = [{
 }],
 "loop": 0,
 "name": &"Integrity",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_f284d")
+}],
+"loop": 1,
+"name": &"Justice",
 "speed": 5.0
 }]
 
@@ -1576,7 +1588,7 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_nxxxb"]
 resource_name = "Pulse"
-length = 2.0
+length = 0.93333334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1584,8 +1596,8 @@ tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.033333335, 0.5, 0.96666664),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.033333335, 0.36666667, 0.9),
+"transitions": PackedFloat32Array(19.698313, 1.1486977, 1),
 "update": 0,
 "values": [Vector2(1.7265625, 1.7265625), Vector2(2.812, 2.812), Vector2(1.7265625, 1.7265625)]
 }
@@ -1720,6 +1732,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hit:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_ve28e"]
 resource_name = "death"
@@ -1789,6 +1813,39 @@ tracks/4/keys = {
 _data = {
 &"RESET": SubResource("Animation_ojs3s"),
 &"death": SubResource("Animation_ve28e")
+}
+
+[sub_resource type="Animation" id="Animation_08813"]
+resource_name = "damage"
+length = 0.36666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend\'s sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.23333333, 0.33333334),
+"transitions": PackedFloat32Array(23.425367, 0.8705495, 1.4142126, 6.2766743),
+"update": 0,
+"values": [Vector2(2.000002, 4.000001), Vector2(-5.315, 6.115), Vector2(6.885, -3.5), Vector2(2.000002, 4.000001)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Friend\'s sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 0.16666667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.74854946, 0.2530161, 0.41248852, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nbic5"]
+_data = {
+&"damage": SubResource("Animation_08813")
 }
 
 [node name="BunkerMain" type="Node2D" unique_id=686264999]
@@ -1943,6 +2000,8 @@ libraries/ = SubResource("AnimationLibrary_7dbvr")
 
 [node name="Cooldown" type="Timer" parent="suferer/Attacks" unique_id=2021316867]
 
+[node name="Patience" type="Node2D" parent="suferer/Attacks" unique_id=45052698]
+
 [node name="sounds" type="Node2D" parent="suferer" unique_id=900229841]
 
 [node name="KnifeSwing" type="AudioStreamPlayer2D" parent="suferer/sounds" unique_id=2003984507]
@@ -1955,7 +2014,6 @@ position = Vector2(4.000004, 0.99998474)
 scale = Vector2(3.7500002, 3.7375004)
 sprite_frames = SubResource("SpriteFrames_sn0t7")
 animation = &"focus"
-frame = 3
 
 [node name="Collision Box" type="CollisionShape2D" parent="suferer" unique_id=1826113052]
 position = Vector2(3.5, 1)
@@ -2176,12 +2234,21 @@ scale = Vector2(1, 0.99999994)
 shape = SubResource("CircleShape2D_vkqoe")
 debug_color = Color(0.92941177, 0, 0.1882353, 0.078431375)
 
+[node name="CursorSpawn" type="Marker2D" parent="suferer/InteractBox" unique_id=1298611529]
+
+[node name="SearchingRange" type="Area2D" parent="suferer/InteractBox/CursorSpawn" unique_id=1978108899]
+position = Vector2(-7, -242)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/CursorSpawn/SearchingRange" unique_id=1205901942]
+position = Vector2(7, 243)
+shape = SubResource("CircleShape2D_co6qv")
+debug_color = Color(0.3529412, 0.8862745, 1, 0)
+
 [node name="Scope" type="AnimatedSprite2D" parent="suferer/InteractBox" unique_id=949006767]
-self_modulate = Color(1, 1, 1, 0.49411765)
-rotation = 6.2831855
+self_modulate = Color(1, 1, 1, 0.64705884)
 scale = Vector2(1.7265625, 1.7265625)
 sprite_frames = SubResource("SpriteFrames_w7t7a")
-animation = &"Integrity"
+animation = &"Justice"
 offset = Vector2(1.1153564, 0.30145264)
 
 [node name="Spin" type="AnimationPlayer" parent="suferer/InteractBox/Scope" unique_id=1456541085]
@@ -2190,8 +2257,6 @@ autoplay = &"Spining"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="suferer/InteractBox/Scope" unique_id=1799612262]
 libraries/ = SubResource("AnimationLibrary_ve28e")
-
-[node name="CursorSpawn" type="Marker2D" parent="suferer/InteractBox" unique_id=1298611529]
 
 [node name="MainCamera" type="Camera2D" parent="suferer" unique_id=1784157402]
 position = Vector2(0, 9)
@@ -2250,6 +2315,9 @@ libraries/ = SubResource("AnimationLibrary_ojs3s")
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="Friend" unique_id=196809979]
 stream = ExtResource("47_106nv")
 
+[node name="Damage" type="AnimationPlayer" parent="Friend" unique_id=1899998983]
+libraries/ = SubResource("AnimationLibrary_nbic5")
+
 [connection signal="timeout" from="suferer/Attacks/Integrity/Fail" to="suferer/Attacks/Integrity" method="_on_fail_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Beat" to="suferer/Attacks/Integrity" method="_on_beat_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/DeadZone" to="suferer/Attacks/Integrity" method="_on_dead_zone_timeout"]
@@ -2258,6 +2326,8 @@ stream = ExtResource("47_106nv")
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/UnblockMovements" to="suferer/Control" method="_on_unblock_movements_timeout"]
+[connection signal="area_entered" from="suferer/InteractBox/CursorSpawn/SearchingRange" to="suferer" method="_on_searching_range_area_entered"]
+[connection signal="area_exited" from="suferer/InteractBox/CursorSpawn/SearchingRange" to="suferer" method="_on_searching_range_area_exited"]
 [connection signal="body_entered" from="Friend/Collision Trigger" to="Friend" method="_on_collision_trigger_body_entered"]
 [connection signal="body_exited" from="Friend/Collision Trigger" to="Friend" method="_on_collision_trigger_body_exited"]
 [connection signal="timeout" from="Friend/Timer" to="Friend/Collision Trigger" method="_on_timer_timeout"]
