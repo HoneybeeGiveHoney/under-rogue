@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal hit
 var speed = 200
 var Roll = 1
 
@@ -46,10 +47,15 @@ func _physics_process(_delta):
 	#endregion
 	
 func _process(_delta):
-	if Input.is_action_pressed("attack") and can_hit and GlobalData.CurrentWeapon == 1:
-		$sounds/KnifeSwing.play()
+	if GlobalData.CurrentWeapon == 1 and cooldown > 0.3:
+		cooldown /= 2
+	
+	if Input.is_action_pressed("attack") and can_hit and GlobalData.CurrentWeapon == 1 and GlobalData.PatienceCharges > 0:
 		if GlobalData.Pulse < 1.2:
 			GlobalData.Pulse += 0.1
+		if GlobalData.PatienceCharges > 0:
+			GlobalData.PatienceCharges -= 1
+		emit_signal("hit")
 		attack_knife()
 	
 	if Input.is_action_pressed("attack") and can_hit and GlobalData.CurrentWeapon == 2:
@@ -61,7 +67,16 @@ func attack_knife():
 	var knife = knife_scene.instantiate()
 	get_tree().current_scene.add_child(knife)
 	knife.Hit()
+	knife.Sound()
+	if $InteractBox/PatienceBrakets.Beat == 0:
+		knife.Damage = 10
+		knife.UnBeat()
+	if $InteractBox/PatienceBrakets.Beat > 0:
+		knife.Damage = 25
+		$InteractBox/Scope/Pulse.play("Pulse")
+		knife.Beat()
 	knife.global_position = $InteractBox/CursorSpawn.global_position
+	
 	#region
 	if Roll == 1:
 		knife.rotation = 0

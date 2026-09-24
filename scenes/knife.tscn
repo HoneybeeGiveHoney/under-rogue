@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://kn3ty52vo151" path="res://Scripts/weapons/knife.gd" id="1_8wt88"]
 [ext_resource type="Texture2D" uid="uid://cqoou355ba0hp" path="res://assets/Sprites/Knife_hit.png" id="2_syuqf"]
+[ext_resource type="AudioStream" uid="uid://nixv3sw57tcl" path="res://assets/Sounds/KnifeSwing.ogg" id="3_amocf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdp04"]
 size = Vector2(126.375, 121.36367)
@@ -35,7 +36,41 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="Animation" id="Animation_amocf"]
+resource_name = "Beat"
+length = 0.26666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.24),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.25, 1.25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.53333336), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rhlpq"]
+_data = {
+&"Beat": SubResource("Animation_amocf")
+}
+
 [node name="Knife" type="Area2D" unique_id=630576184]
+scale = Vector2(1.25, 1.25)
 script = ExtResource("1_8wt88")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1072645152]
@@ -48,12 +83,19 @@ debug_color = Color(0.8901961, 0, 0.3019608, 0.18431373)
 wait_time = 0.493
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=320912201]
+self_modulate = Color(1, 1, 1, 0.5529412)
 position = Vector2(-2, 0)
 scale = Vector2(2.2265625, 2.2265623)
 sprite_frames = SubResource("SpriteFrames_6bsa2")
 animation = &"hit"
 frame = 2
 frame_progress = 1.0
+
+[node name="KnifeSwing" type="AudioStreamPlayer2D" parent="." unique_id=1017079556]
+stream = ExtResource("3_amocf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=294249461]
+libraries/ = SubResource("AnimationLibrary_rhlpq")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Fade" to="." method="_on_fade_timeout"]
