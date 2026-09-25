@@ -108,6 +108,8 @@ mercy={
 2d_render/layer_1="Player"
 2d_render/layer_2="Enemies"
 2d_render/layer_3="Projectiles"
+2d_render/layer_6="down"
+2d_render/layer_7="up"
 
 [physics]
 

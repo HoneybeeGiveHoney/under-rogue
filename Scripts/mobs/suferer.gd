@@ -58,7 +58,9 @@ func _process(_delta):
 		emit_signal("hit")
 		attack_knife()
 	
-	if Input.is_action_pressed("attack") and can_hit and GlobalData.CurrentWeapon == 2:
+	if Input.is_action_pressed("attack") and can_hit and GlobalData.CurrentWeapon == 2 and GlobalData.Inspiration >= $InteractBox/Integrity/Inspiration.MaxConsumption and $InteractBox/Integrity/Inspiration.CA == true:
+		emit_signal("hit")
+		# $InteractBox/Integrity/Inspiration.MaxConsumption = GlobalData.currentType
 		attack_integrity()
 
 func attack_knife():
@@ -91,7 +93,6 @@ func attack_knife():
 	if Roll == 6:
 		knife.rotation = -128
 	#endregion
-	
 func attack_integrity():
 	can_hit = false
 	$Attacks/Cooldown.start()

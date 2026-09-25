@@ -7,6 +7,7 @@ var Pulse = 0
 var CanFocus = 1
 var IntegrityCharges = 0
 var PatienceCharges = 0
+var Inspiration = 0
 
 
 

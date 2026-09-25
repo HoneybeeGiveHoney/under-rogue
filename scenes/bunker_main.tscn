@@ -3,15 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_iolsc"]
 [ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://Scripts/mobs/suferer.gd" id="2_nthll"]
 [ext_resource type="PackedScene" uid="uid://d4eow2hduvu3k" path="res://scenes/knife.tscn" id="3_tq6vh"]
-[ext_resource type="Texture2D" uid="uid://dcq2it180nfnt" path="res://assets/Sprites/sufferer.png" id="3_xg3yv"]
+[ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/Sprites/sufferer.png" id="3_xg3yv"]
 [ext_resource type="PackedScene" uid="uid://belmamiufqsbs" path="res://scenes/integrity_bell.tscn" id="4_3vj0e"]
-[ext_resource type="Texture2D" uid="uid://csr4h4gtnmaby" path="res://assets/Sprites/suffererFocuses.png" id="4_gncxx"]
+[ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/Sprites/suffererFocuses.png" id="4_gncxx"]
 [ext_resource type="Texture2D" uid="uid://dbsiralkxqln6" path="res://assets/Sprites/QTEArrows.png" id="5_1oeht"]
 [ext_resource type="Script" uid="uid://c2wc7mkcnoytg" path="res://scenes/integrity.gd" id="5_crp4k"]
 [ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menus/menu.gd" id="5_h6rnp"]
-[ext_resource type="Texture2D" uid="uid://cj08thpom8b7t" path="res://assets/Sprites/empty_Hearth.png" id="6_lp5pk"]
-[ext_resource type="Texture2D" uid="uid://qv2wabi1yfs2" path="res://assets/Sprites/Pulse.png" id="7_3vj0e"]
-[ext_resource type="Texture2D" uid="uid://3rayylas65ai" path="res://assets/Sprites/SoulRays.png" id="7_8bjgs"]
+[ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/Sprites/empty_Hearth.png" id="6_lp5pk"]
+[ext_resource type="Texture2D" uid="uid://b7vjx671ebsb" path="res://assets/Sprites/Pulse.png" id="7_3vj0e"]
+[ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/Sprites/SoulRays.png" id="7_8bjgs"]
 [ext_resource type="AudioStream" uid="uid://bi2gfl5t5b6bl" path="res://assets/Sounds/Weapons/LeftArrow.ogg" id="7_rt5ba"]
 [ext_resource type="AudioStream" uid="uid://be6srubkymj2e" path="res://assets/Sounds/Weapons/DownArrow.ogg" id="8_6mvv0"]
 [ext_resource type="Texture2D" uid="uid://8ry37gdkui63" path="res://assets/SoulRaysFragments/Empty-Patience.png" id="8_bd77f"]
@@ -19,43 +19,47 @@
 [ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="9_isam3"]
 [ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="10_3cqmg"]
 [ext_resource type="Texture2D" uid="uid://tbfasuw31nbg" path="res://assets/Sprites/SoulLight.png" id="10_nvy1x"]
-[ext_resource type="AudioStream" uid="uid://c7pbeun58pqwm" path="res://assets/Sounds/Weapons/sucess.ogg" id="10_otphl"]
+[ext_resource type="AudioStream" uid="uid://c5ef4a6ml77my" path="res://assets/Sounds/Weapons/sucess.ogg" id="10_otphl"]
 [ext_resource type="AudioStream" uid="uid://dewrygeta1k4u" path="res://assets/Sounds/Weapons/UpArrow.ogg" id="11_jrwb0"]
 [ext_resource type="Script" uid="uid://bi7idqlufendl" path="res://scenes/pulse.gd" id="11_lq3gn"]
-[ext_resource type="Texture2D" uid="uid://bc4hkigsrskm4" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="11_tui8b"]
+[ext_resource type="Texture2D" uid="uid://ds1f4qau0ug1o" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="11_tui8b"]
 [ext_resource type="AudioStream" uid="uid://celwuypigkgcb" path="res://assets/Sounds/Weapons/Failure.ogg" id="12_106nv"]
 [ext_resource type="Texture2D" uid="uid://htacyrunexjb" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="12_t0e2p"]
 [ext_resource type="AudioStream" uid="uid://yxe51eulx7s5" path="res://assets/Sounds/Weapons/Change.ogg" id="13_6mvv0"]
-[ext_resource type="Texture2D" uid="uid://cu5xuylbe5bwy" path="res://assets/SoulRaysFragments/Full_Justice.png" id="13_83unw"]
+[ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/Full_Justice.png" id="13_83unw"]
 [ext_resource type="AudioStream" uid="uid://bmtrkd38ul7xg" path="res://assets/Sounds/Weapons/Beat.ogg" id="13_f284d"]
 [ext_resource type="Texture2D" uid="uid://dlpqfh37hbans" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="14_wqtb7"]
 [ext_resource type="Texture2D" uid="uid://cox12dbm3ogjp" path="res://assets/SoulRaysFragments/Full_Integrity.png" id="15_enw1k"]
+[ext_resource type="AudioStream" uid="uid://cp7c1rc6ekf22" path="res://assets/Sounds/Weapons/PatienceGain.ogg" id="16_akogo"]
 [ext_resource type="Texture2D" uid="uid://ygfi8chngpgf" path="res://assets/SoulRaysFragments/Empty-Dexterity.png" id="16_yawcl"]
-[ext_resource type="Texture2D" uid="uid://vcjjxxbg5qtr" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="17_r5bsq"]
+[ext_resource type="Texture2D" uid="uid://c8ckklxvpmg7i" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="17_r5bsq"]
 [ext_resource type="Texture2D" uid="uid://6omsfqp5l312" path="res://assets/SoulRaysFragments/Empty-Bravery.png" id="18_hkcvx"]
-[ext_resource type="Texture2D" uid="uid://c84dovvcbd3j0" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="19_fa2ew"]
-[ext_resource type="AudioStream" uid="uid://dlnxwx21c5fv0" path="res://assets/Sounds/SoulRaysAppear.ogg" id="20_ro5b2"]
+[ext_resource type="Texture2D" uid="uid://bfwbd4eqg3rrv" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="19_fa2ew"]
+[ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/Sounds/SoulRaysAppear.ogg" id="20_ro5b2"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="21_gu7m6"]
 [ext_resource type="Script" uid="uid://cr8mqoobtb3a7" path="res://Scripts/friend.gd" id="22_fwn4l"]
-[ext_resource type="Texture2D" uid="uid://bcx5o76k6ro3d" path="res://assets/interface/WeaponPointer.png" id="24_vmfmc"]
-[ext_resource type="Texture2D" uid="uid://0kuf12xe40so" path="res://assets/Sprites/Foe1.png" id="25_h5an3"]
+[ext_resource type="Texture2D" uid="uid://cm2yi4kghpvfn" path="res://assets/interface/WeaponPointer.png" id="24_vmfmc"]
+[ext_resource type="Texture2D" uid="uid://br7oebhv03xgr" path="res://assets/Sprites/Foe1.png" id="25_h5an3"]
 [ext_resource type="Script" uid="uid://2o66revuju2o" path="res://Scripts/weapons/Weapon.gd" id="25_nvy1x"]
-[ext_resource type="Texture2D" uid="uid://diqxtphipenc2" path="res://assets/Sprites/FoeFade.png" id="26_uq2c6"]
-[ext_resource type="Texture2D" uid="uid://cb8np41dc0c3a" path="res://assets/Sprites/IntegrityScope.png" id="40_6mvv0"]
+[ext_resource type="Texture2D" uid="uid://xpmscjk4pr54" path="res://assets/Sprites/FoeFade.png" id="26_uq2c6"]
+[ext_resource type="Texture2D" uid="uid://djbdu350lhgo6" path="res://assets/Sprites/IntegrityScope.png" id="40_6mvv0"]
 [ext_resource type="Script" uid="uid://1ybo1j4ykwkk" path="res://scenes/FriendDeath.gd" id="40_rt5ba"]
 [ext_resource type="Texture2D" uid="uid://b2qi33eq4kv86" path="res://assets/Sprites/JusticeScope.png" id="41_f284d"]
 [ext_resource type="Texture2D" uid="uid://bg1gyi7hlpxbl" path="res://assets/Sprites/PatienceScope.png" id="42_nxxxb"]
 [ext_resource type="Texture2D" uid="uid://bhoonm0tl2x67" path="res://assets/Sprites/brakets.png" id="43_ojs3s"]
 [ext_resource type="Script" uid="uid://qwqsdh4fs1xw" path="res://scenes/patience_brakets.gd" id="44_ere52"]
-[ext_resource type="Texture2D" uid="uid://b283q0tvi24fo" path="res://assets/Sprites/FoeDeath.png" id="44_jrwb0"]
+[ext_resource type="Texture2D" uid="uid://v5is1uph6ygx" path="res://assets/Sprites/FoeDeath.png" id="44_jrwb0"]
 [ext_resource type="Script" uid="uid://b47g67hi320ku" path="res://scenes/Patiencecharges.gd" id="44_wdo10"]
 [ext_resource type="Texture2D" uid="uid://i0sjl78aovel" path="res://assets/Sprites/PatienceCharge.png" id="45_7dbvr"]
 [ext_resource type="Texture2D" uid="uid://bqksiqoa02dyn" path="res://assets/Sprites/PatienceChargeC.png" id="45_67hkc"]
 [ext_resource type="AudioStream" uid="uid://u0wr6vyw6rty" path="res://assets/Sounds/Weapons/HearthBeat.ogg" id="45_ere52"]
 [ext_resource type="Texture2D" uid="uid://cnccipkibtcvh" path="res://assets/Sprites/littleStar.png" id="45_otphl"]
 [ext_resource type="Texture2D" uid="uid://dso0juh8f065l" path="res://assets/Sprites/PatiencePulse.png" id="46_67hkc"]
-[ext_resource type="AudioStream" uid="uid://d2dn0pfyow6jk" path="res://assets/Sounds/FoeDeath.ogg" id="47_106nv"]
+[ext_resource type="AudioStream" uid="uid://b6t1bhtqe2o5k" path="res://assets/Sounds/FoeDeath.ogg" id="47_106nv"]
 [ext_resource type="Texture2D" uid="uid://b51i6e1xsogxw" path="res://assets/Sprites/SnowFlake.png" id="47_08813"]
+[ext_resource type="Texture2D" uid="uid://ch7pugjrm2t55" path="res://assets/interface/IntegrityBarBase.png" id="50_6uc53"]
+[ext_resource type="Texture2D" uid="uid://bao7gjvjhc5us" path="res://assets/interface/IntegrityBarFull.png" id="52_77h1j"]
+[ext_resource type="Script" uid="uid://chqawfaoef64j" path="res://scenes/inspiration.gd" id="53_gh2hl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxxxb"]
 atlas = ExtResource("5_1oeht")
@@ -3054,6 +3058,10 @@ libraries/ = SubResource("AnimationLibrary_7dbvr")
 
 [node name="Cooldown" type="Timer" parent="suferer/Attacks" unique_id=2021316867]
 
+[node name="PatienceGain" type="AudioStreamPlayer2D" parent="suferer/Attacks" unique_id=1655893998]
+position = Vector2(2, 2)
+stream = ExtResource("16_akogo")
+
 [node name="KnifeSpawn" type="Marker2D" parent="suferer" unique_id=1381992612]
 
 [node name="Player" type="AnimatedSprite2D" parent="suferer" unique_id=864319927]
@@ -3274,6 +3282,7 @@ wait_time = 1.055
 one_shot = true
 
 [node name="InteractBox" type="Area2D" parent="suferer" unique_id=467115300]
+visibility_layer = 3
 position = Vector2(7, 242)
 
 [node name="hitbox" type="CollisionShape2D" parent="suferer/InteractBox" unique_id=1125096523]
@@ -3295,7 +3304,7 @@ debug_color = Color(0.3529412, 0.8862745, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 position = Vector2(-499.095, -1)
 rotation = 2.3561945
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 sprite_frames = SubResource("SpriteFrames_cxmk6")
 animation = &"Rod"
 offset = Vector2(-0.3284912, 0.29223633)
@@ -3308,6 +3317,7 @@ libraries/ = SubResource("AnimationLibrary_as3dj")
 rotation = 0.7853982
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/PatienceBrakets/Braket" unique_id=1274087400]
+visible = false
 shape = SubResource("CapsuleShape2D_gjxql")
 
 [node name="Window" type="Timer" parent="suferer/InteractBox/PatienceBrakets" unique_id=501662761]
@@ -3318,7 +3328,7 @@ one_shot = true
 self_modulate = Color(1, 1, 1, 0)
 position = Vector2(339, 3)
 rotation = 2.3561945
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 sprite_frames = SubResource("SpriteFrames_cxmk6")
 animation = &"Rod"
 offset = Vector2(-0.3284912, 0.29223633)
@@ -3327,12 +3337,14 @@ offset = Vector2(-0.3284912, 0.29223633)
 rotation = 0.7853982
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/PatienceBrakets2/Braket" unique_id=29317704]
+visible = false
 shape = SubResource("CapsuleShape2D_gjxql")
 
 [node name="Scope" type="AnimatedSprite2D" parent="suferer/InteractBox" unique_id=949006767]
+visibility_layer = 64
 scale = Vector2(1.7265625, 1.7265625)
 sprite_frames = SubResource("SpriteFrames_w7t7a")
-animation = &"Patience"
+animation = &"Integrity"
 offset = Vector2(-0.04296875, 0.30145264)
 
 [node name="Spin" type="AnimationPlayer" parent="suferer/InteractBox/Scope" unique_id=1456541085]
@@ -3341,6 +3353,33 @@ autoplay = &"Spining"
 
 [node name="Pulse" type="AnimationPlayer" parent="suferer/InteractBox/Scope" unique_id=1799612262]
 libraries/ = SubResource("AnimationLibrary_ve28e")
+
+[node name="Integrity" type="Node2D" parent="suferer/InteractBox" unique_id=1950470391]
+visibility_layer = 32
+scale = Vector2(1.425, 1.425)
+
+[node name="Inspiration" type="TextureProgressBar" parent="suferer/InteractBox/Integrity" unique_id=1860666621]
+show_behind_parent = true
+visibility_layer = 32
+offset_left = -73.00049
+offset_top = -74.0
+offset_right = 76.99951
+offset_bottom = 76.0
+value = 100.0
+fill_mode = 8
+radial_initial_angle = 180.0
+radial_center_offset = Vector2(-2.32, 0)
+texture_under = ExtResource("50_6uc53")
+texture_progress = ExtResource("52_77h1j")
+tint_under = Color(1, 1, 1, 0.68235296)
+tint_progress = Color(1, 1, 1, 0.68235296)
+script = ExtResource("53_gh2hl")
+
+[node name="Gain" type="Timer" parent="suferer/InteractBox/Integrity" unique_id=1883801491]
+wait_time = 0.155
+
+[node name="Consumption" type="Timer" parent="suferer/InteractBox/Integrity" unique_id=1594112341]
+wait_time = 0.089
 
 [node name="Patience" type="Node2D" parent="suferer/InteractBox" unique_id=45052698]
 position = Vector2(-7, -242)
@@ -3546,6 +3585,8 @@ stream = ExtResource("47_106nv")
 libraries/ = SubResource("AnimationLibrary_nbic5")
 
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Patience/Charges" method="_on_suferer_hit"]
+[connection signal="hit" from="suferer" to="suferer/InteractBox/Integrity/Inspiration" method="_on_suferer_hit"]
+[connection signal="IntegritySucess" from="suferer/Attacks/Integrity" to="suferer/InteractBox/Integrity/Inspiration" method="_on_integrity_integrity_sucess"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Fail" to="suferer/Attacks/Integrity" method="_on_fail_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Beat" to="suferer/Attacks/Integrity" method="_on_beat_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/DeadZone" to="suferer/Attacks/Integrity" method="_on_dead_zone_timeout"]
@@ -3556,6 +3597,8 @@ libraries/ = SubResource("AnimationLibrary_nbic5")
 [connection signal="timeout" from="suferer/Control/UnblockMovements" to="suferer/Control" method="_on_unblock_movements_timeout"]
 [connection signal="area_entered" from="suferer/InteractBox/CursorSpawn/SearchingRange" to="suferer/InteractBox/PatienceBrakets" method="_on_searching_range_area_entered"]
 [connection signal="timeout" from="suferer/InteractBox/PatienceBrakets/Window" to="suferer/InteractBox/PatienceBrakets" method="_on_window_timeout"]
+[connection signal="timeout" from="suferer/InteractBox/Integrity/Gain" to="suferer/InteractBox/Integrity/Inspiration" method="_on_gain_timeout"]
+[connection signal="timeout" from="suferer/InteractBox/Integrity/Consumption" to="suferer/InteractBox/Integrity/Inspiration" method="_on_consumption_timeout"]
 [connection signal="timeout" from="suferer/InteractBox/Patience/Charges/Grow" to="suferer/InteractBox/Patience/Charges" method="_on_grow_timeout"]
 [connection signal="body_entered" from="Friend/Collision Trigger" to="Friend" method="_on_collision_trigger_body_entered"]
 [connection signal="body_exited" from="Friend/Collision Trigger" to="Friend" method="_on_collision_trigger_body_exited"]

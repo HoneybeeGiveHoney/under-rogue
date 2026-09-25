@@ -1,5 +1,7 @@
 extends Node2D
 
+signal IntegritySucess
+
 var Right = 0
 var Left = 0
 var Up = 0
@@ -41,8 +43,6 @@ func _process(delta):
 	random.seed = 12345
 	Roll = (randi_range(1, 5))
 
-	if Input.is_action_just_pressed("Info"):
-		print(Current, Progress, Beat, Failed, IsPlaying, Right, Left, Up, Down)
 	if Input.is_action_just_pressed("space") and GlobalData.CurrentWeapon == 2 and IsPlaying == 0:
 		SongStarted()
 		Current = Roll
@@ -100,7 +100,7 @@ func _process(delta):
 		if Down == 1  and Failed == 0 and Progress == 3 and Beat == 1:
 			DoBeat()
 			Sucess()
-			GlobalData.IntegritySucess = 1
+			emit_signal("IntegritySucess")
 		#endregion
 	if IsPlaying == 1 and Current == 2:   # SECOND SONG 2️⃣
 		#region Pointer
@@ -154,7 +154,7 @@ func _process(delta):
 		if Up == 1 and Failed == 0 and Progress == 3 and Beat == 1:
 			DoBeat()
 			Sucess()
-			GlobalData.IntegritySucess = 1
+			emit_signal("IntegritySucess")
 		if Down == 1 and Progress == 3:
 			Fail()
 		#endregion
@@ -206,7 +206,7 @@ func _process(delta):
 		if Right == 1 and Progress == 3 and Failed == 0 and Beat == 1:
 			Sucess()
 			DoBeat()
-			GlobalData.IntegritySucess = 1
+			emit_signal("IntegritySucess")
 		if Left == 1 and Progress == 3:
 			Fail()
 		if Up == 1 and Progress == 3:
@@ -266,7 +266,7 @@ func _process(delta):
 		if Up == 1 and Progress == 3 and Failed == 0 and Beat == 1:
 			Sucess()
 			DoBeat()
-			GlobalData.IntegritySucess = 1
+			emit_signal("IntegritySucess")
 		if Down == 1 and Progress == 3:
 			Fail()
 		#endregion
@@ -318,7 +318,7 @@ func _process(delta):
 		if Right == 1 and Progress == 3 and Failed == 0  and Beat == 1:
 			Sucess()
 			DoBeat()
-			GlobalData.IntegritySucess = 1
+			emit_signal("IntegritySucess")
 		if Left == 1 and Progress == 3:
 			Fail()
 		if Up == 1 and Progress == 3:
