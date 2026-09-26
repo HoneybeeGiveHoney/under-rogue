@@ -5,14 +5,20 @@ func _physics_process(_delta):
 	if GlobalData.CurrentWeapon == 0:
 		$"pointer's movement".play("normal")
 		$"../../Pulse/ColorChange".play("Normal")
+	
 	if GlobalData.CurrentWeapon == 1:
 		$"pointer's movement".play("patience")
 		$"../../../InteractBox/Scope".play("Patience")
 		$"../../Pulse/ColorChange".play("Patience")
+	
 	if GlobalData.CurrentWeapon == 2:
 		$"pointer's movement".play("integrity")
 		$"../../../InteractBox/Scope".play("Integrity")
 		$"../../Pulse/ColorChange".play("Integrity")
+		$"../../../InteractBox/Integrity".visible = true
+	else:
+		$"../../../InteractBox/Integrity".visible = false
+	
 	if GlobalData.CurrentWeapon == 3:
 		$"pointer's movement".play("kindness")
 		

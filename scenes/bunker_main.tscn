@@ -3359,27 +3359,26 @@ visibility_layer = 32
 scale = Vector2(1.425, 1.425)
 
 [node name="Inspiration" type="TextureProgressBar" parent="suferer/InteractBox/Integrity" unique_id=1860666621]
-show_behind_parent = true
-visibility_layer = 32
 offset_left = -73.00049
 offset_top = -74.0
 offset_right = 76.99951
 offset_bottom = 76.0
+step = 0.5
 value = 100.0
 fill_mode = 8
 radial_initial_angle = 180.0
 radial_center_offset = Vector2(-2.32, 0)
 texture_under = ExtResource("50_6uc53")
 texture_progress = ExtResource("52_77h1j")
-tint_under = Color(1, 1, 1, 0.68235296)
-tint_progress = Color(1, 1, 1, 0.68235296)
+tint_under = Color(1, 1, 1, 0.40784314)
+tint_progress = Color(1, 1, 1, 0.39215687)
 script = ExtResource("53_gh2hl")
 
 [node name="Gain" type="Timer" parent="suferer/InteractBox/Integrity" unique_id=1883801491]
 wait_time = 0.155
 
 [node name="Consumption" type="Timer" parent="suferer/InteractBox/Integrity" unique_id=1594112341]
-wait_time = 0.089
+wait_time = 0.101
 
 [node name="Patience" type="Node2D" parent="suferer/InteractBox" unique_id=45052698]
 position = Vector2(-7, -242)
@@ -3584,8 +3583,8 @@ stream = ExtResource("47_106nv")
 [node name="Damage" type="AnimationPlayer" parent="Friend" unique_id=1899998983]
 libraries/ = SubResource("AnimationLibrary_nbic5")
 
-[connection signal="hit" from="suferer" to="suferer/InteractBox/Patience/Charges" method="_on_suferer_hit"]
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Integrity/Inspiration" method="_on_suferer_hit"]
+[connection signal="hit" from="suferer" to="suferer/InteractBox/Patience/Charges" method="_on_suferer_hit"]
 [connection signal="IntegritySucess" from="suferer/Attacks/Integrity" to="suferer/InteractBox/Integrity/Inspiration" method="_on_integrity_integrity_sucess"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Fail" to="suferer/Attacks/Integrity" method="_on_fail_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Beat" to="suferer/Attacks/Integrity" method="_on_beat_timeout"]
