@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_iolsc"]
 [ext_resource type="Script" uid="uid://baudin0lijvq8" path="res://Scripts/mobs/suferer.gd" id="2_nthll"]
 [ext_resource type="PackedScene" uid="uid://d4eow2hduvu3k" path="res://scenes/knife.tscn" id="3_tq6vh"]
-[ext_resource type="Texture2D" uid="uid://cyuf3l06xpc4m" path="res://assets/Sprites/sufferer.png" id="3_xg3yv"]
+[ext_resource type="Texture2D" uid="uid://dcq2it180nfnt" path="res://assets/Sprites/sufferer.png" id="3_xg3yv"]
 [ext_resource type="PackedScene" uid="uid://belmamiufqsbs" path="res://scenes/integrity_bell.tscn" id="4_3vj0e"]
-[ext_resource type="Texture2D" uid="uid://dxyvi5aj1vhr2" path="res://assets/Sprites/suffererFocuses.png" id="4_gncxx"]
+[ext_resource type="Texture2D" uid="uid://csr4h4gtnmaby" path="res://assets/Sprites/suffererFocuses.png" id="4_gncxx"]
 [ext_resource type="Texture2D" uid="uid://dbsiralkxqln6" path="res://assets/Sprites/QTEArrows.png" id="5_1oeht"]
 [ext_resource type="PackedScene" uid="uid://c0toen4qmuhdx" path="res://scenes/revolver_bullet.tscn" id="5_akogo"]
 [ext_resource type="Script" uid="uid://c2wc7mkcnoytg" path="res://Scripts/weapons/integrity.gd" id="5_crp4k"]
@@ -21,14 +21,14 @@
 [ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="9_isam3"]
 [ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="10_3cqmg"]
 [ext_resource type="Texture2D" uid="uid://tbfasuw31nbg" path="res://assets/Sprites/SoulLight.png" id="10_nvy1x"]
-[ext_resource type="AudioStream" uid="uid://c5ef4a6ml77my" path="res://assets/Sounds/Weapons/sucess.ogg" id="10_otphl"]
+[ext_resource type="AudioStream" uid="uid://c7pbeun58pqwm" path="res://assets/Sounds/Weapons/sucess.ogg" id="10_otphl"]
 [ext_resource type="AudioStream" uid="uid://dewrygeta1k4u" path="res://assets/Sounds/Weapons/UpArrow.ogg" id="11_jrwb0"]
 [ext_resource type="Script" uid="uid://bi7idqlufendl" path="res://Scripts/pulse.gd" id="11_lq3gn"]
 [ext_resource type="Texture2D" uid="uid://ds1f4qau0ug1o" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="11_tui8b"]
 [ext_resource type="AudioStream" uid="uid://celwuypigkgcb" path="res://assets/Sounds/Weapons/Failure.ogg" id="12_106nv"]
 [ext_resource type="Texture2D" uid="uid://htacyrunexjb" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="12_t0e2p"]
 [ext_resource type="AudioStream" uid="uid://yxe51eulx7s5" path="res://assets/Sounds/Weapons/Change.ogg" id="13_6mvv0"]
-[ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/Full_Justice.png" id="13_83unw"]
+[ext_resource type="Texture2D" uid="uid://cu5xuylbe5bwy" path="res://assets/SoulRaysFragments/Full_Justice.png" id="13_83unw"]
 [ext_resource type="AudioStream" uid="uid://bmtrkd38ul7xg" path="res://assets/Sounds/Weapons/Beat.ogg" id="13_f284d"]
 [ext_resource type="Texture2D" uid="uid://dlpqfh37hbans" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="14_wqtb7"]
 [ext_resource type="Texture2D" uid="uid://cox12dbm3ogjp" path="res://assets/SoulRaysFragments/Full_Integrity.png" id="15_enw1k"]
@@ -60,7 +60,7 @@
 [ext_resource type="AudioStream" uid="uid://u0wr6vyw6rty" path="res://assets/Sounds/Weapons/HearthBeat.ogg" id="45_ere52"]
 [ext_resource type="Texture2D" uid="uid://cnccipkibtcvh" path="res://assets/Sprites/littleStar.png" id="45_otphl"]
 [ext_resource type="Texture2D" uid="uid://dso0juh8f065l" path="res://assets/Sprites/PatiencePulse.png" id="46_67hkc"]
-[ext_resource type="AudioStream" uid="uid://b6t1bhtqe2o5k" path="res://assets/Sounds/FoeDeath.ogg" id="47_106nv"]
+[ext_resource type="AudioStream" uid="uid://d2dn0pfyow6jk" path="res://assets/Sounds/FoeDeath.ogg" id="47_106nv"]
 [ext_resource type="Texture2D" uid="uid://b51i6e1xsogxw" path="res://assets/Sprites/SnowFlake.png" id="47_08813"]
 [ext_resource type="Texture2D" uid="uid://ch7pugjrm2t55" path="res://assets/interface/IntegrityBarBase.png" id="50_6uc53"]
 [ext_resource type="Texture2D" uid="uid://bao7gjvjhc5us" path="res://assets/interface/IntegrityBarFull.png" id="52_77h1j"]
@@ -68,8 +68,9 @@
 [ext_resource type="Texture2D" uid="uid://cspskgg5xfpp0" path="res://assets/Sprites/LittleExplosion.png" id="57_6n4da"]
 [ext_resource type="Texture2D" uid="uid://bv1ssqi61o084" path="res://assets/Sprites/revolverFull.png" id="57_gh2hl"]
 [ext_resource type="AudioStream" uid="uid://dn8os3l5awmfc" path="res://assets/Sounds/Weapons/GrabbingAmmo.ogg" id="59_l1bm3"]
-[ext_resource type="Texture2D" uid="uid://cu7jdv2tfho7n" path="res://assets/Sprites/RevolverReloadingThing.png" id="62_rp32f"]
-[ext_resource type="Texture2D" uid="uid://cjtostdb00je6" path="res://assets/Sprites/RevolverCurrentPointer.png" id="63_ph6v8"]
+[ext_resource type="Texture2D" uid="uid://b8b17y337r6ww" path="res://assets/Furniture/frame.png" id="61_akogo"]
+[ext_resource type="Texture2D" uid="uid://cjtostdb00je6" path="res://assets/Sprites/RevolverReloadingThing.png" id="62_rp32f"]
+[ext_resource type="Texture2D" uid="uid://cu7jdv2tfho7n" path="res://assets/Sprites/RevolverCurrentPointer.png" id="63_ph6v8"]
 [ext_resource type="AudioStream" uid="uid://7kwb8i3ia863" path="res://assets/Sounds/Weapons/revolverBarrelOpen.ogg" id="64_3r077"]
 [ext_resource type="AudioStream" uid="uid://bacxur440pjbo" path="res://assets/Sounds/Weapons/RevolverShoot.ogg" id="65_3r077"]
 [ext_resource type="AudioStream" uid="uid://csfk5qc7g4j4y" path="res://assets/Sounds/Weapons/RevolverBulletIn.ogg" id="65_6n4da"]
@@ -4281,6 +4282,11 @@ stream = ExtResource("47_106nv")
 
 [node name="Damage" type="AnimationPlayer" parent="Friend" unique_id=1899998983]
 libraries/ = SubResource("AnimationLibrary_nbic5")
+
+[node name="Frame" type="Sprite2D" parent="." unique_id=1410016411]
+position = Vector2(949.00006, 157.00002)
+scale = Vector2(0.83203125, 0.6269531)
+texture = ExtResource("61_akogo")
 
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Integrity/Inspiration" method="_on_suferer_hit"]
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Patience/Charges" method="_on_suferer_hit"]
