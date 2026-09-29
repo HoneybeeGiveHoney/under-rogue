@@ -1,0 +1,79 @@
+[gd_scene format=4 uid="uid://bbmrg3n7qn3sh"]
+
+[ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_w7pvb"]
+[ext_resource type="Texture2D" uid="uid://htlagicyqktt" path="res://bunker_inkubator.png" id="2_lm2ou"]
+[ext_resource type="Texture2D" uid="uid://d4cjmu33v6sj8" path="res://bunker_inkubator broken.png" id="3_uxfi8"]
+[ext_resource type="Texture2D" uid="uid://b4pys0llh3wd" path="res://bunker_empty table.png" id="4_wekm1"]
+[ext_resource type="Texture2D" uid="uid://bfguqbv3fdhy4" path="res://bunker_syringe broken.png" id="5_vdmep"]
+[ext_resource type="Texture2D" uid="uid://dcdgn2l44mt6y" path="res://bunker_old paper.png" id="6_j1pca"]
+[ext_resource type="Texture2D" uid="uid://c5kvec8difd76" path="res://bunker_pipe left.png" id="7_lr8cr"]
+
+[node name="Node2D" type="Node2D" unique_id=591462465]
+
+[node name="BunkerTileSet" parent="." unique_id=1351696057 instance=ExtResource("1_w7pvb")]
+tile_map_data = PackedByteArray("AAAAAAsAAQAAAAIAAAAAAAMAAQAAAAIAAAAHAAAAAQACAAAAAAAGAAAAAQACAAAAAAAFAAAAAQACAAAAAAAEAAAAAQACAAAAAAADAAAAAQACAAAAAAACAAAAAQACAAAAAAAOAAAAAQACAAAAAAAPAAAAAQACAAAAAAAQAAAAAQACAAAAAAARAAAAAQACAAAAAAASAAAAAQACAAAAAAATAAAAAQACAAAAAAAUAAAAAQACAAAAAAAVAAAAAQACAAAAAAAWAAAAAQACAAAAAAAXAAAAAQACAAAAAAAYAAAAAQADAAAAAAAAAAAAAQABAAAAAAABAAAAAQACAAAAAAAAAAEAAQAAAAIAAAAAAAIAAQAAAAIAAAAAAAQAAQAAAAIAAAAAAAUAAQAAAAIAAAAAAAoAAQAAAAIAAAAAAAwAAQAAAAIAAAAAAA0AAQABAAEAAAAYAA0AAQADAAEAAAAYAAwAAQAAAAEAAAAYAAsAAQAAAAEAAAAYAAoAAQAAAAEAAAAYAAkAAQAAAAEAAAAYAAgAAQAAAAEAAAAYAAcAAQAAAAEAAAAYAAYAAQAAAAEAAAAYAAUAAQAAAAEAAAAYAAQAAQAAAAEAAAAYAAMAAQAAAAEAAAAYAAIAAQAAAAEAAAAYAAEAAQAAAAEAAAAIAAAAAQACAAAAAAAJAAAAAQACAAAAAAAAAAkAAQAAAAIAAAAAAAgAAQAAAAIAAAAAAAcAAQAAAAIAAAAAAAYAAQAAAAIAAAAKAAAAAQACAAAAAAALAAAAAQACAAAAAAAMAAAAAQACAAAAAAANAAAAAQACAAAAAAABAA0AAQACAAEAAAACAA0AAQACAAEAAAADAA0AAQACAAEAAAAEAA0AAQACAAEAAAAFAA0AAQACAAEAAAAGAA0AAQACAAEAAAAHAA0AAQACAAEAAAAIAA0AAQACAAEAAAAJAA0AAQACAAEAAAAOAA0AAQACAAEAAAAPAA0AAQACAAEAAAAQAA0AAQACAAEAAAARAA0AAQACAAEAAAASAA0AAQACAAEAAAATAA0AAQACAAEAAAAUAA0AAQACAAEAAAAVAA0AAQACAAEAAAAWAA0AAQACAAEAAAAXAA0AAQACAAEAAAA=")
+
+[node name="BunkerInkubator" type="Sprite2D" parent="." unique_id=1619828025]
+position = Vector2(168, 138.00003)
+scale = Vector2(0.89453125, 0.9140625)
+texture = ExtResource("2_lm2ou")
+
+[node name="BunkerInkubator2" type="Sprite2D" parent="." unique_id=1998012523]
+position = Vector2(372, 137)
+scale = Vector2(0.89453125, 0.9140625)
+texture = ExtResource("2_lm2ou")
+
+[node name="BunkerInkubator4" type="Sprite2D" parent="." unique_id=2096637538]
+position = Vector2(779.5, 131.00003)
+scale = Vector2(0.89453125, 0.9140625)
+texture = ExtResource("2_lm2ou")
+
+[node name="BunkerInkubator6" type="Sprite2D" parent="." unique_id=1997386220]
+position = Vector2(1193.5, 128)
+scale = Vector2(0.89453125, 0.9140625)
+texture = ExtResource("2_lm2ou")
+
+[node name="BunkerInkubatorBroken" type="Sprite2D" parent="." unique_id=528763427]
+position = Vector2(1397, 129.99997)
+scale = Vector2(0.890625, 0.94921875)
+texture = ExtResource("3_uxfi8")
+
+[node name="BunkerInkubatorBroken2" type="Sprite2D" parent="." unique_id=1285302136]
+position = Vector2(997, 120)
+scale = Vector2(0.890625, 0.94921875)
+texture = ExtResource("3_uxfi8")
+
+[node name="BunkerInkubatorBroken3" type="Sprite2D" parent="." unique_id=1867842375]
+position = Vector2(571, 127)
+scale = Vector2(0.890625, 0.94921875)
+texture = ExtResource("3_uxfi8")
+
+[node name="BunkerEmptyTable" type="Sprite2D" parent="." unique_id=1805566016]
+position = Vector2(776, 337)
+texture = ExtResource("4_wekm1")
+
+[node name="BunkerSyringeBroken" type="Sprite2D" parent="." unique_id=971111667]
+position = Vector2(836, 342.00003)
+scale = Vector2(0.6035157, 0.45898455)
+texture = ExtResource("5_vdmep")
+
+[node name="BunkerSyringeBroken2" type="Sprite2D" parent="." unique_id=179168662]
+position = Vector2(742, 342)
+scale = Vector2(0.6035157, 0.45898455)
+texture = ExtResource("5_vdmep")
+
+[node name="BunkerOldPaper" type="Sprite2D" parent="." unique_id=989799624]
+position = Vector2(197, 755)
+texture = ExtResource("6_j1pca")
+
+[node name="BunkerOldPaper2" type="Sprite2D" parent="." unique_id=951856157]
+position = Vector2(1406, 764)
+texture = ExtResource("6_j1pca")
+
+[node name="BunkerOldPaper3" type="Sprite2D" parent="." unique_id=2046201001]
+position = Vector2(1127, 762)
+texture = ExtResource("6_j1pca")
+
+[node name="BunkerPipeLeft" type="Sprite2D" parent="." unique_id=210394317]
+position = Vector2(1468, 451)
+texture = ExtResource("7_lr8cr")

@@ -1,0 +1,112 @@
+[gd_scene format=4 uid="uid://bfr5l3p15sas5"]
+
+[ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_2t5f7"]
+[ext_resource type="Texture2D" uid="uid://bue4yl5kkmd11" path="res://bunker_medicin bed.png" id="2_eoure"]
+[ext_resource type="Texture2D" uid="uid://c0e8w8f35oqa5" path="res://bunker_IV drip.png" id="3_qjxsc"]
+[ext_resource type="Texture2D" uid="uid://bfguqbv3fdhy4" path="res://bunker_syringe broken.png" id="4_ftiip"]
+[ext_resource type="Texture2D" uid="uid://bijbguveqy0v7" path="res://bunker_probirka broken.png" id="5_sh630"]
+[ext_resource type="Texture2D" uid="uid://b4pys0llh3wd" path="res://bunker_empty table.png" id="6_recq4"]
+[ext_resource type="Texture2D" uid="uid://d41km68u2we" path="res://bunker_syringe.png" id="7_0rlhb"]
+[ext_resource type="Texture2D" uid="uid://dwucupytupovs" path="res://bunker_chekushka.png" id="8_6w7uj"]
+[ext_resource type="Texture2D" uid="uid://b8b17y337r6ww" path="res://assets/Furniture/frame.png" id="9_hrh8w"]
+[ext_resource type="Texture2D" uid="uid://chuvn5082e17w" path="res://assets/Furniture/PC.png" id="10_qjxsc"]
+[ext_resource type="Texture2D" uid="uid://d1yfgs83ewyra" path="res://assets/Furniture/bunker_paper tray.png" id="11_ftiip"]
+
+[node name="Node2D" type="Node2D" unique_id=1052326849]
+
+[node name="BunkerTileSet" parent="." unique_id=1351696057 instance=ExtResource("1_2t5f7")]
+tile_map_data = PackedByteArray("AAAAAAsAAQAAAAIAAAAAAAMAAQAAAAIAAAANAA4AAQACAAEAAAAJAA4AAQACAAEAAAAHAAAAAQACAAAAAAAGAAAAAQACAAAAAAAFAAAAAQACAAAAAAAEAAAAAQACAAAAAAADAAAAAQACAAAAAAACAAAAAQACAAAAAAAOAAAAAQACAAAAAAAPAAAAAQACAAAAAAAQAAAAAQACAAAAAAARAAAAAQACAAAAAAASAAAAAQACAAAAAAATAAAAAQACAAAAAAAUAAAAAQACAAAAAAAVAAAAAQACAAAAAAAWAAAAAQACAAAAAAAXAAAAAQACAAAAAAAYAAAAAQADAAAAAAAAAAAAAQABAAAAAAABAAAAAQACAAAAAAAAAAEAAQAAAAIAAAAAAAIAAQAAAAIAAAAAAAQAAQAAAAIAAAAAAAUAAQAAAAIAAAAAAAoAAQAAAAIAAAAAAAwAAQAAAAIAAAAAAA0AAQAAAAIAAAAYAA0AAQAAAAEAAAAYAAwAAQAAAAEAAAAYAAsAAQAAAAEAAAAYAAoAAQAAAAEAAAAYAAkAAQAAAAEAAAAYAAgAAQAAAAEAAAAYAAcAAQAAAAEAAAAYAAYAAQAAAAEAAAAYAAUAAQAAAAEAAAAYAAQAAQAAAAEAAAAYAAMAAQAAAAEAAAAYAAIAAQAAAAEAAAAYAAEAAQAAAAEAAAAYAA4AAQADAAEAAAAAAA4AAQABAAEAAAABAA4AAQACAAEAAAACAA4AAQACAAEAAAADAA4AAQACAAEAAAAEAA4AAQACAAEAAAAFAA4AAQACAAEAAAAGAA4AAQACAAEAAAAHAA4AAQACAAEAAAAIAA4AAQACAAEAAAAKAA4AAQACAAEAAAALAA4AAQACAAEAAAAMAA4AAQACAAEAAAAOAA4AAQACAAEAAAAPAA4AAQACAAEAAAAQAA4AAQACAAEAAAARAA4AAQACAAEAAAASAA4AAQACAAEAAAATAA4AAQACAAEAAAAUAA4AAQACAAEAAAAVAA4AAQACAAEAAAAWAA4AAQACAAEAAAAXAA4AAQACAAEAAAAIAAAAAQACAAAAAAAJAAAAAQACAAAAAAAAAAkAAQAAAAIAAAAAAAgAAQAAAAIAAAAAAAcAAQAAAAIAAAAAAAYAAQAAAAIAAAA=")
+
+[node name="BunkerMedicinBed" type="Sprite2D" parent="." unique_id=2000471530]
+position = Vector2(206, 742)
+texture = ExtResource("2_eoure")
+
+[node name="BunkerMedicinBed2" type="Sprite2D" parent="." unique_id=1176974355]
+position = Vector2(560, 739)
+texture = ExtResource("2_eoure")
+
+[node name="BunkerMedicinBed3" type="Sprite2D" parent="." unique_id=1639394970]
+position = Vector2(858, 739)
+texture = ExtResource("2_eoure")
+
+[node name="BunkerMedicinBed4" type="Sprite2D" parent="." unique_id=482263551]
+position = Vector2(1159, 739)
+texture = ExtResource("2_eoure")
+
+[node name="BunkerMedicinBed5" type="Sprite2D" parent="." unique_id=2070862524]
+position = Vector2(1428, 729)
+texture = ExtResource("2_eoure")
+
+[node name="BunkerIvDrip" type="Sprite2D" parent="." unique_id=1807056436]
+position = Vector2(391, 621)
+texture = ExtResource("3_qjxsc")
+
+[node name="BunkerIvDrip2" type="Sprite2D" parent="." unique_id=327211499]
+position = Vector2(729, 614)
+texture = ExtResource("3_qjxsc")
+
+[node name="BunkerIvDrip3" type="Sprite2D" parent="." unique_id=2038311819]
+position = Vector2(1029, 616)
+texture = ExtResource("3_qjxsc")
+
+[node name="BunkerIvDrip4" type="Sprite2D" parent="." unique_id=1647964906]
+position = Vector2(1312, 594)
+texture = ExtResource("3_qjxsc")
+
+[node name="BunkerSyringeBroken" type="Sprite2D" parent="." unique_id=318713654]
+position = Vector2(180, 454)
+scale = Vector2(0.6875, 0.6640625)
+texture = ExtResource("4_ftiip")
+
+[node name="BunkerProbirkaBroken" type="Sprite2D" parent="." unique_id=1118422193]
+position = Vector2(445.5, 331.5)
+scale = Vector2(0.54296875, 0.46484375)
+texture = ExtResource("5_sh630")
+
+[node name="BunkerEmptyTable" type="Sprite2D" parent="." unique_id=991480596]
+position = Vector2(1384, 107)
+texture = ExtResource("6_recq4")
+
+[node name="BunkerSyringe" type="Sprite2D" parent="." unique_id=1111151908]
+position = Vector2(1459.0001, 114.00001)
+scale = Vector2(0.51171935, 0.33300772)
+texture = ExtResource("7_0rlhb")
+
+[node name="BunkerChekushka" type="Sprite2D" parent="." unique_id=2140848993]
+position = Vector2(1346, 81.00003)
+scale = Vector2(0.48046875, 0.4921875)
+texture = ExtResource("8_6w7uj")
+
+[node name="Frame" type="Sprite2D" parent="." unique_id=1656351566]
+position = Vector2(984.00006, 28.999985)
+scale = Vector2(0.58984375, 0.52734375)
+texture = ExtResource("9_hrh8w")
+
+[node name="Pc" type="Sprite2D" parent="." unique_id=230501918]
+position = Vector2(202, 106)
+texture = ExtResource("10_qjxsc")
+
+[node name="BunkerPaperTray" type="Sprite2D" parent="." unique_id=201284890]
+position = Vector2(373.00003, 117.000015)
+scale = Vector2(0.734375, 0.8359375)
+texture = ExtResource("11_ftiip")
+
+[node name="BunkerPaperTray2" type="Sprite2D" parent="." unique_id=216036184]
+position = Vector2(473.00003, 117.00001)
+scale = Vector2(0.734375, 0.8359375)
+texture = ExtResource("11_ftiip")
+
+[node name="BunkerSyringeBroken2" type="Sprite2D" parent="." unique_id=1447244231]
+position = Vector2(583, 515)
+scale = Vector2(0.6875, 0.6640625)
+texture = ExtResource("4_ftiip")
+
+[node name="BunkerSyringeBroken3" type="Sprite2D" parent="." unique_id=2057505584]
+position = Vector2(1439, 427)
+scale = Vector2(0.6875, 0.6640625)
+texture = ExtResource("4_ftiip")
+
+[node name="BunkerSyringeBroken4" type="Sprite2D" parent="." unique_id=387580074]
+position = Vector2(1070, 390)
+scale = Vector2(0.6875, 0.6640625)
+texture = ExtResource("4_ftiip")
