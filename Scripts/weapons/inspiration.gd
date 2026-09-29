@@ -36,7 +36,6 @@ func _process(_delta):
 		Adding = false
 		GC = false
 	
-	print(Consumed)
 	
 	if Consuming == true and CC == false:
 		$"../Consumption".start()

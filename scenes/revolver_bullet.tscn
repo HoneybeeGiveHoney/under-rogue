@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c0toen4qmuhdx"]
+
+[ext_resource type="Script" uid="uid://dent0r63lmu6h" path="res://revolver_bullet.gd" id="1_nk3ri"]
+[ext_resource type="Texture2D" uid="uid://csb3xb8ysijqd" path="res://assets/Sprites/RevolverBullet.png" id="2_5l1lw"]
+[ext_resource type="Texture2D" uid="uid://tp4qisl50txg" path="res://assets/Sprites/RevolverBulletAura.png" id="3_0ixs2"]
+
+[sub_resource type="Gradient" id="Gradient_5l1lw"]
+offsets = PackedFloat32Array(0.5477707, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkqoe"]
+size = Vector2(52, 6)
+
+[node name="RevolverBullet" type="Area2D" unique_id=1803684193]
+visibility_layer = 32
+script = ExtResource("1_nk3ri")
+
+[node name="RevolverBullet" type="Sprite2D" parent="." unique_id=1986679924]
+visibility_layer = 32
+position = Vector2(1, 0)
+texture = ExtResource("2_5l1lw")
+
+[node name="RevolverBulletAura" type="CPUParticles2D" parent="RevolverBullet" unique_id=1706806220]
+show_behind_parent = true
+position = Vector2(2.263, 0.408)
+scale = Vector2(3, 3)
+amount = 14
+texture = ExtResource("3_0ixs2")
+lifetime = 0.46
+gravity = Vector2(0, 0)
+color = Color(1, 1, 1, 0.34509805)
+color_ramp = SubResource("Gradient_5l1lw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=817834809]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_vkqoe")
+debug_color = Color(0.8164338, 0.0008166826, 0.86501485, 0.41960785)

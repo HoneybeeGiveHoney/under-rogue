@@ -1,10 +1,10 @@
 extends Node2D
 
-var IsPaused = 0
-var BlockMovements = 0
+var IsPaused = false
+var BlockMovements = false
 var CurrentWeapon = 0
 var Pulse = 0
-var CanFocus = 1
+var CanFocus = true
 var IntegrityCharges = 0
 var PatienceCharges = 0
 var Inspiration = 0

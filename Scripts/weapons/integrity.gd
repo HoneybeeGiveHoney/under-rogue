@@ -332,7 +332,7 @@ func SongStarted():
 	Progress = 0
 	IsPlaying = 1
 	Alpha = 1
-	GlobalData.CanFocus = 0
+	GlobalData.CanFocus = false
 	$Fail.start()
 	$ArrowsMovement.play("Appear")
 

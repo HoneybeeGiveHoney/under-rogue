@@ -6,19 +6,20 @@ var Roll = 1
 
 @export var knife_scene: PackedScene
 @export var Bell_scene: PackedScene
+@export var Justice_scene: PackedScene
 @export var cooldown: = 0.5
 @export var spawn_point: Node2D
 var can_hit: bool = true
 
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
-	if Input.is_action_pressed("move_right") and GlobalData.IsPaused == 0:
+	if Input.is_action_pressed("move_right") and GlobalData.IsPaused == false and GlobalData.BlockMovements == false:
 		direction.x += 1
-	if Input.is_action_pressed("move_left") and GlobalData.IsPaused == 0:
+	if Input.is_action_pressed("move_left") and GlobalData.IsPaused == false and GlobalData.BlockMovements == false:
 		direction.x -= 1
-	if Input.is_action_pressed("move_down") and GlobalData.IsPaused == 0:
+	if Input.is_action_pressed("move_down") and GlobalData.IsPaused == false and GlobalData.BlockMovements == false:
 		direction.y += 1
-	if Input.is_action_pressed("move_up") and GlobalData.IsPaused == 0:
+	if Input.is_action_pressed("move_up") and GlobalData.IsPaused == false and GlobalData.BlockMovements == false:
 		direction.y -= 1
 
 	if direction.x == 1 and direction.y == 0:
@@ -29,7 +30,7 @@ func _physics_process(_delta):
 		$Player.play("walk_up")
 	elif direction.y == 1:
 		$Player.play("walk_down")
-	elif direction == Vector2.ZERO and GlobalData.IsPaused == 0:
+	elif direction == Vector2.ZERO and GlobalData.IsPaused == false and GlobalData.BlockMovements == false:
 		$Player.play("standing")
 	
 	if direction.length() > 0:
@@ -62,6 +63,18 @@ func _process(_delta):
 		emit_signal("hit")
 		# $InteractBox/Integrity/Inspiration.MaxConsumption = GlobalData.currentType
 		attack_integrity()
+
+	if Input.is_action_pressed("attack") and can_hit and GlobalData.CurrentWeapon == 4 and $Attacks/Justice.Reloading == false:
+		if $Attacks/Justice.CanShoot == true:
+			$Attacks/Justice/Bang/AnimationPlayer.play("bang")
+			$Attacks/Justice/Bang/Bang.start()
+			attack_Justice()
+			$Attacks/Justice/RevolverShoot.play()
+			$Attacks/Justice.Shoot()
+			$Attacks/Justice/Bang.rotation = (get_angle_to(get_global_mouse_position())+ deg_to_rad(90))
+			emit_signal("hit")
+			if GlobalData.Pulse < 1.2:
+				GlobalData.Pulse += 0.1
 
 func attack_knife():
 	can_hit = false
@@ -101,7 +114,16 @@ func attack_integrity():
 	Bell.global_position = $InteractBox/CursorSpawn.global_position
 	Bell.Fade()
 	Bell.Appear()
-	
+func attack_Justice():
+	can_hit = false
+	$Attacks/Cooldown.start()
+	var Justice = Justice_scene.instantiate()
+	get_tree().current_scene.add_child(Justice)
+	Justice.direction = (get_global_mouse_position() - global_position).normalized()
+	Justice.global_position = global_position + Justice.direction * 20
+	Justice.current_rotation = Justice.direction.angle()
+	pass
+
 @export var rmb_attack_scene: PackedScene
 @export var rmb_cooldown: float = 0.3
 var can_rmb_attack: bool = true
@@ -128,3 +150,6 @@ func attack_rmb():
 	
 func _on_cooldown_timeout():
 	can_hit = true
+
+func _on_bang_timeout():
+	$Attacks/Justice/Bang/AnimationPlayer.play("reset")

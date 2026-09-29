@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://belmamiufqsbs"]
 
-[ext_resource type="Script" uid="uid://t863byj7qhad" path="res://scenes/integrity_bell.gd" id="1_5wjq0"]
+[ext_resource type="Script" uid="uid://t863byj7qhad" path="res://Scripts/weapons/integrity_bell.gd" id="1_5wjq0"]
 [ext_resource type="Texture2D" uid="uid://b7sr683jrpo6o" path="res://assets/Sprites/IntegrityBell.png" id="1_es4u7"]
 [ext_resource type="Texture2D" uid="uid://b7vjx671ebsb" path="res://assets/Sprites/Pulse.png" id="3_p3mgc"]
 [ext_resource type="AudioStream" uid="uid://dx58ab0kibkkb" path="res://assets/Sounds/Weapons/IntegrityBell.ogg" id="4_hwoq1"]
