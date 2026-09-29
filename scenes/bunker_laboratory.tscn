@@ -1,22 +1,22 @@
 [gd_scene format=4 uid="uid://cscvi3v04i66g"]
 
 [ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_3uxjb"]
-[ext_resource type="Texture2D" uid="uid://c6ko0c6tgjsuv" path="res://bunker_pipe.png" id="2_fbhb3"]
-[ext_resource type="Texture2D" uid="uid://c5kvec8difd76" path="res://bunker_pipe left.png" id="3_kdwhk"]
-[ext_resource type="Texture2D" uid="uid://c4qysf07rh2xn" path="res://bunker_electrical panel defected.png" id="4_ebvi0"]
-[ext_resource type="Texture2D" uid="uid://b4pys0llh3wd" path="res://bunker_empty table.png" id="5_x2lds"]
-[ext_resource type="Texture2D" uid="uid://0otgoflu6jlq" path="res://bunker_chekushka broken.png" id="6_c7s38"]
-[ext_resource type="Texture2D" uid="uid://bijbguveqy0v7" path="res://bunker_probirka broken.png" id="7_mpd7x"]
-[ext_resource type="Texture2D" uid="uid://dcdgn2l44mt6y" path="res://bunker_old paper.png" id="8_k4c2m"]
-[ext_resource type="Texture2D" uid="uid://b8b17y337r6ww" path="res://assets/Furniture/frame.png" id="9_v46e1"]
+[ext_resource type="Texture2D" uid="uid://c6ko0c6tgjsuv" path="res://assets/Furniture/bunker_pipe.png" id="2_fbhb3"]
+[ext_resource type="Texture2D" uid="uid://c5kvec8difd76" path="res://assets/Furniture/bunker_pipe left.png" id="3_kdwhk"]
+[ext_resource type="Texture2D" uid="uid://c4qysf07rh2xn" path="res://assets/Furniture/bunker_electrical panel defected.png" id="4_ebvi0"]
+[ext_resource type="Texture2D" uid="uid://b4pys0llh3wd" path="res://assets/Furniture/bunker_empty table.png" id="5_x2lds"]
+[ext_resource type="Texture2D" uid="uid://0otgoflu6jlq" path="res://assets/Furniture/bunker_chekushka broken.png" id="6_c7s38"]
+[ext_resource type="Texture2D" uid="uid://bijbguveqy0v7" path="res://assets/Furniture/bunker_probirka broken.png" id="7_mpd7x"]
+[ext_resource type="Texture2D" uid="uid://dcdgn2l44mt6y" path="res://assets/Furniture/bunker_old paper.png" id="8_k4c2m"]
+[ext_resource type="Texture2D" uid="uid://qkgxyidck7p2" path="res://assets/Furniture/frame.png" id="9_v46e1"]
 [ext_resource type="Texture2D" uid="uid://d1yfgs83ewyra" path="res://assets/Furniture/bunker_paper tray.png" id="10_3385l"]
-[ext_resource type="Texture2D" uid="uid://cxsg22pt8d3n2" path="res://assets/Furniture/Papers.png" id="11_hkpue"]
-[ext_resource type="Texture2D" uid="uid://bnp4gbdodk1b6" path="res://bunker_probirka.png" id="12_fbhb3"]
+[ext_resource type="Texture2D" uid="uid://byq3330yhtwvr" path="res://assets/Furniture/Papers.png" id="11_hkpue"]
+[ext_resource type="Texture2D" uid="uid://bnp4gbdodk1b6" path="res://assets/Furniture/bunker_probirka.png" id="12_fbhb3"]
 
 [node name="Node2D" type="Node2D" unique_id=193234582]
 
 [node name="BunkerTileSet" parent="." unique_id=1351696057 instance=ExtResource("1_3uxjb")]
-tile_map_data = PackedByteArray("AAAHAAAAAQACAAAAAAAGAAAAAQACAAAAAAAFAAAAAQACAAAAAAAEAAAAAQACAAAAAAADAAAAAQACAAAAAAACAAAAAQACAAAAAAAMAAAAAQACAAAAAAANAAAAAQACAAAAAAAOAAAAAQACAAAAAAAPAAAAAQACAAAAAAAQAAAAAQACAAAAAAARAAAAAQACAAAAAAASAAAAAQACAAAAAAATAAAAAQACAAAAAAAUAAAAAQACAAAAAAAVAAAAAQACAAAAAAAWAAAAAQACAAAAAAAXAAAAAQACAAAAAAAYAAAAAQADAAAAAAAAAAAAAQABAAAAAAABAAAAAQACAAAAAAAAAAEAAQAAAAIAAAAAAAIAAQAAAAIAAAAAAAMAAQAAAAIAAAAAAAQAAQAAAAIAAAAAAAUAAQAAAAIAAAAAAAYAAQAAAAIAAAAAAAoAAQAAAAIAAAAAAAsAAQAAAAIAAAAAAAwAAQAAAAIAAAAAAA0AAQAAAAIAAAAYAA0AAQAAAAEAAAAYAAwAAQAAAAEAAAAYAAsAAQAAAAEAAAAYAAoAAQAAAAEAAAAYAAkAAQAAAAEAAAAYAAgAAQAAAAEAAAAYAAcAAQAAAAEAAAAYAAYAAQAAAAEAAAAYAAUAAQAAAAEAAAAYAAQAAQAAAAEAAAAYAAMAAQAAAAEAAAAYAAIAAQAAAAEAAAAYAAEAAQAAAAEAAAAAAAkAAQAAAAIAAAAAAAgAAQAAAAIAAAAAAAcAAQAAAAIAAAAYAA4AAQADAAEAAAAAAA4AAQABAAEAAAABAA4AAQACAAEAAAACAA4AAQACAAEAAAADAA4AAQACAAEAAAAEAA4AAQACAAEAAAAFAA4AAQACAAEAAAAGAA4AAQACAAEAAAAHAA4AAQACAAEAAAAIAA4AAQACAAEAAAAJAA4AAQACAAEAAAAKAA4AAQACAAEAAAALAA4AAQACAAEAAAAMAA4AAQACAAEAAAANAA4AAQACAAEAAAAOAA4AAQACAAEAAAAPAA4AAQACAAEAAAAQAA4AAQACAAEAAAARAA4AAQACAAEAAAASAA4AAQACAAEAAAATAA4AAQACAAEAAAAUAA4AAQACAAEAAAAVAA4AAQACAAEAAAAWAA4AAQACAAEAAAAXAA4AAQACAAEAAAA=")
+tile_map_data = PackedByteArray("AAAAAAsAAQAAAAIAAAAAAAMAAQAAAAIAAAANAA4AAQACAAEAAAAJAA4AAQACAAEAAAAHAAAAAQACAAAAAAAGAAAAAQACAAAAAAAFAAAAAQACAAAAAAAEAAAAAQACAAAAAAADAAAAAQACAAAAAAACAAAAAQACAAAAAAAMAAAAAQACAAAAAAANAAAAAQACAAAAAAAOAAAAAQACAAAAAAAPAAAAAQACAAAAAAAQAAAAAQACAAAAAAARAAAAAQACAAAAAAASAAAAAQACAAAAAAATAAAAAQACAAAAAAAUAAAAAQACAAAAAAAVAAAAAQACAAAAAAAWAAAAAQACAAAAAAAXAAAAAQACAAAAAAAYAAAAAQADAAAAAAAAAAAAAQABAAAAAAABAAAAAQACAAAAAAAAAAEAAQAAAAIAAAAAAAIAAQAAAAIAAAAAAAQAAQAAAAIAAAAAAAUAAQAAAAIAAAAAAAYAAQAAAAIAAAAAAAoAAQAAAAIAAAAAAAwAAQAAAAIAAAAAAA0AAQAAAAIAAAAYAA0AAQAAAAEAAAAYAAwAAQAAAAEAAAAYAAsAAQAAAAEAAAAYAAoAAQAAAAEAAAAYAAkAAQAAAAEAAAAYAAgAAQAAAAEAAAAYAAcAAQAAAAEAAAAYAAYAAQAAAAEAAAAYAAUAAQAAAAEAAAAYAAQAAQAAAAEAAAAYAAMAAQAAAAEAAAAYAAIAAQAAAAEAAAAYAAEAAQAAAAEAAAAAAAkAAQAAAAIAAAAAAAgAAQAAAAIAAAAAAAcAAQAAAAIAAAAYAA4AAQADAAEAAAAAAA4AAQABAAEAAAABAA4AAQACAAEAAAACAA4AAQACAAEAAAADAA4AAQACAAEAAAAEAA4AAQACAAEAAAAFAA4AAQACAAEAAAAGAA4AAQACAAEAAAAHAA4AAQACAAEAAAAIAA4AAQACAAEAAAAKAA4AAQACAAEAAAALAA4AAQACAAEAAAAMAA4AAQACAAEAAAAOAA4AAQACAAEAAAAPAA4AAQACAAEAAAAQAA4AAQACAAEAAAARAA4AAQACAAEAAAASAA4AAQACAAEAAAATAA4AAQACAAEAAAAUAA4AAQACAAEAAAAVAA4AAQACAAEAAAAWAA4AAQACAAEAAAAXAA4AAQACAAEAAAA=")
 
 [node name="BunkerPipe" type="Sprite2D" parent="." unique_id=229068496]
 position = Vector2(340, 144)
@@ -68,7 +68,7 @@ scale = Vector2(0.66015625, 0.55859375)
 texture = ExtResource("7_mpd7x")
 
 [node name="BunkerOldPaper2" type="Sprite2D" parent="." unique_id=879248421]
-position = Vector2(1005, 178)
+position = Vector2(994, 175)
 texture = ExtResource("8_k4c2m")
 
 [node name="BunkerProbirka" type="Sprite2D" parent="." unique_id=1088843304]

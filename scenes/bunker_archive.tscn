@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://db4t1xvblas5b"]
 
 [ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_8cuyx"]
-[ext_resource type="Texture2D" uid="uid://dcdgn2l44mt6y" path="res://bunker_old paper.png" id="2_fsvet"]
+[ext_resource type="Texture2D" uid="uid://dcdgn2l44mt6y" path="res://assets/Furniture/bunker_old paper.png" id="2_fsvet"]
 [ext_resource type="Texture2D" uid="uid://d1yfgs83ewyra" path="res://assets/Furniture/bunker_paper tray.png" id="3_jwrfq"]
 
 [node name="Node2D" type="Node2D" unique_id=2041169784]

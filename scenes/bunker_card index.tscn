@@ -1,15 +1,15 @@
 [gd_scene format=4 uid="uid://dw4efwmoyvw4e"]
 
 [ext_resource type="PackedScene" uid="uid://3ehpg8su6k0k" path="res://scenes/TileMaps.tscn" id="1_fsuqs"]
-[ext_resource type="Texture2D" uid="uid://b4pys0llh3wd" path="res://bunker_empty table.png" id="2_wodm0"]
-[ext_resource type="Texture2D" uid="uid://dcdgn2l44mt6y" path="res://bunker_old paper.png" id="3_h5axx"]
-[ext_resource type="Texture2D" uid="uid://cxsg22pt8d3n2" path="res://assets/Furniture/Papers.png" id="4_ssxod"]
+[ext_resource type="Texture2D" uid="uid://b4pys0llh3wd" path="res://assets/Furniture/bunker_empty table.png" id="2_wodm0"]
+[ext_resource type="Texture2D" uid="uid://dcdgn2l44mt6y" path="res://assets/Furniture/bunker_old paper.png" id="3_h5axx"]
+[ext_resource type="Texture2D" uid="uid://byq3330yhtwvr" path="res://assets/Furniture/Papers.png" id="4_ssxod"]
 [ext_resource type="Texture2D" uid="uid://d1yfgs83ewyra" path="res://assets/Furniture/bunker_paper tray.png" id="5_wlu41"]
-[ext_resource type="Texture2D" uid="uid://cj4n03prw4mf8" path="res://assets/Furniture/trashcan.png" id="6_essc6"]
-[ext_resource type="Texture2D" uid="uid://b8b17y337r6ww" path="res://assets/Furniture/frame.png" id="7_15blb"]
+[ext_resource type="Texture2D" uid="uid://81yppkdc5q6q" path="res://assets/Furniture/trashcan.png" id="6_essc6"]
+[ext_resource type="Texture2D" uid="uid://qkgxyidck7p2" path="res://assets/Furniture/frame.png" id="7_15blb"]
 [ext_resource type="Texture2D" uid="uid://lg65q3e2dg2m" path="res://assets/Furniture/bunker_scientist table.png" id="8_e04ca"]
-[ext_resource type="Texture2D" uid="uid://chuvn5082e17w" path="res://assets/Furniture/PC.png" id="9_idiuv"]
-[ext_resource type="Texture2D" uid="uid://d2vciqqtdbfqx" path="res://bunker_pipe up.png" id="10_huikp"]
+[ext_resource type="Texture2D" uid="uid://0atby4jm31fo" path="res://assets/Furniture/PC.png" id="9_idiuv"]
+[ext_resource type="Texture2D" uid="uid://d2vciqqtdbfqx" path="res://assets/Furniture/bunker_pipe up.png" id="10_huikp"]
 
 [node name="Node2D" type="Node2D" unique_id=676373328]
 
