@@ -61,9 +61,6 @@ func _process(_delta):
 		CanShoot = false
 		#endregion
 	
-	if Input.is_action_just_pressed("Info"):
-		print(Current, RevFirst, CanShoot)
-	
 	if Input.is_action_just_pressed("Reload") and Reloading == false:
 		Reloading = true
 		CanOpenBarrel = false
