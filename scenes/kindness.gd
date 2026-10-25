@@ -23,7 +23,8 @@ var Spin = 1
 
 func _process(_delta):
 	
-	$Pot/CookingBar.value = CookingProgress
+	$Aura/Aura.value = CookingProgress
+	
 	
 	#region кручение колеса
 	
@@ -54,7 +55,7 @@ func _process(_delta):
 		$Pot/SpinStepCooldown.start()
 	
 	if SpinAccel > 0 and CanCook == true:
-		CookingProgress = CookingProgress + (roundf(SpinAccel) / 20)
+		$Aura/Aura.value = $Aura/Aura.value + (roundf(SpinAccel) / 20)
 	
 	$VisibleIngredients/Ingredient1.global_position = $Pot/Ingredient1.global_position
 	$VisibleIngredients/Ingredient2.global_position = $Pot/Ingredient2.global_position

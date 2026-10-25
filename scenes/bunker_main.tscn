@@ -426,6 +426,28 @@ _data = {
 &"shaking": SubResource("Animation_iv4jx")
 }
 
+[sub_resource type="Animation" id="Animation_rbqj4"]
+resource_name = "spin"
+length = 4.9333334
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.9333334),
+"transitions": PackedFloat32Array(1.0000002, 1),
+"update": 0,
+"values": [0.0, 6.265732014659643]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4eo5"]
+_data = {
+&"spin": SubResource("Animation_rbqj4")
+}
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
 atlas = ExtResource("3_xg3yv")
 region = Rect2(0, 0, 19, 36)
@@ -3934,6 +3956,17 @@ show_behind_parent = true
 position = Vector2(2, 2)
 scale = Vector2(3.745, 3.745)
 texture = ExtResource("19_rbqj4")
+
+[node name="spin" type="AnimationPlayer" parent="suferer/Kindness/Aura" unique_id=269224167]
+libraries/ = SubResource("AnimationLibrary_q4eo5")
+
+[node name="Aura" type="ProgressBar" parent="suferer/Kindness/Aura" unique_id=1016707237]
+visible = false
+offset_left = 19.411856
+offset_top = 74.6151
+offset_right = 23.411856
+offset_bottom = 101.6151
+step = 1.0
 
 [node name="Player" type="AnimatedSprite2D" parent="suferer" unique_id=864319927]
 visibility_layer = 64
