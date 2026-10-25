@@ -10,55 +10,51 @@
 [ext_resource type="PackedScene" uid="uid://c0toen4qmuhdx" path="res://scenes/revolver_bullet.tscn" id="5_akogo"]
 [ext_resource type="Script" uid="uid://c2wc7mkcnoytg" path="res://Scripts/weapons/integrity.gd" id="5_crp4k"]
 [ext_resource type="Script" uid="uid://7bpyik5fbvnb" path="res://Scripts/menus/menu.gd" id="5_h6rnp"]
-[ext_resource type="Texture2D" uid="uid://dggm85gllmhxr" path="res://assets/Sprites/Sufferer/SuffererHead.png" id="6_g125w"]
 [ext_resource type="Texture2D" uid="uid://bqoccrdse87pf" path="res://assets/Sprites/empty_Hearth.png" id="6_lp5pk"]
 [ext_resource type="Texture2D" uid="uid://b7vjx671ebsb" path="res://assets/Sprites/Pulse.png" id="7_3vj0e"]
 [ext_resource type="Texture2D" uid="uid://b4yoejs84vo60" path="res://assets/Sprites/SoulRays.png" id="7_8bjgs"]
-[ext_resource type="Texture2D" uid="uid://eijiinjqb7bn" path="res://assets/Sprites/Sufferer/SuffererTorso.png" id="7_iq78o"]
 [ext_resource type="AudioStream" uid="uid://bi2gfl5t5b6bl" path="res://assets/Sounds/Weapons/LeftArrow.ogg" id="7_rt5ba"]
-[ext_resource type="Texture2D" uid="uid://oikm2mylc7wu" path="res://assets/Sprites/Sufferer/SuffererRightArm.png" id="8_0wcbw"]
 [ext_resource type="AudioStream" uid="uid://be6srubkymj2e" path="res://assets/Sounds/Weapons/DownArrow.ogg" id="8_6mvv0"]
 [ext_resource type="Texture2D" uid="uid://8ry37gdkui63" path="res://assets/SoulRaysFragments/Empty-Patience.png" id="8_bd77f"]
+[ext_resource type="Texture2D" uid="uid://qcc8nc1s4tmi" path="res://assets/Sprites/Kindness/sporeCloud.png" id="8_kqnpd"]
 [ext_resource type="AudioStream" uid="uid://do0q03ugh6ibc" path="res://assets/Sounds/Weapons/RightArrow.ogg" id="9_3vj0e"]
-[ext_resource type="Texture2D" uid="uid://brkijyjaowypl" path="res://assets/Sprites/Sufferer/SuffererRightShoulder.png" id="9_aaybg"]
 [ext_resource type="Texture2D" uid="uid://c58w0mivlkd1b" path="res://assets/SoulRaysFragments/Full_Patience.png" id="9_isam3"]
 [ext_resource type="Texture2D" uid="uid://c2ag6wudm7ni" path="res://assets/SoulRaysFragments/Empty-Kindness.png" id="10_3cqmg"]
-[ext_resource type="Texture2D" uid="uid://8tl2hwu3fw6d" path="res://assets/Sprites/Sufferer/SuffererRightHand.png" id="10_kqnpd"]
 [ext_resource type="Texture2D" uid="uid://tbfasuw31nbg" path="res://assets/Sprites/SoulLight.png" id="10_nvy1x"]
 [ext_resource type="AudioStream" uid="uid://c5ef4a6ml77my" path="res://assets/Sounds/Weapons/sucess.ogg" id="10_otphl"]
 [ext_resource type="AudioStream" uid="uid://dewrygeta1k4u" path="res://assets/Sounds/Weapons/UpArrow.ogg" id="11_jrwb0"]
 [ext_resource type="Script" uid="uid://bi7idqlufendl" path="res://Scripts/pulse.gd" id="11_lq3gn"]
-[ext_resource type="Texture2D" uid="uid://bc87rtfs2n6gp" path="res://assets/Sprites/Sufferer/SuffererLeftArm.png" id="11_rbqj4"]
 [ext_resource type="Texture2D" uid="uid://ds1f4qau0ug1o" path="res://assets/SoulRaysFragments/Full_Kindness.png" id="11_tui8b"]
 [ext_resource type="AudioStream" uid="uid://celwuypigkgcb" path="res://assets/Sounds/Weapons/Failure.ogg" id="12_106nv"]
-[ext_resource type="Texture2D" uid="uid://c6weyqqi1ins7" path="res://assets/Sprites/Sufferer/SuffererLeftHand.png" id="12_q4eo5"]
 [ext_resource type="Texture2D" uid="uid://htacyrunexjb" path="res://assets/SoulRaysFragments/Empty-Justice.png" id="12_t0e2p"]
+[ext_resource type="Texture2D" uid="uid://bm573rqnxxobc" path="res://assets/Sprites/handKnuckle.png" id="13_0wcbw"]
 [ext_resource type="AudioStream" uid="uid://yxe51eulx7s5" path="res://assets/Sounds/Weapons/Change.ogg" id="13_6mvv0"]
 [ext_resource type="Texture2D" uid="uid://yaavelx5psno" path="res://assets/SoulRaysFragments/Full_Justice.png" id="13_83unw"]
 [ext_resource type="AudioStream" uid="uid://bmtrkd38ul7xg" path="res://assets/Sounds/Weapons/Beat.ogg" id="13_f284d"]
-[ext_resource type="Texture2D" uid="uid://bsptnckjo5mqv" path="res://assets/Sprites/Sufferer/SuffererLeftShoulder.png" id="13_ybcmu"]
-[ext_resource type="Texture2D" uid="uid://bgjsgfmn6t3i0" path="res://assets/Sprites/Sufferer/SuffererLeftLeg.png" id="14_ehxeq"]
 [ext_resource type="Texture2D" uid="uid://dlpqfh37hbans" path="res://assets/SoulRaysFragments/Empty-Integrity.png" id="14_wqtb7"]
-[ext_resource type="Texture2D" uid="uid://ceekw86xo1jof" path="res://assets/Sprites/Sufferer/SuffererLeftFoot.png" id="15_2vxa1"]
 [ext_resource type="Texture2D" uid="uid://cox12dbm3ogjp" path="res://assets/SoulRaysFragments/Full_Integrity.png" id="15_enw1k"]
+[ext_resource type="AudioStream" uid="uid://dq1uogm1yox4y" path="res://assets/Sounds/Weapons/searching.ogg" id="15_iq78o"]
 [ext_resource type="AudioStream" uid="uid://cp7c1rc6ekf22" path="res://assets/Sounds/Weapons/PatienceGain.ogg" id="16_akogo"]
-[ext_resource type="Texture2D" uid="uid://bu750am636qul" path="res://assets/Sprites/Sufferer/SuffererRightLeg.png" id="16_swdrg"]
 [ext_resource type="Texture2D" uid="uid://ygfi8chngpgf" path="res://assets/SoulRaysFragments/Empty-Dexterity.png" id="16_yawcl"]
-[ext_resource type="Texture2D" uid="uid://krob1h7mxqyr" path="res://assets/Sprites/Sufferer/SuffererRightFoot.png" id="17_o75b7"]
+[ext_resource type="AudioStream" uid="uid://finhb0jkhe4v" path="res://assets/Sounds/Weapons/PickSound.mp3" id="17_aaybg"]
 [ext_resource type="Texture2D" uid="uid://c8ckklxvpmg7i" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="17_r5bsq"]
 [ext_resource type="Script" uid="uid://bvvavaqbqwbhv" path="res://scenes/justice.gd" id="18_77h1j"]
 [ext_resource type="Script" uid="uid://b8t5sfr76rt5m" path="res://scenes/kindness.gd" id="18_ehxeq"]
 [ext_resource type="Texture2D" uid="uid://6omsfqp5l312" path="res://assets/SoulRaysFragments/Empty-Bravery.png" id="18_hkcvx"]
 [ext_resource type="Texture2D" uid="uid://bfwbd4eqg3rrv" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="19_fa2ew"]
 [ext_resource type="Texture2D" uid="uid://bcplg4qblwn56" path="res://assets/Sprites/Justice/revolverBarrel.png" id="19_gh2hl"]
+[ext_resource type="Texture2D" uid="uid://cnollgl5eo66s" path="res://assets/Sprites/Kindness/kindnessAura.png" id="19_rbqj4"]
 [ext_resource type="Texture2D" uid="uid://dxhk52gjfbgby" path="res://assets/Sprites/Justice/RevolverAmmo.png" id="20_0i2yw"]
 [ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/Sounds/SoulRaysAppear.ogg" id="20_ro5b2"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="21_gu7m6"]
 [ext_resource type="Script" uid="uid://cr8mqoobtb3a7" path="res://Scripts/mobs/friend.gd" id="22_fwn4l"]
 [ext_resource type="Texture2D" uid="uid://plqh86rthj5f" path="res://assets/Sprites/Kindness/KindnessSack.png" id="23_2vxa1"]
+[ext_resource type="Texture2D" uid="uid://bkvbqy4ggdusd" path="res://assets/Sprites/Kindness/KindnessIngredients.png" id="24_o75b7"]
 [ext_resource type="Texture2D" uid="uid://cm2yi4kghpvfn" path="res://assets/interface/WeaponPointer.png" id="24_vmfmc"]
+[ext_resource type="Texture2D" uid="uid://doveoctta1s8q" path="res://assets/Sprites/hand.png" id="25_0io1r"]
 [ext_resource type="Texture2D" uid="uid://br7oebhv03xgr" path="res://assets/Sprites/Foe1.png" id="25_h5an3"]
 [ext_resource type="Script" uid="uid://2o66revuju2o" path="res://Scripts/weapons/Weapon.gd" id="25_nvy1x"]
+[ext_resource type="Texture2D" uid="uid://cn0hf25bcqbts" path="res://assets/Sprites/nothing.png" id="26_0io1r"]
 [ext_resource type="Texture2D" uid="uid://xpmscjk4pr54" path="res://assets/Sprites/FoeFade.png" id="26_uq2c6"]
 [ext_resource type="Texture2D" uid="uid://djbdu350lhgo6" path="res://assets/Sprites/Integrity/IntegrityScope.png" id="40_6mvv0"]
 [ext_resource type="Script" uid="uid://1ybo1j4ykwkk" path="res://Scripts/mobs/FriendDeath.gd" id="40_rt5ba"]
@@ -91,141 +87,9 @@
 [ext_resource type="AudioStream" uid="uid://bacxur440pjbo" path="res://assets/Sounds/Weapons/RevolverShoot.ogg" id="65_3r077"]
 [ext_resource type="AudioStream" uid="uid://csfk5qc7g4j4y" path="res://assets/Sounds/Weapons/RevolverBulletIn.ogg" id="65_6n4da"]
 [ext_resource type="Texture2D" uid="uid://v2uotdrq4n3u" path="res://assets/Sprites/Kindness/KindnessPot.png" id="80_q4eo5"]
-[ext_resource type="Texture2D" uid="uid://ctvgr6nwfb4ri" path="res://assets/Sprites/Kindness/Apple.png" id="81_ybcmu"]
-[ext_resource type="Texture2D" uid="uid://dml81b12w13xe" path="res://assets/Sprites/Kindness/Carroot.png" id="82_ehxeq"]
-[ext_resource type="Texture2D" uid="uid://bgmmbquc16mn2" path="res://assets/Sprites/Kindness/potato.png" id="84_ybcmu"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dbuyv"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_g125w")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8w3y3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_iq78o")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kd1y4"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_0wcbw")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_qo7ek"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_aaybg")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_m8dv1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_kqnpd")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_20yo1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_rbqj4")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rljbg"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_ybcmu")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dsydp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_q4eo5")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_l3ngc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_ehxeq")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_v5agc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("15_2vxa1")
-}],
-"loop": 0,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1d6r0"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("16_swdrg")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0lnet"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_o75b7")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://ctvgr6nwfb4ri" path="res://assets/Sprites/Kindness/Ingredients/Apple.png" id="81_ybcmu"]
+[ext_resource type="Texture2D" uid="uid://dml81b12w13xe" path="res://assets/Sprites/Kindness/Ingredients/Carroot.png" id="82_ehxeq"]
+[ext_resource type="Texture2D" uid="uid://bgmmbquc16mn2" path="res://assets/Sprites/Kindness/Ingredients/potato.png" id="84_ybcmu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dk4md"]
 animations = [{
@@ -237,6 +101,10 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Gradient" id="Gradient_vkqoe"]
+offsets = PackedFloat32Array(0.2822086, 0.4417178, 0.6625767, 0.9693251)
+colors = PackedColorArray(0.05490196, 0.5372549, 0.14509805, 1, 0.34901962, 0.75686276, 0.20784314, 1, 0.34509805, 0.7372549, 0.15294118, 1, 0, 0.99215686, 0, 0)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ny722"]
 animations = [{
@@ -258,6 +126,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("26_0io1r")
+}],
+"loop": 0,
+"name": &"Nothing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("84_ybcmu")
 }],
 "loop": 0,
@@ -265,16 +141,290 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_h70q5"]
+[sub_resource type="Animation" id="Animation_0wcbw"]
+resource_name = "fade"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666666, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.5846852994181004]
+}
+
+[sub_resource type="Animation" id="Animation_aaybg"]
+resource_name = "unfade"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.01, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.5690509975429023, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kqnpd"]
+_data = {
+&"fade": SubResource("Animation_0wcbw"),
+&"unfade": SubResource("Animation_aaybg")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sik7j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("23_2vxa1")
+"texture": ExtResource("25_0io1r")
 }],
 "loop": 0,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_0wcbw")
+}],
+"loop": 0,
+"name": &"knuckle",
+"speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_o75b7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(652, 67)]
+}
+
+[sub_resource type="Animation" id="Animation_0io1r"]
+resource_name = "back up"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(3.031435, 0.70710486),
+"update": 0,
+"values": [Vector2(661, 205.66), Vector2(652, 67)]
+}
+
+[sub_resource type="Animation" id="Animation_as3dj"]
+resource_name = "lowering"
+length = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(2.5491211, 1),
+"update": 0,
+"values": [Vector2(652, 67), Vector2(661, 205.66)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xf7vj"]
+_data = {
+&"RESET": SubResource("Animation_o75b7"),
+&"back up": SubResource("Animation_0io1r"),
+&"lowering": SubResource("Animation_as3dj")
+}
+
+[sub_resource type="Animation" id="Animation_5tcw6"]
+resource_name = "Reset"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.05235988]
+}
+
+[sub_resource type="Animation" id="Animation_evjl6"]
+resource_name = "shake"
+length = 0.6666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6399998),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.05235988, -0.11693705988361988, 0.4363323129985824, 0.05235988]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_738hr"]
+_data = {
+&"Reset": SubResource("Animation_5tcw6"),
+&"shake": SubResource("Animation_evjl6")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lofop"]
+atlas = ExtResource("23_2vxa1")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_as3dj"]
+atlas = ExtResource("23_2vxa1")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h70q5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lofop")
+}],
+"loop": 1,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_as3dj")
+}],
+"loop": 0,
+"name": &"opened",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf7vj"]
+atlas = ExtResource("24_o75b7")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tcw6"]
+atlas = ExtResource("24_o75b7")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8y4fw"]
+atlas = ExtResource("24_o75b7")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hlkn0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xf7vj")
+}],
+"loop": 0,
+"name": &"Apple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tcw6")
+}],
+"loop": 0,
+"name": &"Carrot",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_0io1r")
+}],
+"loop": 0,
+"name": &"Nothing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8y4fw")
+}],
+"loop": 1,
+"name": &"Potato",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_xf7vj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_iv4jx"]
+resource_name = "shaking"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.02, 0.16666667, 0.29666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.03490658503988659, 0.04363323129985824]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8y4fw"]
+_data = {
+&"RESET": SubResource("Animation_xf7vj"),
+&"shaking": SubResource("Animation_iv4jx")
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
 atlas = ExtResource("3_xg3yv")
@@ -3618,101 +3768,172 @@ Justice_scene = ExtResource("5_akogo")
 
 [node name="KnifeSpawn" type="Marker2D" parent="suferer" unique_id=1381992612]
 
-[node name="Sprites" type="Node2D" parent="suferer" unique_id=182923271]
-visible = false
-
-[node name="Head" type="AnimatedSprite2D" parent="suferer/Sprites" unique_id=110868784]
-position = Vector2(7, -34)
-scale = Vector2(3.79, 3.79)
-sprite_frames = SubResource("SpriteFrames_dbuyv")
-
-[node name="Torso" type="AnimatedSprite2D" parent="suferer/Sprites" unique_id=1339848362]
-position = Vector2(1.3347168, 9.530029)
-scale = Vector2(3.79, 3.79)
-sprite_frames = SubResource("SpriteFrames_8w3y3")
-
-[node name="RightArm" type="AnimatedSprite2D" parent="suferer/Sprites" unique_id=1642294398]
-position = Vector2(-19.45, 3.84)
-scale = Vector2(3.79, 3.79)
-sprite_frames = SubResource("SpriteFrames_kd1y4")
-
-[node name="RightShoulder" type="AnimatedSprite2D" parent="suferer/Sprites/RightArm" unique_id=897991274]
-position = Vector2(0.0039293766, 2.4709742)
-sprite_frames = SubResource("SpriteFrames_qo7ek")
-
-[node name="RightHand" type="AnimatedSprite2D" parent="suferer/Sprites/RightArm/RightShoulder" unique_id=2052425819]
-show_behind_parent = true
-position = Vector2(0, 2.342)
-scale = Vector2(0.805, 0.805)
-sprite_frames = SubResource("SpriteFrames_m8dv1")
-
-[node name="LeftArm" type="AnimatedSprite2D" parent="suferer/Sprites" unique_id=113617071]
-position = Vector2(22.1, 3.865)
-scale = Vector2(3.79, 3.79)
-sprite_frames = SubResource("SpriteFrames_20yo1")
-
-[node name="LeftShoulder" type="AnimatedSprite2D" parent="suferer/Sprites/LeftArm" unique_id=1301038089]
-position = Vector2(0.004, 2.978)
-sprite_frames = SubResource("SpriteFrames_rljbg")
-
-[node name="LeftHand" type="AnimatedSprite2D" parent="suferer/Sprites/LeftArm/LeftShoulder" unique_id=1254581647]
-show_behind_parent = true
-position = Vector2(0.16503906, 2.1399994)
-scale = Vector2(0.87, 0.87)
-sprite_frames = SubResource("SpriteFrames_dsydp")
-
-[node name="LeftLeg" type="AnimatedSprite2D" parent="suferer/Sprites" unique_id=928063092]
-position = Vector2(13, 36)
-scale = Vector2(3.79, 3.79)
-sprite_frames = SubResource("SpriteFrames_l3ngc")
-
-[node name="LeftFoot" type="AnimatedSprite2D" parent="suferer/Sprites/LeftLeg" unique_id=1840404372]
-position = Vector2(0.49, 4.965)
-sprite_frames = SubResource("SpriteFrames_v5agc")
-
-[node name="RightLeg" type="AnimatedSprite2D" parent="suferer/Sprites" unique_id=1486905337]
-position = Vector2(-6, 36)
-scale = Vector2(3.79, 3.79)
-sprite_frames = SubResource("SpriteFrames_1d6r0")
-
-[node name="RightFoot" type="AnimatedSprite2D" parent="suferer/Sprites/RightLeg" unique_id=1960257873]
-position = Vector2(-1.005, 4.923)
-sprite_frames = SubResource("SpriteFrames_0lnet")
-
 [node name="Kindness" type="Node2D" parent="suferer" unique_id=1506430294]
-visible = false
 script = ExtResource("18_ehxeq")
 
 [node name="Pot" type="AnimatedSprite2D" parent="suferer/Kindness" unique_id=1155271757]
-self_modulate = Color(1, 1, 1, 0.5254902)
 position = Vector2(3.000062, 1.0000229)
 scale = Vector2(2.715, 2.715)
 sprite_frames = SubResource("SpriteFrames_dk4md")
 
+[node name="Ingredient1" type="Marker2D" parent="suferer/Kindness/Pot" unique_id=1993455027]
+position = Vector2(39.410694, -26.151007)
+
+[node name="spores" type="CPUParticles2D" parent="suferer/Kindness/Pot/Ingredient1" unique_id=773794014]
+emitting = false
+amount = 27
+texture = ExtResource("8_kqnpd")
+lifetime = 0.76
+preprocess = 0.7
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 22.81
+angular_velocity_min = 4.0
+angular_velocity_max = 160.83
+scale_amount_min = 0.49
+scale_amount_max = 0.99
+color_ramp = SubResource("Gradient_vkqoe")
+
+[node name="Ingredient2" type="Marker2D" parent="suferer/Kindness/Pot" unique_id=1711095373]
+position = Vector2(-39.410706, -23.941069)
+
+[node name="spores" type="CPUParticles2D" parent="suferer/Kindness/Pot/Ingredient2" unique_id=620225842]
+emitting = false
+amount = 27
+texture = ExtResource("8_kqnpd")
+lifetime = 0.76
+preprocess = 0.7
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 22.81
+angular_velocity_min = 4.0
+angular_velocity_max = 160.83
+scale_amount_min = 0.49
+scale_amount_max = 0.99
+color_ramp = SubResource("Gradient_vkqoe")
+
+[node name="Ingredient3" type="Marker2D" parent="suferer/Kindness/Pot" unique_id=1523314612]
+position = Vector2(1.8416481, 46.040516)
+
+[node name="spores" type="CPUParticles2D" parent="suferer/Kindness/Pot/Ingredient3" unique_id=734143054]
+emitting = false
+amount = 27
+texture = ExtResource("8_kqnpd")
+lifetime = 0.76
+preprocess = 0.7
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 22.81
+angular_velocity_min = 4.0
+angular_velocity_max = 160.83
+scale_amount_min = 0.49
+scale_amount_max = 0.99
+color_ramp = SubResource("Gradient_vkqoe")
+
+[node name="SpinStepCooldown" type="Timer" parent="suferer/Kindness/Pot" unique_id=197634941]
+wait_time = 0.44
+one_shot = true
+
+[node name="SpinSlowingCooldown" type="Timer" parent="suferer/Kindness/Pot" unique_id=456005470]
+wait_time = 0.101
+one_shot = true
+
 [node name="VisibleIngredients" type="Node2D" parent="suferer/Kindness" unique_id=874468025]
+position = Vector2(0.00024414063, 0)
+scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Ingredient1" type="AnimatedSprite2D" parent="suferer/Kindness/VisibleIngredients" unique_id=1058127044]
-position = Vector2(103, -83)
-scale = Vector2(0.535, 0.535)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(109.999756, -73)
+scale = Vector2(0.61, 0.61)
+skew = -1.43117
 sprite_frames = SubResource("SpriteFrames_ny722")
-animation = &"Apple"
+animation = &"Nothing"
+autoplay = "Nothing"
+
+[node name="FadeUnfade" type="AnimationPlayer" parent="suferer/Kindness/VisibleIngredients/Ingredient1" unique_id=875331128]
+libraries/ = SubResource("AnimationLibrary_kqnpd")
 
 [node name="Ingredient2" type="AnimatedSprite2D" parent="suferer/Kindness/VisibleIngredients" unique_id=63337617]
-position = Vector2(-117, -38)
-scale = Vector2(0.535, 0.535)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-104.000244, -67)
+scale = Vector2(0.61, 0.61)
+skew = -1.569051
 sprite_frames = SubResource("SpriteFrames_ny722")
-animation = &"Carroot"
+animation = &"Nothing"
+autoplay = "Nothing"
+
+[node name="FadeUnfade" type="AnimationPlayer" parent="suferer/Kindness/VisibleIngredients/Ingredient2" unique_id=1438841525]
+libraries/ = SubResource("AnimationLibrary_kqnpd")
 
 [node name="Ingredient3" type="AnimatedSprite2D" parent="suferer/Kindness/VisibleIngredients" unique_id=1007407763]
-position = Vector2(56, 120)
-scale = Vector2(0.535, 0.535)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(8.99976, 125)
+scale = Vector2(0.61, 0.61)
+skew = -1.569051
 sprite_frames = SubResource("SpriteFrames_ny722")
-animation = &"Potato"
+animation = &"Nothing"
+autoplay = "Nothing"
+
+[node name="FadeUnfade" type="AnimationPlayer" parent="suferer/Kindness/VisibleIngredients/Ingredient3" unique_id=241577722]
+libraries/ = SubResource("AnimationLibrary_kqnpd")
+
+[node name="pickability" type="Timer" parent="suferer/Kindness/VisibleIngredients" unique_id=845032786]
+wait_time = 0.355
+
+[node name="Hand" type="AnimatedSprite2D" parent="suferer/Kindness" unique_id=1060796109]
+show_behind_parent = true
+position = Vector2(652, 67)
+rotation = 0.058046453
+scale = Vector2(2.039, 2.039)
+sprite_frames = SubResource("SpriteFrames_sik7j")
+
+[node name="Hand" type="AnimationPlayer" parent="suferer/Kindness/Hand" unique_id=1230869166]
+libraries/ = SubResource("AnimationLibrary_xf7vj")
+
+[node name="Shake" type="AnimationPlayer" parent="suferer/Kindness/Hand" unique_id=144597273]
+libraries/ = SubResource("AnimationLibrary_738hr")
+
+[node name="Lowering" type="Timer" parent="suferer/Kindness/Hand" unique_id=269858350]
+wait_time = 1.509
+one_shot = true
+
+[node name="PullingOut" type="Timer" parent="suferer/Kindness/Hand" unique_id=1375604967]
+wait_time = 0.34
+one_shot = true
 
 [node name="Sack" type="AnimatedSprite2D" parent="suferer/Kindness" unique_id=1988751802]
 position = Vector2(644, 301)
 scale = Vector2(2.695, 2.695)
 sprite_frames = SubResource("SpriteFrames_h70q5")
+animation = &"opened"
+
+[node name="Ingredients" type="AnimatedSprite2D" parent="suferer/Kindness/Sack" unique_id=1498169777]
+position = Vector2(0.742115, 0.37106133)
+scale = Vector2(0.94, 0.94)
+sprite_frames = SubResource("SpriteFrames_hlkn0")
+animation = &"Nothing"
+autoplay = "Nothing"
+
+[node name="shaking" type="AnimationPlayer" parent="suferer/Kindness/Sack" unique_id=73336959]
+libraries/ = SubResource("AnimationLibrary_8y4fw")
+
+[node name="SackCooldown" type="Timer" parent="suferer/Kindness/Sack" unique_id=1460250914]
+wait_time = 0.517
+one_shot = true
+
+[node name="searching" type="AudioStreamPlayer2D" parent="suferer/Kindness/Sack" unique_id=1448835234]
+stream = ExtResource("15_iq78o")
+
+[node name="PickSound" type="AudioStreamPlayer2D" parent="suferer/Kindness" unique_id=1641901932]
+stream = ExtResource("17_aaybg")
+
+[node name="Aura" type="Sprite2D" parent="suferer/Kindness" unique_id=1623800358]
+self_modulate = Color(1, 1, 1, 0.3764706)
+show_behind_parent = true
+position = Vector2(2, 2)
+scale = Vector2(3.745, 3.745)
+texture = ExtResource("19_rbqj4")
 
 [node name="Player" type="AnimatedSprite2D" parent="suferer" unique_id=864319927]
 visibility_layer = 64
@@ -3751,6 +3972,7 @@ offset_bottom = -84.0
 text = "* I look in my very soul..."
 label_settings = SubResource("LabelSettings_vkqoe")
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="Tint" type="ColorRect" parent="suferer" unique_id=610449697]
 self_modulate = Color(1, 1, 1, 0)
@@ -4000,7 +4222,7 @@ shape = SubResource("CapsuleShape2D_gjxql")
 visibility_layer = 64
 scale = Vector2(1.7265625, 1.7265625)
 sprite_frames = SubResource("SpriteFrames_w7t7a")
-animation = &"Dexterity"
+animation = &"Kindness"
 offset = Vector2(-0.04296875, 0.30145264)
 
 [node name="Spin" type="AnimationPlayer" parent="suferer/InteractBox/Scope" unique_id=1456541085]
@@ -4050,6 +4272,7 @@ position = Vector2(0, -89)
 scale = Vector2(1e-05, 1e-05)
 sprite_frames = SubResource("SpriteFrames_txojl")
 animation = &"Full"
+metadata/_edit_lock_ = true
 
 [node name="Animation" type="AnimationPlayer" parent="suferer/InteractBox/Patience/Charges/PatienceCharge1" unique_id=1192224565]
 libraries/ = SubResource("AnimationLibrary_akogo")
@@ -4077,6 +4300,7 @@ position = Vector2(0, 91)
 scale = Vector2(1e-05, 1e-05)
 sprite_frames = SubResource("SpriteFrames_w8rrg")
 animation = &"Full"
+metadata/_edit_lock_ = true
 
 [node name="Animation" type="AnimationPlayer" parent="suferer/InteractBox/Patience/Charges/PatienceCharge2" unique_id=60849604]
 libraries/ = SubResource("AnimationLibrary_bpkfj")
@@ -4097,6 +4321,7 @@ initial_velocity_min = 42.11
 initial_velocity_max = 178.95
 angular_velocity_min = 22.74
 angular_velocity_max = 83.36
+metadata/_edit_lock_ = true
 
 [node name="PatienceCharge3" type="AnimatedSprite2D" parent="suferer/InteractBox/Patience/Charges" unique_id=1869391360]
 self_modulate = Color(1, 1, 1, 0)
@@ -4104,6 +4329,7 @@ position = Vector2(90, 1)
 scale = Vector2(1e-05, 1e-05)
 sprite_frames = SubResource("SpriteFrames_iaotu")
 animation = &"Full"
+metadata/_edit_lock_ = true
 
 [node name="Animation" type="AnimationPlayer" parent="suferer/InteractBox/Patience/Charges/PatienceCharge3" unique_id=844125455]
 root_node = NodePath("../../PatienceCharge2")
@@ -4132,6 +4358,7 @@ position = Vector2(-90, 1)
 scale = Vector2(1e-05, 1e-05)
 sprite_frames = SubResource("SpriteFrames_xf5l1")
 animation = &"Full"
+metadata/_edit_lock_ = true
 
 [node name="Animation" type="AnimationPlayer" parent="suferer/InteractBox/Patience/Charges/PatienceCharge4" unique_id=523692008]
 libraries/ = SubResource("AnimationLibrary_l1bm3")
@@ -4157,21 +4384,25 @@ angular_velocity_max = 83.36
 position = Vector2(-1, -89)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("46_67hkc")
+metadata/_edit_lock_ = true
 
 [node name="PatiencePulse2" type="Sprite2D" parent="suferer/InteractBox/Patience/Charges" unique_id=1975534849]
 position = Vector2(0, 90)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("46_67hkc")
+metadata/_edit_lock_ = true
 
 [node name="PatiencePulse3" type="Sprite2D" parent="suferer/InteractBox/Patience/Charges" unique_id=1535554392]
 position = Vector2(89, 1)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("46_67hkc")
+metadata/_edit_lock_ = true
 
 [node name="PatiencePulse4" type="Sprite2D" parent="suferer/InteractBox/Patience/Charges" unique_id=1755138554]
 position = Vector2(-90, 0)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("46_67hkc")
+metadata/_edit_lock_ = true
 
 [node name="Grow" type="Timer" parent="suferer/InteractBox/Patience/Charges" unique_id=190134997]
 wait_time = 2.0
@@ -4595,6 +4826,7 @@ offset_right = -43.360092
 offset_bottom = -43.0
 scale = Vector2(12.425, 12.425)
 flat = true
+metadata/_edit_lock_ = true
 
 [node name="MainCamera" type="Camera2D" parent="suferer" unique_id=1784157402]
 position = Vector2(0, 9)
@@ -4666,6 +4898,12 @@ texture = ExtResource("61_akogo")
 
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Integrity/Inspiration" method="_on_suferer_hit"]
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Patience/Charges" method="_on_suferer_hit"]
+[connection signal="timeout" from="suferer/Kindness/Pot/SpinStepCooldown" to="suferer/Kindness" method="_on_spin_step_cooldown_timeout"]
+[connection signal="timeout" from="suferer/Kindness/Pot/SpinSlowingCooldown" to="suferer/Kindness" method="_on_spin_slowing_cooldown_timeout"]
+[connection signal="timeout" from="suferer/Kindness/VisibleIngredients/pickability" to="suferer/Kindness" method="_on_pickability_timeout"]
+[connection signal="timeout" from="suferer/Kindness/Hand/Lowering" to="suferer/Kindness" method="_on_lowering_timeout"]
+[connection signal="timeout" from="suferer/Kindness/Hand/PullingOut" to="suferer/Kindness" method="_on_pulling_out_timeout"]
+[connection signal="timeout" from="suferer/Kindness/Sack/SackCooldown" to="suferer/Kindness" method="_on_sack_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/UnblockMovements" to="suferer/Control" method="_on_unblock_movements_timeout"]

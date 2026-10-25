@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cniqymac8dfo8"]
 
-[ext_resource type="Texture2D" uid="uid://ctvgr6nwfb4ri" path="res://assets/Sprites/Kindness/Apple.png" id="1_rcex7"]
+[ext_resource type="Texture2D" uid="uid://ctvgr6nwfb4ri" path="res://assets/Sprites/Kindness/Ingredients/Apple.png" id="1_rcex7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hlkn0"]
 animations = [{
