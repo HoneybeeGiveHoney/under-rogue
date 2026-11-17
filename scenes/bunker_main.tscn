@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://dxhk52gjfbgby" path="res://assets/Sprites/Justice/RevolverAmmo.png" id="20_0i2yw"]
 [ext_resource type="AudioStream" uid="uid://cexainsjakgv8" path="res://assets/Sounds/SoulRaysAppear.ogg" id="20_ro5b2"]
 [ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="21_gu7m6"]
+[ext_resource type="Texture2D" uid="uid://c0f1tcw84d2mb" path="res://assets/Sprites/Kindness/debuffProgress.png" id="22_ehxeq"]
 [ext_resource type="Script" uid="uid://cr8mqoobtb3a7" path="res://Scripts/mobs/friend.gd" id="22_fwn4l"]
 [ext_resource type="Texture2D" uid="uid://plqh86rthj5f" path="res://assets/Sprites/Kindness/KindnessSack.png" id="23_2vxa1"]
 [ext_resource type="Texture2D" uid="uid://bkvbqy4ggdusd" path="res://assets/Sprites/Kindness/KindnessIngredients.png" id="24_o75b7"]
@@ -66,7 +67,6 @@
 [ext_resource type="Script" uid="uid://b47g67hi320ku" path="res://Scripts/weapons/Patiencecharges.gd" id="44_wdo10"]
 [ext_resource type="Texture2D" uid="uid://i0sjl78aovel" path="res://assets/Sprites/Patience/PatienceCharge.png" id="45_7dbvr"]
 [ext_resource type="Texture2D" uid="uid://bqksiqoa02dyn" path="res://assets/Sprites/Patience/PatienceChargeC.png" id="45_67hkc"]
-[ext_resource type="AudioStream" uid="uid://u0wr6vyw6rty" path="res://assets/Sounds/Weapons/HearthBeat.ogg" id="45_ere52"]
 [ext_resource type="Texture2D" uid="uid://dpvnw8b36khu8" path="res://assets/Sprites/Kindness/kindnessScope.png" id="45_iq78o"]
 [ext_resource type="Texture2D" uid="uid://cnccipkibtcvh" path="res://assets/Sprites/littleStar.png" id="45_otphl"]
 [ext_resource type="Texture2D" uid="uid://bomishx6iyk7w" path="res://assets/Sprites/Kindness/kindnessScopeThorns.png" id="46_0wcbw"]
@@ -80,6 +80,8 @@
 [ext_resource type="Texture2D" uid="uid://cspskgg5xfpp0" path="res://assets/Sprites/Justice/LittleExplosion.png" id="57_6n4da"]
 [ext_resource type="Texture2D" uid="uid://bv1ssqi61o084" path="res://assets/Sprites/Justice/revolverFull.png" id="57_gh2hl"]
 [ext_resource type="AudioStream" uid="uid://dn8os3l5awmfc" path="res://assets/Sounds/Weapons/GrabbingAmmo.ogg" id="59_l1bm3"]
+[ext_resource type="Texture2D" uid="uid://c0rjgjqo1s6l5" path="res://assets/Sprites/Kindness/targetSelect.png" id="60_ehxeq"]
+[ext_resource type="Script" uid="uid://dbxgy3ittb613" path="res://scenes/target_selectKindness.gd" id="61_2vxa1"]
 [ext_resource type="Texture2D" uid="uid://qkgxyidck7p2" path="res://assets/Furniture/frame.png" id="61_akogo"]
 [ext_resource type="Texture2D" uid="uid://cjtostdb00je6" path="res://assets/Sprites/Justice/RevolverCurrentPointer.png" id="62_rp32f"]
 [ext_resource type="Texture2D" uid="uid://cu7jdv2tfho7n" path="res://assets/Sprites/Justice/RevolverReloadingThing.png" id="63_ph6v8"]
@@ -90,6 +92,11 @@
 [ext_resource type="Texture2D" uid="uid://ctvgr6nwfb4ri" path="res://assets/Sprites/Kindness/Ingredients/Apple.png" id="81_ybcmu"]
 [ext_resource type="Texture2D" uid="uid://dml81b12w13xe" path="res://assets/Sprites/Kindness/Ingredients/Carroot.png" id="82_ehxeq"]
 [ext_resource type="Texture2D" uid="uid://bgmmbquc16mn2" path="res://assets/Sprites/Kindness/Ingredients/potato.png" id="84_ybcmu"]
+[ext_resource type="AudioStream" uid="uid://b0mh5eisupg3q" path="res://bunker_theme.mp3" id="85_2vxa1"]
+[ext_resource type="Script" uid="uid://w5d8lmih0ie2" path="res://scenes/bgm.gd" id="86_0io1r"]
+[ext_resource type="Texture2D" uid="uid://dbmd2ys1l25ko" path="res://assets/interface/musicTip.png" id="87_lofop"]
+[ext_resource type="LabelSettings" uid="uid://6taah1psmom3" path="res://Determination.tres" id="88_as3dj"]
+[ext_resource type="Texture2D" uid="uid://tci8uxkuwvy6" path="res://assets/Sprites/fire.png" id="93_2vxa1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dk4md"]
 animations = [{
@@ -426,14 +433,50 @@ _data = {
 &"shaking": SubResource("Animation_iv4jx")
 }
 
-[sub_resource type="Animation" id="Animation_rbqj4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ncax"]
+atlas = ExtResource("19_rbqj4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olwty"]
+atlas = ExtResource("19_rbqj4")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im57p"]
+atlas = ExtResource("19_rbqj4")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cl5f"]
+atlas = ExtResource("19_rbqj4")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dbuyv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ncax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olwty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im57p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cl5f")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_ehxeq"]
 resource_name = "spin"
 length = 4.9333334
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
+tracks/0/path = NodePath("Aura:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -445,7 +488,29 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q4eo5"]
 _data = {
-&"spin": SubResource("Animation_rbqj4")
+&"spin": SubResource("Animation_ehxeq")
+}
+
+[sub_resource type="Animation" id="Animation_2vxa1"]
+resource_name = "spin"
+length = 3.6333334
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.76666665, 1.9333333, 2.9, 3.4666667),
+"transitions": PackedFloat32Array(3.3635912, 1.830108, 0.15389314, 0.6698588, 3.0778625),
+"update": 0,
+"values": [0.0, 2.356194490192345, 0.0, -2.356194490192345, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_swdrg"]
+_data = {
+&"spin": SubResource("Animation_2vxa1")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vekm"]
@@ -2521,6 +2586,9 @@ _data = {
 &"Spin": SubResource("Animation_bpkfj")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_yddip"]
+radius = 71.918465
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxxxb"]
 atlas = ExtResource("5_1oeht")
 region = Rect2(0, 0, 128, 128)
@@ -3528,6 +3596,109 @@ _data = {
 &"Third": SubResource("Animation_omikk")
 }
 
+[sub_resource type="Animation" id="Animation_swdrg"]
+resource_name = "bunker"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:stream")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("85_2vxa1")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o75b7"]
+_data = {
+&"bunker": SubResource("Animation_swdrg")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kd1y4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("87_lofop")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xf7vj"]
+font = ExtResource("21_gu7m6")
+font_size = 32
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5tcw6"]
+font = ExtResource("21_gu7m6")
+font_size = 18
+
+[sub_resource type="Animation" id="Animation_738hr"]
+resource_name = "base"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0.2),
+"update": 0,
+"values": [Vector2(-301.78, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_olwty"]
+resource_name = "in"
+length = 0.8666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8333333),
+"transitions": PackedFloat32Array(0.2, 3),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-301.78, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_im57p"]
+resource_name = "out"
+length = 0.53333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.2, 1),
+"update": 0,
+"values": [Vector2(-301.78, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3cl5f"]
+_data = {
+&"base": SubResource("Animation_738hr"),
+&"in": SubResource("Animation_olwty"),
+&"out": SubResource("Animation_im57p")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxmk6"]
+size = Vector2(308, 190)
+
+[sub_resource type="Gradient" id="Gradient_co6qv"]
+offsets = PackedFloat32Array(0, 0.5038168, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 0.6056738, 1.6605109e-06, 3.85046e-07, 0.39215687)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vj0e"]
 radius = 66.068146
 
@@ -3794,7 +3965,7 @@ Justice_scene = ExtResource("5_akogo")
 script = ExtResource("18_ehxeq")
 
 [node name="Pot" type="AnimatedSprite2D" parent="suferer/Kindness" unique_id=1155271757]
-position = Vector2(3.000062, 1.0000229)
+position = Vector2(-650, 309.99994)
 scale = Vector2(2.715, 2.715)
 sprite_frames = SubResource("SpriteFrames_dk4md")
 
@@ -3860,15 +4031,25 @@ one_shot = true
 wait_time = 0.101
 one_shot = true
 
+[node name="IngredientCooking" type="ProgressBar" parent="suferer/Kindness/Pot" unique_id=157772398]
+offset_left = 110.12891
+offset_top = -117.49538
+offset_right = 150.1289
+offset_bottom = -77.49538
+step = 0.1
+
+[node name="adding" type="Timer" parent="suferer/Kindness/Pot/IngredientCooking" unique_id=1898646191]
+wait_time = 0.35
+
+[node name="MessUp" type="Timer" parent="suferer/Kindness/Pot/IngredientCooking" unique_id=2104389717]
+
 [node name="VisibleIngredients" type="Node2D" parent="suferer/Kindness" unique_id=874468025]
 position = Vector2(0.00024414063, 0)
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Ingredient1" type="AnimatedSprite2D" parent="suferer/Kindness/VisibleIngredients" unique_id=1058127044]
-self_modulate = Color(1, 1, 1, 0)
 position = Vector2(109.999756, -73)
 scale = Vector2(0.61, 0.61)
-skew = -1.43117
 sprite_frames = SubResource("SpriteFrames_ny722")
 animation = &"Nothing"
 autoplay = "Nothing"
@@ -3950,23 +4131,62 @@ stream = ExtResource("15_iq78o")
 [node name="PickSound" type="AudioStreamPlayer2D" parent="suferer/Kindness" unique_id=1641901932]
 stream = ExtResource("17_aaybg")
 
-[node name="Aura" type="Sprite2D" parent="suferer/Kindness" unique_id=1623800358]
-self_modulate = Color(1, 1, 1, 0.3764706)
+[node name="Aura" type="AnimatedSprite2D" parent="suferer/Kindness" unique_id=287691680]
+modulate = Color(1, 1, 1, 0.5764706)
 show_behind_parent = true
-position = Vector2(2, 2)
-scale = Vector2(3.745, 3.745)
-texture = ExtResource("19_rbqj4")
+position = Vector2(1.55, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = SubResource("SpriteFrames_dbuyv")
+autoplay = "default"
 
 [node name="spin" type="AnimationPlayer" parent="suferer/Kindness/Aura" unique_id=269224167]
+root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_q4eo5")
+autoplay = &"spin"
 
 [node name="Aura" type="ProgressBar" parent="suferer/Kindness/Aura" unique_id=1016707237]
-visible = false
-offset_left = 19.411856
-offset_top = 74.6151
-offset_right = 23.411856
-offset_bottom = 101.6151
-step = 1.0
+offset_left = -155006.0
+offset_top = 300000.0
+offset_right = -155002.0
+offset_bottom = 300027.0
+show_percentage = false
+
+[node name="TargetSelect" type="Sprite2D" parent="suferer/Kindness" unique_id=195911631]
+position = Vector2(6.9999995, 241.99998)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("60_ehxeq")
+script = ExtResource("61_2vxa1")
+
+[node name="CD" type="Timer" parent="suferer/Kindness/TargetSelect" unique_id=287681472]
+wait_time = 0.48
+one_shot = true
+
+[node name="DebuffProgress" type="TextureProgressBar" parent="suferer/Kindness/TargetSelect" unique_id=496790835]
+self_modulate = Color(0, 0.850158, 0.20288435, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.49994
+offset_top = -135.25
+offset_right = 7.500061
+offset_bottom = 8.75
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.19, 1.19)
+pivot_offset = Vector2(72, 72)
+max_value = 4.0
+fill_mode = 4
+radial_initial_angle = 40.0
+texture_progress = ExtResource("22_ehxeq")
+
+[node name="spin" type="AnimationPlayer" parent="suferer/Kindness/TargetSelect/DebuffProgress" unique_id=484798484]
+libraries/ = SubResource("AnimationLibrary_swdrg")
+autoplay = &"spin"
+
+[node name="CastCD" type="Timer" parent="suferer/Kindness" unique_id=1563520852]
+one_shot = true
 
 [node name="Player" type="AnimatedSprite2D" parent="suferer" unique_id=864319927]
 visibility_layer = 64
@@ -4190,7 +4410,7 @@ process_mode = 3
 wait_time = 1.055
 one_shot = true
 
-[node name="InteractBox" type="Area2D" parent="suferer" unique_id=467115300]
+[node name="InteractBox" type="Area2D" parent="suferer" unique_id=467115300 groups=["Mouse"]]
 visibility_layer = 3
 position = Vector2(7, 242)
 
@@ -4209,9 +4429,9 @@ position = Vector2(7, 243)
 shape = SubResource("CircleShape2D_co6qv")
 debug_color = Color(0.3529412, 0.8862745, 1, 0)
 
-[node name="PatienceBrakets" type="AnimatedSprite2D" parent="suferer/InteractBox" unique_id=414720051]
+[node name="PatienceBrakets" type="AnimatedSprite2D" parent="suferer/InteractBox" unique_id=1659350001]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(-499.095, -1)
+position = Vector2(-506.09497, -243)
 rotation = 2.3561945
 scale = Vector2(0.9999999, 0.9999999)
 sprite_frames = SubResource("SpriteFrames_cxmk6")
@@ -4220,23 +4440,23 @@ offset = Vector2(-0.3284912, 0.29223633)
 script = ExtResource("44_ere52")
 metadata/_edit_lock_ = true
 
-[node name="Brakets" type="AnimationPlayer" parent="suferer/InteractBox/PatienceBrakets" unique_id=1862718365]
+[node name="Brakets" type="AnimationPlayer" parent="suferer/InteractBox/PatienceBrakets" unique_id=45226809]
 libraries/ = SubResource("AnimationLibrary_as3dj")
 
-[node name="Braket" type="Area2D" parent="suferer/InteractBox/PatienceBrakets" unique_id=1034047837 groups=["PatienceBeat"]]
+[node name="Braket" type="Area2D" parent="suferer/InteractBox/PatienceBrakets" unique_id=653406905 groups=["PatienceBeat"]]
 rotation = 0.7853982
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/PatienceBrakets/Braket" unique_id=1274087400]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/PatienceBrakets/Braket" unique_id=1894882937]
 visible = false
 shape = SubResource("CapsuleShape2D_gjxql")
 
-[node name="Window" type="Timer" parent="suferer/InteractBox/PatienceBrakets" unique_id=501662761]
+[node name="Window" type="Timer" parent="suferer/InteractBox/PatienceBrakets" unique_id=983623232]
 wait_time = 0.2
 one_shot = true
 
-[node name="PatienceBrakets2" type="AnimatedSprite2D" parent="suferer/InteractBox" unique_id=956102975]
+[node name="PatienceBrakets2" type="AnimatedSprite2D" parent="suferer/InteractBox" unique_id=351528034]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(339, 3)
+position = Vector2(332, -239)
 rotation = 2.3561945
 scale = Vector2(0.9999999, 0.9999999)
 sprite_frames = SubResource("SpriteFrames_cxmk6")
@@ -4244,10 +4464,10 @@ animation = &"Rod"
 offset = Vector2(-0.3284912, 0.29223633)
 metadata/_edit_lock_ = true
 
-[node name="Braket" type="Area2D" parent="suferer/InteractBox/PatienceBrakets2" unique_id=234403832 groups=["PatienceBeat"]]
+[node name="Braket" type="Area2D" parent="suferer/InteractBox/PatienceBrakets2" unique_id=2104531347 groups=["PatienceBeat"]]
 rotation = 0.7853982
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/PatienceBrakets2/Braket" unique_id=29317704]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/PatienceBrakets2/Braket" unique_id=313698435]
 visible = false
 shape = SubResource("CapsuleShape2D_gjxql")
 
@@ -4444,6 +4664,16 @@ one_shot = true
 [node name="Spin" type="AnimationPlayer" parent="suferer/InteractBox/Patience/Charges" unique_id=615980486]
 libraries/ = SubResource("AnimationLibrary_77h1j")
 autoplay = &"Spin"
+
+[node name="Kindness" type="Node2D" parent="suferer/InteractBox" unique_id=714390677]
+
+[node name="SeekingRange" type="Area2D" parent="suferer/InteractBox/Kindness" unique_id=1643692791]
+visible = false
+position = Vector2(0, 1)
+scale = Vector2(1.6, 1.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/Kindness/SeekingRange" unique_id=1168323757]
+shape = SubResource("CircleShape2D_yddip")
 
 [node name="Attacks" type="Node2D" parent="suferer" unique_id=1601687981]
 metadata/_edit_lock_ = true
@@ -4864,16 +5094,69 @@ metadata/_edit_lock_ = true
 [node name="MainCamera" type="Camera2D" parent="suferer" unique_id=1784157402]
 position = Vector2(0, 9)
 
-[node name="Label" type="Label" parent="suferer" unique_id=1741826290]
-offset_left = 123.0
-offset_top = 105.0
-offset_right = 163.0
-offset_bottom = 128.0
+[node name="HeartBeat" type="AudioStreamPlayer2D" parent="suferer" unique_id=1439705092]
+position = Vector2(-7, -242.00006)
+scale = Vector2(0.99999994, 0.99999994)
 
-[node name="HeartBeat" type="AudioStreamPlayer2D" parent="suferer" unique_id=1750419377]
-stream = ExtResource("45_ere52")
+[node name="BGM" type="AudioStreamPlayer2D" parent="suferer" unique_id=359706585]
+stream = ExtResource("85_2vxa1")
+volume_db = 0.785
+script = ExtResource("86_0io1r")
 
-[node name="Friend" type="CharacterBody2D" parent="." unique_id=93083512 groups=["Enemies"]]
+[node name="MusicCD" type="Timer" parent="suferer/BGM" unique_id=1321231846]
+one_shot = true
+
+[node name="Starter" type="Timer" parent="suferer/BGM/MusicCD" unique_id=416905522]
+wait_time = 10.0
+
+[node name="MusicSwitch" type="AnimationPlayer" parent="suferer/BGM" unique_id=414599538]
+libraries/ = SubResource("AnimationLibrary_o75b7")
+autoplay = &"bunker"
+
+[node name="Tip" type="Node2D" parent="suferer/BGM" unique_id=1402268255]
+position = Vector2(-301.78, 0)
+
+[node name="Tip" type="AnimatedSprite2D" parent="suferer/BGM/Tip" unique_id=17862487]
+position = Vector2(-640, -330.00003)
+scale = Vector2(2.54, 1.38)
+sprite_frames = SubResource("SpriteFrames_kd1y4")
+
+[node name="Label" type="Label" parent="suferer/BGM/Tip" unique_id=396598825]
+offset_left = -720.0
+offset_top = -379.0
+offset_right = -575.0
+offset_bottom = -344.0
+text = ":^( bunker"
+label_settings = SubResource("LabelSettings_xf7vj")
+
+[node name="made by" type="Label" parent="suferer/BGM/Tip" unique_id=9437875]
+offset_left = -674.0
+offset_top = -325.0
+offset_right = -599.0
+offset_bottom = -290.0
+text = "made by..."
+label_settings = SubResource("LabelSettings_5tcw6")
+
+[node name="Author" type="Label" parent="suferer/BGM/Tip" unique_id=1389810595]
+offset_left = -693.0
+offset_top = -310.0
+offset_right = -575.0
+offset_bottom = -275.0
+text = "Karp335"
+label_settings = ExtResource("88_as3dj")
+
+[node name="sliding" type="AnimationPlayer" parent="suferer/BGM/Tip" unique_id=1109976284]
+libraries/ = SubResource("AnimationLibrary_3cl5f")
+autoplay = &"base"
+
+[node name="ExtendTip" type="Area2D" parent="suferer/BGM" unique_id=1008162506]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/BGM/ExtendTip" unique_id=1070472406]
+position = Vector2(-666, -333)
+shape = SubResource("RectangleShape2D_cxmk6")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Foe" type="CharacterBody2D" parent="." unique_id=93083512 groups=["Enemies"]]
 position = Vector2(2155, 681)
 collision_layer = 0
 collision_mask = 0
@@ -4882,25 +5165,42 @@ wall_min_slide_angle = 3.1415927
 safe_margin = 0.485
 script = ExtResource("22_fwn4l")
 
-[node name="Collision Trigger" type="Area2D" parent="Friend" unique_id=1850365989 groups=["Enemies"]]
+[node name="Burning" type="CPUParticles2D" parent="Foe" unique_id=792172159]
+emitting = false
+amount = 5
+texture = ExtResource("93_2vxa1")
+explosiveness = 0.24
+emission_shape = 1
+emission_sphere_radius = 46.27
+spread = 180.0
+gravity = Vector2(0, -30)
+initial_velocity_min = 7.85
+initial_velocity_max = 101.97
+angular_velocity_min = 8.6
+angular_velocity_max = 19.18
+scale_amount_min = 1.6
+scale_amount_max = 1.95
+color_ramp = SubResource("Gradient_co6qv")
+
+[node name="Collision Trigger" type="Area2D" parent="Foe" unique_id=1850365989 groups=["Enemies"]]
 script = ExtResource("40_rt5ba")
 
-[node name="Collision" type="CollisionShape2D" parent="Friend/Collision Trigger" unique_id=1248468103]
+[node name="Collision" type="CollisionShape2D" parent="Foe/Collision Trigger" unique_id=1248468103]
 shape = SubResource("CircleShape2D_3vj0e")
 debug_color = Color(0.9703923, 0, 0.4518209, 0.13333334)
 
-[node name="Friend\'s sprite" type="AnimatedSprite2D" parent="Friend" unique_id=320355133]
+[node name="Friend\'s sprite" type="AnimatedSprite2D" parent="Foe" unique_id=320355133]
 position = Vector2(2.000002, 4.000001)
 scale = Vector2(1.32, 1.32)
 sprite_frames = SubResource("SpriteFrames_co6qv")
-animation = &"Death"
+animation = &"Base"
 autoplay = "Base"
 
-[node name="Hitbox" type="CollisionShape2D" parent="Friend" unique_id=756824085 groups=["Enemies"]]
+[node name="Hitbox" type="CollisionShape2D" parent="Foe" unique_id=756824085 groups=["Enemies"]]
 shape = SubResource("CircleShape2D_gjxql")
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
-[node name="hit" type="CPUParticles2D" parent="Friend" unique_id=1571353561]
+[node name="hit" type="CPUParticles2D" parent="Foe" unique_id=1571353561]
 emitting = false
 amount = 79
 texture = ExtResource("45_otphl")
@@ -4911,18 +5211,24 @@ gravity = Vector2(0, 0)
 initial_velocity_min = 120.81
 initial_velocity_max = 318.31
 
-[node name="Timer" type="Timer" parent="Friend" unique_id=167069264]
+[node name="DeathTimer" type="Timer" parent="Foe" unique_id=167069264]
 wait_time = 1.1669999999999998
 one_shot = true
 
-[node name="Death" type="AnimationPlayer" parent="Friend" unique_id=2144292583]
+[node name="Death" type="AnimationPlayer" parent="Foe" unique_id=2144292583]
 libraries/ = SubResource("AnimationLibrary_ojs3s")
 
-[node name="DeathSound" type="AudioStreamPlayer2D" parent="Friend" unique_id=196809979]
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="Foe" unique_id=196809979]
 stream = ExtResource("47_106nv")
 
-[node name="Damage" type="AnimationPlayer" parent="Friend" unique_id=1899998983]
+[node name="Damage" type="AnimationPlayer" parent="Foe" unique_id=1899998983]
 libraries/ = SubResource("AnimationLibrary_nbic5")
+
+[node name="StatusEffects" type="Node2D" parent="Foe" unique_id=407115161]
+
+[node name="Burning" type="Timer" parent="Foe/StatusEffects" unique_id=2120308166]
+wait_time = 0.5
+one_shot = true
 
 [node name="Frame" type="Sprite2D" parent="." unique_id=1410016411]
 position = Vector2(949.00006, 157.00002)
@@ -4931,20 +5237,26 @@ texture = ExtResource("61_akogo")
 
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Integrity/Inspiration" method="_on_suferer_hit"]
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Patience/Charges" method="_on_suferer_hit"]
+[connection signal="Burn" from="suferer/Kindness" to="Foe/Collision Trigger" method="_on_kindness_burn"]
 [connection signal="timeout" from="suferer/Kindness/Pot/SpinStepCooldown" to="suferer/Kindness" method="_on_spin_step_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Kindness/Pot/SpinSlowingCooldown" to="suferer/Kindness" method="_on_spin_slowing_cooldown_timeout"]
+[connection signal="timeout" from="suferer/Kindness/Pot/IngredientCooking/adding" to="suferer/Kindness" method="_on_adding_timeout"]
+[connection signal="timeout" from="suferer/Kindness/Pot/IngredientCooking/MessUp" to="suferer/Kindness" method="_on_mess_up_timeout"]
 [connection signal="timeout" from="suferer/Kindness/VisibleIngredients/pickability" to="suferer/Kindness" method="_on_pickability_timeout"]
 [connection signal="timeout" from="suferer/Kindness/Hand/Lowering" to="suferer/Kindness" method="_on_lowering_timeout"]
 [connection signal="timeout" from="suferer/Kindness/Hand/PullingOut" to="suferer/Kindness" method="_on_pulling_out_timeout"]
 [connection signal="timeout" from="suferer/Kindness/Sack/SackCooldown" to="suferer/Kindness" method="_on_sack_cooldown_timeout"]
+[connection signal="timeout" from="suferer/Kindness/TargetSelect/CD" to="suferer/Kindness/TargetSelect" method="_on_cd_timeout"]
+[connection signal="timeout" from="suferer/Kindness/CastCD" to="suferer/Kindness" method="_on_cast_cd_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/UnblockMovements" to="suferer/Control" method="_on_unblock_movements_timeout"]
-[connection signal="area_entered" from="suferer/InteractBox/CursorSpawn/SearchingRange" to="suferer/InteractBox/PatienceBrakets" method="_on_searching_range_area_entered"]
 [connection signal="timeout" from="suferer/InteractBox/PatienceBrakets/Window" to="suferer/InteractBox/PatienceBrakets" method="_on_window_timeout"]
 [connection signal="timeout" from="suferer/InteractBox/Integrity/Gain" to="suferer/InteractBox/Integrity/Inspiration" method="_on_gain_timeout"]
 [connection signal="timeout" from="suferer/InteractBox/Integrity/Consumption" to="suferer/InteractBox/Integrity/Inspiration" method="_on_consumption_timeout"]
 [connection signal="timeout" from="suferer/InteractBox/Patience/Charges/Grow" to="suferer/InteractBox/Patience/Charges" method="_on_grow_timeout"]
+[connection signal="area_entered" from="suferer/InteractBox/Kindness/SeekingRange" to="suferer/Kindness/TargetSelect" method="_on_seeking_range_area_entered"]
+[connection signal="area_exited" from="suferer/InteractBox/Kindness/SeekingRange" to="suferer/Kindness/TargetSelect" method="_on_seeking_range_area_exited"]
 [connection signal="IntegritySucess" from="suferer/Attacks/Integrity" to="suferer/InteractBox/Integrity/Inspiration" method="_on_integrity_integrity_sucess"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Fail" to="suferer/Attacks/Integrity" method="_on_fail_timeout"]
 [connection signal="timeout" from="suferer/Attacks/Integrity/Beat" to="suferer/Attacks/Integrity" method="_on_beat_timeout"]
@@ -4963,6 +5275,12 @@ texture = ExtResource("61_akogo")
 [connection signal="pressed" from="suferer/Attacks/Justice/RevolverBarrel/SeventhButton" to="suferer/Attacks/Justice" method="_on_seventh_pressed"]
 [connection signal="timeout" from="suferer/Attacks/Justice/RevolverReloadingThing/Timer" to="suferer/Attacks/Justice" method="_on_timer_timeout"]
 [connection signal="button_down" from="suferer/AmmoSource" to="suferer/Attacks/Justice" method="_on_ammo_source_button_down"]
-[connection signal="body_entered" from="Friend/Collision Trigger" to="Friend" method="_on_collision_trigger_body_entered"]
-[connection signal="body_exited" from="Friend/Collision Trigger" to="Friend" method="_on_collision_trigger_body_exited"]
-[connection signal="timeout" from="Friend/Timer" to="Friend/Collision Trigger" method="_on_timer_timeout"]
+[connection signal="finished" from="suferer/BGM" to="suferer" method="_on_bgm_finished"]
+[connection signal="timeout" from="suferer/BGM/MusicCD" to="suferer" method="_on_music_cd_timeout"]
+[connection signal="timeout" from="suferer/BGM/MusicCD/Starter" to="suferer" method="_on_starter_timeout"]
+[connection signal="area_entered" from="suferer/BGM/ExtendTip" to="suferer/BGM" method="_on_extend_tip_area_entered"]
+[connection signal="area_exited" from="suferer/BGM/ExtendTip" to="suferer/BGM" method="_on_extend_tip_area_exited"]
+[connection signal="body_entered" from="Foe/Collision Trigger" to="Foe" method="_on_collision_trigger_body_entered"]
+[connection signal="body_exited" from="Foe/Collision Trigger" to="Foe" method="_on_collision_trigger_body_exited"]
+[connection signal="timeout" from="Foe/DeathTimer" to="Foe/Collision Trigger" method="_on_timer_timeout"]
+[connection signal="timeout" from="Foe/StatusEffects/Burning" to="Foe/Collision Trigger" method="_on_burning_timeout"]

@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://6taah1psmom3"]
+
+[ext_resource type="FontFile" uid="uid://e3vepanad8vu" path="res://fonts/Determination.otf" id="1_6ylfe"]
+
+[resource]
+font = ExtResource("1_6ylfe")
+font_size = 32
