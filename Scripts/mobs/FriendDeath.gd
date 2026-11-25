@@ -3,6 +3,7 @@ extends Area2D
 signal Death
 var Health = 50
 var Dead = false
+var Deadqueue = false
 
 var Burns = 0
 var BurnsCD = true
@@ -11,9 +12,13 @@ func _process(_delta):
 	if Health <= 0 and Dead == false:
 		Dead = true
 		emit_signal("Death")
-		$"../DeathTimer".start()
 		$"..".alive = false
+		Deadqueue = true
 		$"../Death".play("death")
+	
+	if Dead == true and Deadqueue == false:
+		Deadqueue = true
+		$"../DeathTimer".start()
 	
 	if not Burns == 0:
 		$"../Burning".emitting = true
@@ -27,12 +32,10 @@ func _process(_delta):
 		if Burns < 0:
 			Burns = 0
 
-
 func Hit():
 	$"../Damage".play("damage")
 
 func _on_DeathTimer_timeout():
-	$"../Hitbox".queue_free()
 	$"..".queue_free()
 
 func _on_burning_timeout():

@@ -1,5 +1,5 @@
 extends Node2D
-signal Burn(amount)
+signal Cast(type, amount)
 
 var SackOpened = false # открыт ли мешок?
 var SackCooldown = false # кулдаун мешка
@@ -13,6 +13,7 @@ var Ingredient1 = 0
 var Ingredient2 = 0
 var Ingredient3 = 0
 var IngredientsCooking = 0
+var Debufftype = null
 
 
 var SSSC = true # super spin step cooldown
@@ -28,6 +29,8 @@ var CACooldown = true
 var DebuffProgress = 0
 var DebuffProgressRaw = 0
 var CastCD = true
+
+var Duration = 3
 
 func _process(_delta):
 #region кручение колеса
@@ -96,7 +99,7 @@ func _process(_delta):
 	if Input.is_action_just_released("attack") and not DebuffProgress == 0 and CastCD == true:
 		$CastCD.start()
 		CastCD = false
-		emit_signal("Burn", DebuffProgress)
+		emit_signal("Cast", Debufftype, DebuffProgress)
 		DebuffProgress = 0
 		DebuffProgressRaw = 0
 	
@@ -243,7 +246,18 @@ func SpendIngredients():
 	$Aura/Aura.value = 0
 #endregion
 
-
+#region влияние продуктов на каст
+func CalculateType():
+	if Ingredient1 == 1:
+		Duration *= 2
+	if Ingredient2 == 1:
+		Duration *= 2
+	if Ingredient3 == 1:
+		Duration *= 2
+		
+	if Ingredient1 == 2:
+		GlobalData.Damage *= 2
+#endregion
 
 #region таймеры
 func _on_pickability_timeout():

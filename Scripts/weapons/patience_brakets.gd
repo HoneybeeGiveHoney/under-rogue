@@ -10,6 +10,7 @@ func _process(_delta):
 
 func _on_searching_range_area_entered(area: Area2D):
 	if area.is_in_group("PatienceBeat"):
+		print("yes")
 		Beat += 1
 		$Window.start()
 

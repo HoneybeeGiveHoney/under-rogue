@@ -9,6 +9,9 @@ var IntegrityCharges = 0
 var PatienceCharges = 0
 var Inspiration = 0
 
+var Damage = 5
+var Defence = 0
+
 
 
 var IntegritySucess = 0

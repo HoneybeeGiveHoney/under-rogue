@@ -88,7 +88,7 @@ func _process(_delta):
 		$BGM/MusicCD.start()
 		$BGM.play()
 		IsMusicPlaying = true
-
+#endregion
 
 func attack_knife():
 	can_hit = false
@@ -100,7 +100,7 @@ func attack_knife():
 	if $InteractBox/PatienceBrakets.Beat == 0:
 		knife.Damage = 10
 		knife.UnBeat()
-	if $InteractBox/PatienceBrakets.Beat > 0:
+	if not $InteractBox/PatienceBrakets.Beat == 0:
 		knife.Damage = 25
 		$InteractBox/Scope/Pulse.play("Pulse")
 		knife.Beat()

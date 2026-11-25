@@ -38,8 +38,8 @@
 [ext_resource type="Texture2D" uid="uid://ygfi8chngpgf" path="res://assets/SoulRaysFragments/Empty-Dexterity.png" id="16_yawcl"]
 [ext_resource type="AudioStream" uid="uid://finhb0jkhe4v" path="res://assets/Sounds/Weapons/PickSound.mp3" id="17_aaybg"]
 [ext_resource type="Texture2D" uid="uid://c8ckklxvpmg7i" path="res://assets/SoulRaysFragments/Full_Dexterity.png" id="17_r5bsq"]
-[ext_resource type="Script" uid="uid://bvvavaqbqwbhv" path="res://scenes/justice.gd" id="18_77h1j"]
-[ext_resource type="Script" uid="uid://b8t5sfr76rt5m" path="res://scenes/kindness.gd" id="18_ehxeq"]
+[ext_resource type="Script" uid="uid://bvvavaqbqwbhv" path="res://Scripts/justice.gd" id="18_77h1j"]
+[ext_resource type="Script" uid="uid://b8t5sfr76rt5m" path="res://Scripts/kindness.gd" id="18_ehxeq"]
 [ext_resource type="Texture2D" uid="uid://6omsfqp5l312" path="res://assets/SoulRaysFragments/Empty-Bravery.png" id="18_hkcvx"]
 [ext_resource type="Texture2D" uid="uid://bfwbd4eqg3rrv" path="res://assets/SoulRaysFragments/Full_Bravery.png" id="19_fa2ew"]
 [ext_resource type="Texture2D" uid="uid://bcplg4qblwn56" path="res://assets/Sprites/Justice/revolverBarrel.png" id="19_gh2hl"]
@@ -61,8 +61,6 @@
 [ext_resource type="Script" uid="uid://1ybo1j4ykwkk" path="res://Scripts/mobs/FriendDeath.gd" id="40_rt5ba"]
 [ext_resource type="Texture2D" uid="uid://b2qi33eq4kv86" path="res://assets/Sprites/Justice/JusticeScope.png" id="41_f284d"]
 [ext_resource type="Texture2D" uid="uid://bg1gyi7hlpxbl" path="res://assets/Sprites/Patience/PatienceScope.png" id="42_nxxxb"]
-[ext_resource type="Texture2D" uid="uid://bhoonm0tl2x67" path="res://assets/Sprites/Patience/brakets.png" id="43_ojs3s"]
-[ext_resource type="Script" uid="uid://qwqsdh4fs1xw" path="res://Scripts/weapons/patience_brakets.gd" id="44_ere52"]
 [ext_resource type="Texture2D" uid="uid://v5is1uph6ygx" path="res://assets/Sprites/FoeDeath.png" id="44_jrwb0"]
 [ext_resource type="Script" uid="uid://b47g67hi320ku" path="res://Scripts/weapons/Patiencecharges.gd" id="44_wdo10"]
 [ext_resource type="Texture2D" uid="uid://i0sjl78aovel" path="res://assets/Sprites/Patience/PatienceCharge.png" id="45_7dbvr"]
@@ -81,7 +79,7 @@
 [ext_resource type="Texture2D" uid="uid://bv1ssqi61o084" path="res://assets/Sprites/Justice/revolverFull.png" id="57_gh2hl"]
 [ext_resource type="AudioStream" uid="uid://dn8os3l5awmfc" path="res://assets/Sounds/Weapons/GrabbingAmmo.ogg" id="59_l1bm3"]
 [ext_resource type="Texture2D" uid="uid://c0rjgjqo1s6l5" path="res://assets/Sprites/Kindness/targetSelect.png" id="60_ehxeq"]
-[ext_resource type="Script" uid="uid://dbxgy3ittb613" path="res://scenes/target_selectKindness.gd" id="61_2vxa1"]
+[ext_resource type="Script" uid="uid://dbxgy3ittb613" path="res://Scripts/target_selectKindness.gd" id="61_2vxa1"]
 [ext_resource type="Texture2D" uid="uid://qkgxyidck7p2" path="res://assets/Furniture/frame.png" id="61_akogo"]
 [ext_resource type="Texture2D" uid="uid://cjtostdb00je6" path="res://assets/Sprites/Justice/RevolverCurrentPointer.png" id="62_rp32f"]
 [ext_resource type="Texture2D" uid="uid://cu7jdv2tfho7n" path="res://assets/Sprites/Justice/RevolverReloadingThing.png" id="63_ph6v8"]
@@ -93,7 +91,8 @@
 [ext_resource type="Texture2D" uid="uid://dml81b12w13xe" path="res://assets/Sprites/Kindness/Ingredients/Carroot.png" id="82_ehxeq"]
 [ext_resource type="Texture2D" uid="uid://bgmmbquc16mn2" path="res://assets/Sprites/Kindness/Ingredients/potato.png" id="84_ybcmu"]
 [ext_resource type="AudioStream" uid="uid://b0mh5eisupg3q" path="res://bunker_theme.mp3" id="85_2vxa1"]
-[ext_resource type="Script" uid="uid://w5d8lmih0ie2" path="res://scenes/bgm.gd" id="86_0io1r"]
+[ext_resource type="AudioStream" uid="uid://u0wr6vyw6rty" path="res://assets/Sounds/Weapons/HearthBeat.ogg" id="85_lofop"]
+[ext_resource type="Script" uid="uid://w5d8lmih0ie2" path="res://Scripts/bgm.gd" id="86_0io1r"]
 [ext_resource type="Texture2D" uid="uid://dbmd2ys1l25ko" path="res://assets/interface/musicTip.png" id="87_lofop"]
 [ext_resource type="LabelSettings" uid="uid://6taah1psmom3" path="res://Determination.tres" id="88_as3dj"]
 [ext_resource type="Texture2D" uid="uid://tci8uxkuwvy6" path="res://assets/Sprites/fire.png" id="93_2vxa1"]
@@ -1367,199 +1366,6 @@ radius = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_co6qv"]
 radius = 65.00769
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ehxeq"]
-atlas = ExtResource("43_ojs3s")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2vxa1"]
-atlas = ExtResource("43_ojs3s")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_swdrg"]
-atlas = ExtResource("43_ojs3s")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o75b7"]
-atlas = ExtResource("43_ojs3s")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0io1r"]
-atlas = ExtResource("43_ojs3s")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_cxmk6"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ehxeq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2vxa1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_swdrg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o75b7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0io1r")
-}],
-"loop": 1,
-"name": &"Rod",
-"speed": 5.0
-}]
-
-[sub_resource type="Animation" id="Animation_ph6v8"]
-resource_name = "Reset"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-499.095, -1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../PatienceBrakets2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(339, 3)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../PatienceBrakets2:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_lofop"]
-resource_name = "pulse"
-length = 1.5333333
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../PatienceBrakets2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.73333335),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(339, 3), Vector2(28.47, 3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.0333333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-499.095, -1), Vector2(-28.02, 3)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../CursorSpawn/SearchingRange/CollisionShape2D:shape:radius")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [65.00769]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.36666667, 1.1666666),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../PatienceBrakets2:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.36666667, 0.8333333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../../HeartBeat:stream")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../../HeartBeat:playing")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0.4),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_as3dj"]
-_data = {
-&"Reset": SubResource("Animation_ph6v8"),
-&"pulse": SubResource("Animation_lofop")
-}
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjxql"]
-radius = 14.0
-height = 56.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w7t7a"]
 animations = [{
@@ -4429,48 +4235,6 @@ position = Vector2(7, 243)
 shape = SubResource("CircleShape2D_co6qv")
 debug_color = Color(0.3529412, 0.8862745, 1, 0)
 
-[node name="PatienceBrakets" type="AnimatedSprite2D" parent="suferer/InteractBox" unique_id=1659350001]
-self_modulate = Color(1, 1, 1, 0)
-position = Vector2(-506.09497, -243)
-rotation = 2.3561945
-scale = Vector2(0.9999999, 0.9999999)
-sprite_frames = SubResource("SpriteFrames_cxmk6")
-animation = &"Rod"
-offset = Vector2(-0.3284912, 0.29223633)
-script = ExtResource("44_ere52")
-metadata/_edit_lock_ = true
-
-[node name="Brakets" type="AnimationPlayer" parent="suferer/InteractBox/PatienceBrakets" unique_id=45226809]
-libraries/ = SubResource("AnimationLibrary_as3dj")
-
-[node name="Braket" type="Area2D" parent="suferer/InteractBox/PatienceBrakets" unique_id=653406905 groups=["PatienceBeat"]]
-rotation = 0.7853982
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/PatienceBrakets/Braket" unique_id=1894882937]
-visible = false
-shape = SubResource("CapsuleShape2D_gjxql")
-
-[node name="Window" type="Timer" parent="suferer/InteractBox/PatienceBrakets" unique_id=983623232]
-wait_time = 0.2
-one_shot = true
-
-[node name="PatienceBrakets2" type="AnimatedSprite2D" parent="suferer/InteractBox" unique_id=351528034]
-self_modulate = Color(1, 1, 1, 0)
-position = Vector2(332, -239)
-rotation = 2.3561945
-scale = Vector2(0.9999999, 0.9999999)
-sprite_frames = SubResource("SpriteFrames_cxmk6")
-animation = &"Rod"
-offset = Vector2(-0.3284912, 0.29223633)
-metadata/_edit_lock_ = true
-
-[node name="Braket" type="Area2D" parent="suferer/InteractBox/PatienceBrakets2" unique_id=2104531347 groups=["PatienceBeat"]]
-rotation = 0.7853982
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="suferer/InteractBox/PatienceBrakets2/Braket" unique_id=313698435]
-visible = false
-shape = SubResource("CapsuleShape2D_gjxql")
-
 [node name="Scope" type="AnimatedSprite2D" parent="suferer/InteractBox" unique_id=949006767]
 visibility_layer = 64
 scale = Vector2(1.7265625, 1.7265625)
@@ -5081,6 +4845,12 @@ stream = ExtResource("65_6n4da")
 position = Vector2(0, 6)
 stream = ExtResource("65_3r077")
 
+[node name="Patience" type="Node2D" parent="suferer/Attacks" unique_id=2004935653]
+
+[node name="Window" type="Timer" parent="suferer/Attacks/Patience" unique_id=983623232]
+wait_time = 0.2
+one_shot = true
+
 [node name="AmmoSource" type="Button" parent="suferer" unique_id=71689909]
 self_modulate = Color(1, 1, 1, 0)
 offset_left = -52.000107
@@ -5097,6 +4867,7 @@ position = Vector2(0, 9)
 [node name="HeartBeat" type="AudioStreamPlayer2D" parent="suferer" unique_id=1439705092]
 position = Vector2(-7, -242.00006)
 scale = Vector2(0.99999994, 0.99999994)
+stream = ExtResource("85_lofop")
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="suferer" unique_id=359706585]
 stream = ExtResource("85_2vxa1")
@@ -5212,7 +4983,7 @@ initial_velocity_min = 120.81
 initial_velocity_max = 318.31
 
 [node name="DeathTimer" type="Timer" parent="Foe" unique_id=167069264]
-wait_time = 1.1669999999999998
+wait_time = 0.747
 one_shot = true
 
 [node name="Death" type="AnimationPlayer" parent="Foe" unique_id=2144292583]
@@ -5237,7 +5008,6 @@ texture = ExtResource("61_akogo")
 
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Integrity/Inspiration" method="_on_suferer_hit"]
 [connection signal="hit" from="suferer" to="suferer/InteractBox/Patience/Charges" method="_on_suferer_hit"]
-[connection signal="Burn" from="suferer/Kindness" to="Foe/Collision Trigger" method="_on_kindness_burn"]
 [connection signal="timeout" from="suferer/Kindness/Pot/SpinStepCooldown" to="suferer/Kindness" method="_on_spin_step_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Kindness/Pot/SpinSlowingCooldown" to="suferer/Kindness" method="_on_spin_slowing_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Kindness/Pot/IngredientCooking/adding" to="suferer/Kindness" method="_on_adding_timeout"]
@@ -5251,7 +5021,6 @@ texture = ExtResource("61_akogo")
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_timer_timeout"]
 [connection signal="timeout" from="suferer/Control/PauseCooldown" to="suferer/Control" method="_on_pause_cooldown_timeout"]
 [connection signal="timeout" from="suferer/Control/UnblockMovements" to="suferer/Control" method="_on_unblock_movements_timeout"]
-[connection signal="timeout" from="suferer/InteractBox/PatienceBrakets/Window" to="suferer/InteractBox/PatienceBrakets" method="_on_window_timeout"]
 [connection signal="timeout" from="suferer/InteractBox/Integrity/Gain" to="suferer/InteractBox/Integrity/Inspiration" method="_on_gain_timeout"]
 [connection signal="timeout" from="suferer/InteractBox/Integrity/Consumption" to="suferer/InteractBox/Integrity/Inspiration" method="_on_consumption_timeout"]
 [connection signal="timeout" from="suferer/InteractBox/Patience/Charges/Grow" to="suferer/InteractBox/Patience/Charges" method="_on_grow_timeout"]
@@ -5282,5 +5051,5 @@ texture = ExtResource("61_akogo")
 [connection signal="area_exited" from="suferer/BGM/ExtendTip" to="suferer/BGM" method="_on_extend_tip_area_exited"]
 [connection signal="body_entered" from="Foe/Collision Trigger" to="Foe" method="_on_collision_trigger_body_entered"]
 [connection signal="body_exited" from="Foe/Collision Trigger" to="Foe" method="_on_collision_trigger_body_exited"]
-[connection signal="timeout" from="Foe/DeathTimer" to="Foe/Collision Trigger" method="_on_timer_timeout"]
+[connection signal="timeout" from="Foe/DeathTimer" to="Foe" method="_on_death_timer_timeout"]
 [connection signal="timeout" from="Foe/StatusEffects/Burning" to="Foe/Collision Trigger" method="_on_burning_timeout"]

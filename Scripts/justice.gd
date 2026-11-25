@@ -60,14 +60,13 @@ func _process(_delta):
 	if Current == 8 and RevEight == false:
 		CanShoot = false
 		#endregion
-	if GlobalData.CurrentWeapon == 4:
-		if Input.is_action_just_pressed("Reload") and Reloading == false:
-			Reloading = true
-			CanOpenBarrel = false
-			Current += 1
-			$RevolverReloadingThing.visible = true
-			$RevolverReloadingThing/Timer.start()
-			$RevolverBarrelOpen.play()
+	if Input.is_action_just_pressed("Reload") and Reloading == false:
+		Reloading = true
+		CanOpenBarrel = false
+		Current += 1
+		$RevolverReloadingThing.visible = true
+		$RevolverReloadingThing/Timer.start()
+		$RevolverBarrelOpen.play()
 			#region Animations
 		if Current == 9:
 			$RevolverCurrentPointer/Pointer.play("First")
