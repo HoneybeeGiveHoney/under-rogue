@@ -10,6 +10,8 @@ var PatienceCharges = 0
 var Inspiration = 0
 
 var Damage = 5
+
+
 var Defence = 0
 
 
